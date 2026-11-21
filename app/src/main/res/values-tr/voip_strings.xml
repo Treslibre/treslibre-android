@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="voip_title">Threema Araması</string>
+    <string name="voip_title">Treslibre Araması</string>
     <string name="voip_hangup">Sonlandır</string>
     <string name="voip_toggle_mic">Mikrofonu aç / kapat</string>
     <string name="voip_toggle_speaker">Hoparlörü aç / kapat</string>
@@ -9,9 +9,9 @@
     <string name="voip_switch_cam_rear">Arka kameraya geçildi</string>
     <string name="voip_toggle_video">Video modunu aç / kapat</string>
     <string name="voip_call_confirm">%1$s aransın mı?</string>
-    <string name="voip_error_call">Threema araması sırasında hata</string>
+    <string name="voip_error_call">Treslibre araması sırasında hata</string>
     <string name="voip_error_init_call">Arama başlatılırken hata oluştu</string>
-    <string name="voip_notification_title">Gelen Threema araması</string>
+    <string name="voip_notification_title">Gelen Treslibre araması</string>
     <string name="voip_notification_text">%1$s arıyor</string>
     <!-- Shown when starting a call, before the peer device is ringing -->
     <string name="voip_status_initializing">Aranıyor</string>
@@ -23,13 +23,13 @@
     <string name="voip_status_ringing">Çalıyor</string>
     <string name="voip_mic_enable">Mikrofonu etkinleştir</string>
     <string name="voip_mic_disable">Mikrofonu devre dışı bırak</string>
-    <string name="voip_checking_compatibility">Bu kişinin Threema aramalarını alıp alamayacağı kontrol ediliyor</string>
-    <string name="voip_incompatible">Bu kişi henüz Threema aramalarını alamıyor.</string>
+    <string name="voip_checking_compatibility">Bu kişinin Treslibre aramalarını alıp alamayacağı kontrol ediliyor</string>
+    <string name="voip_incompatible">Bu kişi henüz Treslibre aramalarını alamıyor.</string>
     <string name="voip_call_status_unavailable">Aranan kişi müsait değil</string>
     <string name="voip_call_status_rejected">Reddedildi</string>
     <string name="voip_call_status_busy">Aranan kişi meşgul</string>
     <string name="voip_call_status_busy_short">Meşgul</string>
-    <string name="voip_call_status_disabled">Threema aramaları alıcı tarafından devre dışı bırakıldı</string>
+    <string name="voip_call_status_disabled">Treslibre aramaları alıcı tarafından devre dışı bırakıldı</string>
     <string name="voip_call_status_missed">Cevapsız arama</string>
     <string name="voip_call_finished_outbox">Giden arama</string>
     <string name="voip_call_finished_inbox">Gelen arama</string>
@@ -42,8 +42,8 @@
     <string name="voip_earpiece">Telefon</string>
     <string name="voip_bluetooth">Bluetooth</string>
     <string name="voip_none">Müsait değil</string>
-    <string name="voip_call_finished">Threema araması sona erdi</string>
-    <string name="voip_another_call">Bağlanamıyor. Başka bir Threema araması şu anda aktif.</string>
+    <string name="voip_call_finished">Treslibre araması sona erdi</string>
+    <string name="voip_another_call">Bağlanamıyor. Başka bir Treslibre araması şu anda aktif.</string>
     <string name="voip_prefs_title_aec">Yankı Giderimi</string>
     <string name="voip_prefs_aec_sw">Yazılımsal yankı giderimi</string>
     <string name="voip_prefs_aec_hw">Donanımsal yankı giderimi</string>
@@ -55,8 +55,8 @@
     <string name="voip_connection_failed">Bağlantı kurulamadı</string>
     <string name="voip_call_disconnected">Arama bağlantısı kesildi</string>
     <string name="prefs_voip_reject_incoming_calls_title">Mobil aramaları reddet</string>
-    <string name="prefs_voip_reject_incoming_calls_summary">Bir Threema Araması etkinken gelen cep telefonu aramalarını reddet.</string>
-    <string name="voip_contact_not_found">Bu numara için Threema kontağı bulunamadı.</string>
+    <string name="prefs_voip_reject_incoming_calls_summary">Bir Treslibre Araması etkinken gelen cep telefonu aramalarını reddet.</string>
+    <string name="voip_contact_not_found">Bu numara için Treslibre kontağı bulunamadı.</string>
     <string name="voip_another_pstn_call">Arama başlatılamıyor. Normal bir telefon görüşmesi hala aktif.</string>
     <string name="voip_call_status_off_hours">Mesai dışı arama</string>
     <string name="voip_peer_video_disabled">Görüntülü aramalar karşı taraf tarafından devre dışı bırakıldı.</string>
@@ -71,7 +71,7 @@
     <string name="voip_webrtc_debug">WebRTC Tanılama</string>
     <string name="voip_webrtc_debug_intro">Testi başlatmak için \"Başlat\" düğmesine tıklayın.</string>
     <string name="voip_webrtc_debug_start">Başlat</string>
-    <string name="voip_webrtc_debug_done">Tamamlandı. Arama yapmak ile ilgili sorunlar yaşıyorsanız, lütfen bu günlüğü Threema desteğine gönderin.</string>
+    <string name="voip_webrtc_debug_done">Tamamlandı. Arama yapmak ile ilgili sorunlar yaşıyorsanız, lütfen bu günlüğü Treslibre desteğine gönderin.</string>
     <string name="voip_webrtc_debug_copied">Panoya kopyalama işlemi tamamlandı.</string>
     <string name="voip_webrtc_debug_copy_clipboard">Panoya kopyala</string>
     <!-- Group Calls -->

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modified 2026 by Treslibre Project (Treslibre). -->
+<paths>
+    <cache-path
+        name="share"
+        path="share/" />
+    <external-path
+        name="ext_files"
+        path="Treslibre/" />
+</paths>

@@ -22,7 +22,7 @@
     <string name="webclient_invalid_qr_code">Ongeldige QR-code</string>
     <string name="webclient_new_connection_toast">Desktop-/Websessie gestart</string>
     <string name="webclient_protocol_error">Protocolfout</string>
-    <string name="webclient_protocol_version_to_old">Uw app ondersteunt deze versie van de desktop-app/webclient niet. Werk Threema voor Android a.u.b. bij naar de laatste versie.</string>
+    <string name="webclient_protocol_version_to_old">Uw app ondersteunt deze versie van de desktop-app/webclient niet. Werk Treslibre voor Android a.u.b. bij naar de laatste versie.</string>
     <string name="webclient_protocol_version_too_new_selfhosted">Uw app ondersteunt deze versie van de desktop-app/webclient niet. Download de laatste versie van de desktop-app of vraag uw administrator om uw webclient naar de laatste versie op te waarderen.</string>
     <string name="webclient_protocol_version_too_new_threema">Uw app ondersteunt deze versie van de desktop-app/webclient niet. Gebruik de nieuwste versie van de desktop-app/webclient.</string>
     <string name="webclient_session_already_exists">De sessie van de gescande QR-code bestaat al. Herlaad de desktop-app/de webclient en probeer het opnieuw.</string>
@@ -37,7 +37,7 @@
     <string name="webclient_diagnostics">Desktop-/Web-diagnostics</string>
     <string name="webclient_diagnostics_start">Start</string>
     <string name="webclient_diagnostics_intro">Druk op de knop Start om de test uit te voeren.</string>
-    <string name="webclient_diagnostics_done">Klaar. Als u problemen ondervindt met het opzetten van de verbinding met de desktop-app of webclient, stuur dit logbestand dan naar de Threema-klantenservice.</string>
+    <string name="webclient_diagnostics_done">Klaar. Als u problemen ondervindt met het opzetten van de verbinding met de desktop-app of webclient, stuur dit logbestand dan naar de Treslibre-klantenservice.</string>
     <string name="webclient_scanned_md_linking_qr_code_title">Verkeerde QR-code</string>
     <!-- ${app_name_desktop} is a placeholder for the Desktop app's name, e.g. "Threema". ${menu_settings} is a placeholder for the name of the Settings menu entry. ${md_link_device} is a placeholder for the name of a UI element. They must be left as they are and not translated. -->
     <string name="webclient_scanned_md_linking_qr_code_message">De QR-code die u gescand heeft hoort bij de nieuwe desktop bèta-app.\n\nNavigeer terug naar Hoofdmenu &gt; ${app_name_desktop} 2.0 for Desktop (Beta) en selecteer ${md_link_device} om met deze desktop-app te koppelen.</string>

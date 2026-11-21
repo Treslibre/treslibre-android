@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="voip_title">Обаждане чрез Threema</string>
+    <string name="voip_title">Обаждане чрез Treslibre</string>
     <string name="voip_hangup">Затворете</string>
     <string name="voip_toggle_mic">Включете/заглушете микрофона</string>
     <string name="voip_toggle_speaker">Включете/спрете високоговорителя</string>
@@ -9,9 +9,9 @@
     <string name="voip_switch_cam_rear">Превключете на задната камера</string>
     <string name="voip_toggle_video">Превключете на режим видео</string>
     <string name="voip_call_confirm">Искате ли да се обадите на %1$s?</string>
-    <string name="voip_error_call">Грешка по време на обаждане чрез Threema</string>
+    <string name="voip_error_call">Грешка по време на обаждане чрез Treslibre</string>
     <string name="voip_error_init_call">Грешка при започване на разговора</string>
-    <string name="voip_notification_title">Входящо обаждане по Threema</string>
+    <string name="voip_notification_title">Входящо обаждане по Treslibre</string>
     <string name="voip_notification_text">%1$s се обажда</string>
     <!-- Shown when starting a call, before the peer device is ringing -->
     <string name="voip_status_initializing">Стартирам</string>
@@ -23,13 +23,13 @@
     <string name="voip_status_ringing">Звъни</string>
     <string name="voip_mic_enable">Включете микрофона</string>
     <string name="voip_mic_disable">Изключете микрофона</string>
-    <string name="voip_checking_compatibility">Проверка дали този контакт може да получава обаждания по Threema</string>
-    <string name="voip_incompatible">Този контакт все още не може да получава обаждания по Threema.</string>
+    <string name="voip_checking_compatibility">Проверка дали този контакт може да получава обаждания по Treslibre</string>
+    <string name="voip_incompatible">Този контакт все още не може да получава обаждания по Treslibre.</string>
     <string name="voip_call_status_unavailable">Контактът е недостъпен</string>
     <string name="voip_call_status_rejected">Отхвърлено обаждане</string>
     <string name="voip_call_status_busy">Контактът е зает</string>
     <string name="voip_call_status_busy_short">Заето</string>
-    <string name="voip_call_status_disabled">Абонатът е деактивирал обажданията чрез Threema</string>
+    <string name="voip_call_status_disabled">Абонатът е деактивирал обажданията чрез Treslibre</string>
     <string name="voip_call_status_missed">Пропуснато повикване</string>
     <string name="voip_call_finished_outbox">Изходящо повикване</string>
     <string name="voip_call_finished_inbox">Входящо повикване</string>
@@ -42,8 +42,8 @@
     <string name="voip_earpiece">Телефон</string>
     <string name="voip_bluetooth">Bluetooth</string>
     <string name="voip_none">Недостъпен</string>
-    <string name="voip_call_finished">Обаждането по Threema приключи</string>
-    <string name="voip_another_call">Не можем да се свържем. Има друго текущо обаждане по Threema.</string>
+    <string name="voip_call_finished">Обаждането по Treslibre приключи</string>
+    <string name="voip_another_call">Не можем да се свържем. Има друго текущо обаждане по Treslibre.</string>
     <string name="voip_prefs_title_aec">Премахване на ехото</string>
     <string name="voip_prefs_aec_sw">Софтуерно премахване на ехото</string>
     <string name="voip_prefs_aec_hw">Хардуерно премахване на ехото</string>
@@ -55,8 +55,8 @@
     <string name="voip_connection_failed">Връзката не може да бъде осъществена</string>
     <string name="voip_call_disconnected">Обаждането прекъсна</string>
     <string name="prefs_voip_reject_incoming_calls_title">Отклонете мобилните обаждания</string>
-    <string name="prefs_voip_reject_incoming_calls_summary">Отклонете мобилните обаждания докато има активно обаждане по Threema.</string>
-    <string name="voip_contact_not_found">Няма Threema контакт за този номер.</string>
+    <string name="prefs_voip_reject_incoming_calls_summary">Отклонете мобилните обаждания докато има активно обаждане по Treslibre.</string>
+    <string name="voip_contact_not_found">Няма Treslibre контакт за този номер.</string>
     <string name="voip_another_pstn_call">Не може да се осъществи обаждане. Има активно мобилно обаждане.</string>
     <string name="voip_call_status_off_hours">Обаждане в неработно време</string>
     <string name="voip_peer_video_disabled">Събеседникът деактивира видео разговора.</string>
@@ -71,7 +71,7 @@
     <string name="voip_webrtc_debug">WebRTC Диагностика</string>
     <string name="voip_webrtc_debug_intro">Натиснете бутона „Старт“, за да стартирате теста.</string>
     <string name="voip_webrtc_debug_start">Старт</string>
-    <string name="voip_webrtc_debug_done">Готово. Ако имате проблем със започването на разговора, изпратете този резултат към екипа по поддръжка на Threema.</string>
+    <string name="voip_webrtc_debug_done">Готово. Ако имате проблем със започването на разговора, изпратете този резултат към екипа по поддръжка на Treslibre.</string>
     <string name="voip_webrtc_debug_copied">Копирането в буферната памет приключи.</string>
     <string name="voip_webrtc_debug_copy_clipboard">Копирайте в буферната памет</string>
     <!-- Group Calls -->

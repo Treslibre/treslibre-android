@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.app.notifications
 
 import android.content.Context
@@ -50,8 +51,8 @@ object NotificationChannels {
      * these channels are created on demand only
      */
 
-    /** channel will be created on-the-fly by ThreemaPushService */
-    const val NOTIFICATION_CHANNEL_THREEMA_PUSH = "threema_push"
+    /** channel will be created on-the-fly by PushService */
+    const val NOTIFICATION_CHANNEL_THREEMA_PUSH = "treslibre_push"
 
     /** channel will be created on-the-fly by RemoteSecretMonitorService */
     const val NOTIFICATION_CHANNEL_REMOTE_SECRET = "remote_secret_monitor"

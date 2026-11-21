@@ -785,7 +785,7 @@ donar només el vostre nom o un pseudònim. Si no definiu un sobrenom utilitzare
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="prefs_title_voip_enable">Activar les trucades de ${app_name_short}</string>
     <string name="webclient_invalid_push_token_message">Es requereix inici manual</string>
-    <string name="threema_work_contact">Contacte de Threema Work</string>
+    <string name="threema_work_contact">Contacte de Treslibre</string>
     <!-- ${app_name} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="permission_phone_required">Permetre el permís per gestionar trucades telefòniques mentre s\'utilitza la trucada de ${app_name}</string>
     <string name="strikethrough">Ratllat</string>
@@ -1067,7 +1067,7 @@ donar només el vostre nom o un pseudònim. Si no definiu un sobrenom utilitzare
     <!-- ${company_name} is a placeholder for the name of the company that operates the app, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="send_to_support">Enviar a Suport de ${company_name}</string>
     <string name="menu_legal">Legal</string>
-    <string name="tooltip_work_hint">Aquest contacte utilitza Threema Work.</string>
+    <string name="tooltip_work_hint">Aquest contacte utilitza Treslibre.</string>
     <string name="video_camera_on">Càmera de vídeo activada</string>
     <string name="video_camera_off">Càmera de vídeo desactivada</string>
     <string name="enable_picture_in_picture">Iniciar el mode imatge sobre imatge</string>
@@ -1093,7 +1093,7 @@ donar només el vostre nom o un pseudònim. Si no definiu un sobrenom utilitzare
     <string name="biometrics_not_enrolled">No hi ha biometria registrada al sistema.</string>
     <string name="biometrics_not_avilable">El sistema no té biometria disponible.</string>
     <string name="biometrics_no_permission">Falta el permís per accedir a les dades biomètriques o el maquinari.</string>
-    <string name="verification_settings_desc">Els punts indiquen el nivell de verificació d\'un contacte.</string>
+    <string name="verification_settings_desc">Les barres indiquen el nivell de verificació d\'un contacte.</string>
     <string name="verification_levels_title">Nivells de verificació</string>
     <string name="work_verification_levels_title">Contactes de la vostra organització</string>
     <string name="external_verification_levels_title">Altres contactes</string>

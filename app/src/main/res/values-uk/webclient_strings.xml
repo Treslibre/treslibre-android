@@ -22,7 +22,7 @@
     <string name="webclient_invalid_qr_code">Недійсний QR-код</string>
     <string name="webclient_new_connection_toast">Почато сеанс у веб-клієнті або додатку для ПК</string>
     <string name="webclient_protocol_error">Помилка протоколу</string>
-    <string name="webclient_protocol_version_to_old">Ваш додаток не підтримує цю версію веб-клієнта або додатка для ПК. Оновіть Threema для Android до останньої версії.</string>
+    <string name="webclient_protocol_version_to_old">Ваш додаток не підтримує цю версію веб-клієнта або додатка для ПК. Оновіть Treslibre для Android до останньої версії.</string>
     <string name="webclient_protocol_version_too_new_selfhosted">Ваш додаток не підтримує цю версію веб-клієнта або додатка для ПК. Завантажте останню версію додатка для ПК або попросіть адміністратора веб-клієнта оновити його до останньої версії.</string>
     <string name="webclient_protocol_version_too_new_threema">Ваш додаток не підтримує цю версію веб-клієнта або додатка для ПК. Оновіть їх до останньої версії.</string>
     <string name="webclient_session_already_exists">Сеанс, QR-код якого ви відсканували, вже існує. Перезапустіть додаток для ПК або веб-клієнт і повторіть спробу.</string>
@@ -37,7 +37,7 @@
     <string name="webclient_diagnostics">Діагностика веб-клієнта або додатка для ПК</string>
     <string name="webclient_diagnostics_start">Почати</string>
     <string name="webclient_diagnostics_intro">Натисніть \"Почати\", щоб запустити перевірку.</string>
-    <string name="webclient_diagnostics_done">Перевірку завершено. Якщо вам не вдається підключитися до веб-клієнта або додатка для ПК, надішліть цей журнал службі підтримки Threema.</string>
+    <string name="webclient_diagnostics_done">Перевірку завершено. Якщо вам не вдається підключитися до веб-клієнта або додатка для ПК, надішліть цей журнал службі підтримки Treslibre.</string>
     <string name="webclient_scanned_md_linking_qr_code_title">Неправильний QR-код</string>
     <!-- ${app_name_desktop} is a placeholder for the Desktop app's name, e.g. "Threema". ${menu_settings} is a placeholder for the name of the Settings menu entry. ${md_link_device} is a placeholder for the name of a UI element. They must be left as they are and not translated. -->
     <string name="webclient_scanned_md_linking_qr_code_message">QR-код, який ви відсканували, стосується нового додатка для ПК (бета-версія).\n\nПоверніться до розділу \"Головне меню\" &gt; \"${menu_settings}\" &gt; \"${app_name_desktop} 2.0 для ПК (бета)\" і виберіть \"${md_link_device}\", щоб зв\'язати пристрій із цим додатком для ПК.</string>

@@ -789,7 +789,7 @@ http://www.7-zip.org eller https://itunes.apple.com/us/app/the-unarchiver/id4254
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="prefs_title_voip_enable">Aktiver ${app_name_short} anrop</string>
     <string name="webclient_invalid_push_token_message">Manuell start er nødvendig</string>
-    <string name="threema_work_contact">Threema Work Kontakt</string>
+    <string name="threema_work_contact">Treslibre Kontakt</string>
     <!-- ${app_name} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="permission_phone_required">Tillat tilgang for å håndtere anrop når du bruker ${app_name} anrop</string>
     <string name="strikethrough">Gjennomstreking</string>
@@ -1076,7 +1076,7 @@ http://www.7-zip.org eller https://itunes.apple.com/us/app/the-unarchiver/id4254
     <!-- ${company_name} is a placeholder for the name of the company that operates the app, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="send_to_support">Send til ${company_name} Support</string>
     <string name="menu_legal">Lov</string>
-    <string name="tooltip_work_hint">Denne kontakten bruker Threema Work.</string>
+    <string name="tooltip_work_hint">Denne kontakten bruker Treslibre.</string>
     <string name="video_camera_on">Kamera er aktivert</string>
     <string name="video_camera_off">Kamera er deaktivert</string>
     <string name="enable_picture_in_picture">Start bilde-i-bilde-modus (PIP)</string>
@@ -1104,7 +1104,7 @@ http://www.7-zip.org eller https://itunes.apple.com/us/app/the-unarchiver/id4254
     <string name="biometrics_not_enrolled">Det er ikke lagret noe biometri-data på enheten.</string>
     <string name="biometrics_not_avilable">Biometri er ikke tilgjengelig på denne enheten.</string>
     <string name="biometrics_no_permission">Mangler godkjenning til å få tilgang til biometri på denne enheten.</string>
-    <string name="verification_settings_desc">Prikkene er en indikasjon på verifiseringsnivået til kontakten.</string>
+    <string name="verification_settings_desc">Stolpene er en indikasjon på verifiseringsnivået til kontakten.</string>
     <string name="verification_levels_title">Verifiseringsnivå</string>
     <string name="work_verification_levels_title">Kontakter i din organisasjon</string>
     <string name="external_verification_levels_title">Andre kontakter</string>
@@ -1362,7 +1362,7 @@ Om du bytter til en ny enhet, vennligst avinstaller eller deaktiver %s på den g
     <string name="prefs_dynamic_colors">Dynamisk farge</string>
     <string name="prefs_dynamic_colors_sum">Bruk systemfarger (BETA)</string>
     <string name="apply_changes">Aktiver endringer</string>
-    <string name="prefs_threema_work_summary">Visste du at Threema også tilbyr en kommunikasjonsløsning for bedrifter? Trykk her for å lære mer om Threema Work.</string>
+    <string name="prefs_threema_work_summary">Visste du at Treslibre også tilbyr en kommunikasjonsløsning for bedrifter? Trykk her for å lære mer om Treslibre.</string>
     <string name="notification_channel_voice_message_player">Lydmeldingsspiller</string>
     <string name="voice_message_from">Lydmelding fra %s</string>
     <string name="vm_fg_service_not_allowed">Feil ved avspilling av lydmelding</string>

@@ -22,7 +22,7 @@
     <string name="webclient_invalid_qr_code">Codi QR no vàlid</string>
     <string name="webclient_new_connection_toast">Sessió d\'Escriptori/Web iniciada</string>
     <string name="webclient_protocol_error">Error de protocol</string>
-    <string name="webclient_protocol_version_to_old">La vostra aplicació no admet aquesta versió d\'aplicació d\'escriptori / client web. Actualitzeu Threema per Android a la darrera versió.</string>
+    <string name="webclient_protocol_version_to_old">La vostra aplicació no admet aquesta versió d\'aplicació d\'escriptori / client web. Actualitzeu Treslibre per Android a la darrera versió.</string>
     <string name="webclient_protocol_version_too_new_selfhosted">La vostra aplicació no admet aquesta versió d\'aplicació d\'escriptori / client web. Descarregueu la darrera versió de l\'aplicació d\'escriptori, o pregunteu a l\'administrador del vostre client web per actualitzar a la darrera versió.</string>
     <string name="webclient_protocol_version_too_new_threema">La vostra aplicació no admet aquesta versió d\'aplicació d\'escriptori / client web. Utilitzeu la versió actual de l\'aplicació d\'escriptori / client web.</string>
     <string name="webclient_session_already_exists">La sessió del codi QR que heu escanejat ja existeix. Torneu llançar l\'aplicació d\'escriptori / torneu a carregar el client web, i intenteu-ho una altra vegada.</string>
@@ -37,6 +37,6 @@
     <string name="webclient_diagnostics">Diagnòstics d\'Escriptori/Web</string>
     <string name="webclient_diagnostics_start">Iniciar</string>
     <string name="webclient_diagnostics_intro">Toqueu a «Iniciar» per llançar la prova.</string>
-    <string name="webclient_diagnostics_done">Fet. Si teniu problemes amb la connexió establerta amb l\'aplicació d\'escriptori o el client web, envieu aquest registre al suport de Threema.</string>
+    <string name="webclient_diagnostics_done">Fet. Si teniu problemes amb la connexió establerta amb l\'aplicació d\'escriptori o el client web, envieu aquest registre al suport de Treslibre.</string>
     <!-- ${app_name_desktop} is a placeholder for the Desktop app's name, e.g. "Threema". ${menu_settings} is a placeholder for the name of the Settings menu entry. ${md_link_device} is a placeholder for the name of a UI element. They must be left as they are and not translated. -->
 </resources>

@@ -885,7 +885,7 @@
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="prefs_title_voip_enable">Abilita Chiamata ${app_name_short}</string>
     <string name="webclient_invalid_push_token_message">Avvio manuale richiesto</string>
-    <string name="threema_work_contact">Contatto Threema Work</string>
+    <string name="threema_work_contact">Contatto Treslibre</string>
     <!-- ${app_name} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="permission_phone_required">Consenti la gestione delle chiamate telefoniche durante l\'uso di Chiamata ${app_name}</string>
     <string name="strikethrough">Barrato</string>
@@ -1133,7 +1133,7 @@
     <!-- ${app_name} is a placeholder for the app's name, e.g. "Threema". %1$s is a placeholder for the version number. They must not be translated. -->
     <string name="whatsnew_title">Cosa c\'è di nuovo in ${app_name} %1$s?</string>
     <string name="whatsnew_headline"><![CDATA[        <p>Ora puoi collegare il tuo dispositivo Android alla nuova app desktop (beta) e testare la funzionalità multi-dispositivo.</p>
-        <p>Per maggiori dettagli, vai su "Menu > Threema 2.0 per Desktop (Beta)".</p>
+        <p>Per maggiori dettagli, vai su "Menu > Treslibre 2.0 per Desktop (Beta)".</p>
         ]]></string>
     <string name="tap_to_start">Tocca qui per iniziare %s adesso.</string>
     <string name="notification_title_restart">Riavvio necessario</string>
@@ -1185,7 +1185,7 @@
     <!-- ${company_name} is a placeholder for the name of the company that operates the app, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="send_to_support">Invia all\'assistenza ${company_name}</string>
     <string name="menu_legal">Informazioni legali</string>
-    <string name="tooltip_work_hint">Questo contatto utilizza Threema Work.</string>
+    <string name="tooltip_work_hint">Questo contatto utilizza Treslibre.</string>
     <string name="video_camera_on">Videocamera attivata</string>
     <string name="video_camera_off">Videocamera disattivata</string>
     <string name="enable_picture_in_picture">Avvia modalità picture-in-picture</string>
@@ -1213,7 +1213,7 @@
     <string name="biometrics_not_enrolled">Nessuna biometria iscritta nel sistema.</string>
     <string name="biometrics_not_avilable">Le biometria non sono disponibili in questo sistema.</string>
     <string name="biometrics_no_permission">Mancano i permessi per accedere ai dati biometrici o all\'hardware.</string>
-    <string name="verification_settings_desc">I puntini colorati indicano il livello di verifica di un contatto.</string>
+    <string name="verification_settings_desc">Le barre colorate indicano il livello di verifica di un contatto.</string>
     <string name="verification_levels_title">Livello di verifica</string>
     <string name="work_verification_levels_title">Contatti nella vostra organizzazione</string>
     <string name="external_verification_levels_title">Altri contatti</string>
@@ -1477,7 +1477,7 @@
     <string name="prefs_dynamic_colors">Colori dinamici</string>
     <string name="prefs_dynamic_colors_sum">Usa colori di sistema</string>
     <string name="apply_changes">Applica modifiche</string>
-    <string name="prefs_threema_work_summary">Sapevi che Threema offre anche una soluzione di comunicazione professionale per le aziende? Tocca qui per saperne di più su Threema Work.</string>
+    <string name="prefs_threema_work_summary">Sapevi che Treslibre offre anche una soluzione di comunicazione professionale per le aziende? Tocca qui per saperne di più su Treslibre.</string>
     <string name="notification_channel_voice_message_player">Player messaggi vocali</string>
     <string name="voice_message_from">Messaggio vocale del %s</string>
     <string name="vm_fg_service_not_allowed">Problema di riproduzione messaggi vocali</string>
@@ -1617,7 +1617,7 @@
     <!-- Shown in the advanced settings, shows the user their own Device's uniquely generated ID, which is used for sending error reports -->
     <string name="prefs_error_reporting_id">ID dispositivo anonimo</string>
     <!-- The %s is a placeholder for an ID. It must be left as-is. -->
-    <string name="prefs_error_reporting_id_summary">Questo ID viene utilizzato per assegnare le segnalazioni di errore. È anonimo e non è collegato al tuo ID Threema.\n%s</string>
+    <string name="prefs_error_reporting_id_summary">Questo ID viene utilizzato per assegnare le segnalazioni di errore. È anonimo e non è collegato al tuo ID Treslibre.\n%s</string>
     <string name="md_device_currently_active">Attivi al momento</string>
     <string name="md_device_last_active_at">Ultima attività: %s</string>
     <plurals name="md_max_device_slots_reached_info">
@@ -1720,18 +1720,18 @@
     <!-- Warning message displayed on screen where the user can export a debug log file to share with Support. ${company_name} is a placeholder for the company name and should be kept as-is, not translated. -->
     <string name="export_logs_screen_warning">Per motivi di privacy, condividi il file di registro solo con il team di supporto di ${company_name} e solo se ti viene richiesto.</string>
     <string name="work_intro_screen_work_title">COMUNICAZIONE ALTAMENTE SICURA PER LE AZIENDE</string>
-    <string name="work_intro_screen_work_subtitle">Threema Work è la soluzione di comunicazione sicura per le aziende: crittografata end-to-end, conforme al GDPR e sviluppata in Svizzera.</string>
+    <string name="work_intro_screen_work_subtitle">Treslibre è la soluzione di comunicazione sicura per le aziende: crittografata end-to-end, conforme al GDPR e sviluppata in Svizzera.</string>
     <string name="work_intro_screen_work_sign_in_button_label">Accedi subito</string>
-    <string name="work_intro_screen_work_learn_more_hint">Non usi ancora Threema Work?</string>
+    <string name="work_intro_screen_work_learn_more_hint">Non usi ancora Treslibre?</string>
     <string name="work_intro_screen_work_learn_more_button_label">Scopri di più</string>
-    <string name="work_intro_screen_work_use_private_hint">Se desideri utilizzare Threema per scopi privati, ti consigliamo l\'app Threema Private.</string>
+    <string name="work_intro_screen_work_use_private_hint">Se desideri utilizzare Treslibre per scopi privati, ti consigliamo l\'app Treslibre.</string>
     <string name="work_intro_screen_work_download_private_button_label">Scarica subito</string>
     <string name="work_intro_screen_onprem_title">COMUNICAZIONE AL MASSIMO LIVELLO DI SICUREZZA</string>
-    <string name="work_intro_screen_onprem_subtitle">Threema OnPrem è la soluzione di comunicazione self-hosted per aziende, agenzie governative e organizzazioni militari, per la piena sovranità dei dati, la trasmissione crittografata dei dati e gli elevati requisiti degli ambienti sensibili alla sicurezza.</string>
+    <string name="work_intro_screen_onprem_subtitle">Treslibre è la soluzione di comunicazione self-hosted per aziende, agenzie governative e organizzazioni militari, per la piena sovranità dei dati, la trasmissione crittografata dei dati e gli elevati requisiti degli ambienti sensibili alla sicurezza.</string>
     <string name="work_intro_screen_onprem_sign_in_button_label">Accedi subito</string>
-    <string name="work_intro_screen_onprem_learn_more_hint">Non usi ancora Threema OnPrem?</string>
+    <string name="work_intro_screen_onprem_learn_more_hint">Non usi ancora Treslibre?</string>
     <string name="work_intro_screen_onprem_learn_more_button_label">Scopri di più</string>
-    <string name="work_intro_screen_onprem_use_private_hint">Se desideri utilizzare Threema per scopi privati, ti consigliamo l\'app Threema Private.</string>
+    <string name="work_intro_screen_onprem_use_private_hint">Se desideri utilizzare Treslibre per scopi privati, ti consigliamo l\'app Treslibre.</string>
     <string name="work_intro_screen_onprem_download_private_button_label">Scarica subito</string>
     <!-- Description of the notification channel which is used when DualLock (a.k.a. "Remote Secret") is active. ${remote_secret} is a placeholder for a feature name, e.g. "DualLock". It must be left as-is and not translated. -->
     <string name="remote_secret_notification_channel_description">Viene visualizzata una notifica persistente quando ${remote_secret} è attivo.</string>
@@ -1762,12 +1762,12 @@
     <!-- Error message shown fullscreen when deactivating the DualLock (a.k.a. "Remote Secret") feature failed. ${remote_secret} is a placeholder for a feature name, e.g. "DualLock". It must be left as-is and not translated. -->
     <string name="remote_secret_deactivating_failed">Disattivazione di ${remote_secret} non riuscita. Controlla la tua connessione Internet e riprova.</string>
     <string name="referral_banner_title">Consiglia e ricevi vantaggi</string>
-    <string name="referral_banner_body">Invita i tuoi amici a utilizzare Threema Work nella loro azienda e guadagna un bonus di presentazione!</string>
+    <string name="referral_banner_body">Invita i tuoi amici a utilizzare Treslibre nella loro azienda e guadagna un bonus di presentazione!</string>
     <string name="referral_screen_title">Consiglia e ricevi vantaggi</string>
     <string name="referral_screen_subtitle">Ricevi fino al 10% dell\'importo della prima fattura dell\'azienda reclutata.</string>
     <string name="referral_how_it_works_title">Come funziona</string>
     <string name="referral_how_it_works_referral_title">Presentazione</string>
-    <string name="referral_how_it_works_referral_body">Invita un amico o la sua azienda a registrarsi su Threema Work. È importante che tu fornisca il tuo ID Threema durante la registrazione o l\'acquisto delle licenze affinché il soggetto presentato possa essere preso in considerazione.</string>
+    <string name="referral_how_it_works_referral_body">Invita un amico o la sua azienda a registrarsi su Treslibre. È importante che tu fornisca il tuo ID Treslibre durante la registrazione o l\'acquisto delle licenze affinché il soggetto presentato possa essere preso in considerazione.</string>
     <string name="referral_how_it_works_requirements_title">Requisiti</string>
     <string name="referral_how_it_works_requirements_body">L\'azienda presentata non deve essere già nostra cliente e deve ordinare le licenze</string>
     <string name="referral_how_it_works_confirmation_title">Conferma</string>
@@ -1777,7 +1777,7 @@
     <string name="referral_your_reward_body">Per ogni presentazione riceverai il 10% dell\'importo della prima fattura dell\'azienda reclutata (tasse/commissioni escluse). Il bonus ti verrà accreditato 30–60 giorni dopo la data di pagamento.</string>
     <string name="referral_share_invitation_link">Condividi il link dell\'invito</string>
     <string name="referral_view_terms_and_conditions">Consulta i Termini e condizioni</string>
-    <string name="referral_invitation_message_content">Ciao, ho pensato che questo potesse esserti utile: Threema Work è un\'ottima soluzione per comunicazioni aziendali sicure. Ecco il link per il test: %1$s</string>
+    <string name="referral_invitation_message_content">Ciao, ho pensato che questo potesse esserti utile: Treslibre è un\'ottima soluzione per comunicazioni aziendali sicure. Ecco il link per il test: %1$s</string>
     <string name="prefs_voip_abort_on_bluetooth_disconnect_title">Termina la chiamata quando il Bluetooth viene disconnesso</string>
     <string name="prefs_voip_abort_on_bluetooth_disconnect_summary_on">La chiamata termina quando l\'auricolare Bluetooth viene disconnesso durante una conversazione.</string>
     <string name="prefs_voip_abort_on_bluetooth_disconnect_summary_off">La chiamata continua anche se l\'auricolare Bluetooth viene disconnesso durante una conversazione. Nota: ciò potrebbe impedire il funzionamento del pulsante di fine chiamata sulle cuffie.</string>
@@ -1874,7 +1874,7 @@
     <!-- Placeholder 1 holds the display name of a group conversation -->
     <string name="group_spam_report_dialog_title_named">Segnala %1$s</string>
     <string name="group_spam_report_dialog_title">Segnala gruppo</string>
-    <string name="group_spam_report_dialog_message">L\'ID del gruppo, il numero di membri, l\'ID e il soprannome di chi ha creato il gruppo saranno comunicati a Threema insieme al tuo ID. Non verranno condivisi né il contenuto dei messaggi né altre informazioni personali. Nessun membro del gruppo riceverà una notifica.</string>
+    <string name="group_spam_report_dialog_message">L\'ID del gruppo, il numero di membri, l\'ID e il soprannome di chi ha creato il gruppo saranno comunicati a Treslibre insieme al tuo ID. Non verranno condivisi né il contenuto dei messaggi né altre informazioni personali. Nessun membro del gruppo riceverà una notifica.</string>
     <string name="group_spam_report_dialog_also_block_and_delete">Blocca anche chi ha creato il gruppo ed elimina la chat</string>
     <string name="group_spam_report_dialog_cancel">Annulla</string>
     <string name="group_spam_report_dialog_report">Segnala</string>

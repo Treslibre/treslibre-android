@@ -22,8 +22,8 @@
     <string name="webclient_invalid_qr_code">Ungültige QR-Code</string>
     <string name="webclient_new_connection_toast">Desktop-/Web-Sitzig gstartet</string>
     <string name="webclient_protocol_error">Protokoll-Fehler</string>
-    <string name="webclient_protocol_version_to_old">D’Desktop-App / de Web-Client isch nöd kompatibel mit dere Android-App. Bitte aktualisiered Sie Threema für Android uf die neuscht Version.</string>
-    <string name="webclient_protocol_version_too_new_selfhosted">Ihri App unterstützt die Version vode Desktop-App / vom Web-Client nöd. Laded Sie die neust Version vode Desktop-App abe, oder bitted Sie de Administrator vo Ihrere Threema-Web-Instanz, uf die neuscht Version vo Threema Web z’aktualisiere.</string>
+    <string name="webclient_protocol_version_to_old">D’Desktop-App / de Web-Client isch nöd kompatibel mit dere Android-App. Bitte aktualisiered Sie Treslibre für Android uf die neuscht Version.</string>
+    <string name="webclient_protocol_version_too_new_selfhosted">Ihri App unterstützt die Version vode Desktop-App / vom Web-Client nöd. Laded Sie die neust Version vode Desktop-App abe, oder bitted Sie de Administrator vo Ihrere Treslibre-Web-Instanz, uf die neuscht Version vo Treslibre Web z’aktualisiere.</string>
     <string name="webclient_protocol_version_too_new_threema">Ihri App unterstützt die Version vode Desktop-App / vom Web-Client nöd. Bitte nutzed Sie e neueri Version vode Desktop-App / vom Web-Client.</string>
     <string name="webclient_session_already_exists">Es existiert scho e Sitzig für de QR-Code. Bitte started Sie Ihri Desktop-App / de Web-Client neu.</string>
     <string name="webclient_really_start_webclient_by_payload_body">Wänd Sie d’Sitzig jetzt starte?</string>
@@ -37,7 +37,7 @@
     <string name="webclient_diagnostics">Desktop-/Web-Diagnose</string>
     <string name="webclient_diagnostics_start">Start</string>
     <string name="webclient_diagnostics_intro">Tipped Sie ufde «Start»-Button, zum de Test z’starte.</string>
-    <string name="webclient_diagnostics_done">Beendet. Falls Problem bim Ufbau vode Desktop-/Web-Verbindig ufträtted, schicked Sie das Log bitte an Threema-Support.</string>
+    <string name="webclient_diagnostics_done">Beendet. Falls Problem bim Ufbau vode Desktop-/Web-Verbindig ufträtted, schicked Sie das Log bitte an Treslibre-Support.</string>
     <string name="webclient_scanned_md_linking_qr_code_title">Falsche QR-Code</string>
     <!-- ${app_name_desktop} is a placeholder for the Desktop app's name, e.g. "Threema". ${menu_settings} is a placeholder for the name of the Settings menu entry. ${md_link_device} is a placeholder for the name of a UI element. They must be left as they are and not translated. -->
     <string name="webclient_scanned_md_linking_qr_code_message">De QR-Code, wo Sie gscannt händ, ghört zude neue Desktop-App (Beta).\n\nGönd Sie zrugg zum «Hauptmenü &gt; ${menu_settings} &gt; ${app_name_desktop} 2.0 für Desktop (Beta)» und tipped Sie uf «${md_link_device}», zum s’Handy mitde Desktop-App z’verchnüpfe.</string>

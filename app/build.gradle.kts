@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 import com.android.build.gradle.internal.api.ApkVariantOutputImpl
 import com.android.build.gradle.internal.tasks.factory.dependsOn
 import config.BuildFeatureFlags
@@ -24,14 +25,6 @@ plugins {
     alias(libs.plugins.koin.compiler)
 }
 
-// only apply the plugin if we are dealing with an AppGallery build
-if (gradle.startParameter.taskRequests.toString().contains("Hms")) {
-    logger.info("enabling hms plugin")
-    apply {
-        plugin("com.huawei.agconnect")
-    }
-}
-
 /**
  * Only use the scheme "<major>.<minor>.<patch>" for the appVersion
  */
@@ -51,11 +44,32 @@ val defaultVersionCode = 1240
  */
 val keystores: Map<String, KeystoreConfig?> = mapOf(
     "debug" to findKeystore(projectDir, "debug"),
-    "release" to findKeystore(projectDir, "threema"),
-    "hms_release" to findKeystore(projectDir, "threema_hms"),
-    "onprem_release" to findKeystore(projectDir, "onprem"),
-    "blue_release" to findKeystore(projectDir, "threema_blue"),
+    "release" to findKeystore(projectDir, "treslibre"),
 )
+
+val requestedCargoTargets = (findProperty("cargoTargets") as String?)
+    ?.split(",")
+    ?.map { it.trim() }
+    ?.filter { it.isNotEmpty() }
+    ?: listOf("arm64", "armeabi-v7a", "x86", "x86_64").let {
+        listOf("armeabi-v7a", "x86", "arm64-v8a", "x86_64")
+    }
+
+val cargoTargetList = (findProperty("cargoTargets") as String?)
+    ?.split(",")
+    ?.map { it.trim() }
+    ?.filter { it.isNotEmpty() }
+    ?: listOf("x86_64", "arm64", "arm", "x86")
+
+val enabledAbiSplits = cargoTargetList.mapNotNull { target ->
+    when (target) {
+        "arm64" -> "arm64-v8a"
+        "arm" -> "armeabi-v7a"
+        "x86" -> "x86"
+        "x86_64" -> "x86_64"
+        else -> null
+    }
+}.toTypedArray()
 
 android {
     // NOTE: When adjusting compileSdk, buildToolsVersion or ndkVersion, make sure to also adjust
@@ -73,13 +87,16 @@ android {
         minSdk = 24
         targetSdk = 36
         vectorDrawables.useSupportLibrary = true
-        applicationId = "ch.threema.app"
+        applicationId = "org.treslibre.app"
         testApplicationId = "$applicationId.test"
         versionCode = defaultVersionCode
         versionName = "$appVersion$betaSuffix"
 
         setProductNames(
-            appName = "Threema",
+            appName = "Treslibre",
+            shortAppName = "Treslibre",
+            companyName = "Treslibre Project",
+            appNameDesktop = "Treslibre",
         )
 
         stringBuildConfigField("BASE_VERSION_NAME", appVersion)
@@ -92,47 +109,46 @@ android {
         stringResValue("call_mime_type", "vnd.android.cursor.item/vnd.$applicationId.call")
 
         intBuildConfigField("MAX_GROUP_SIZE", 256)
-        stringBuildConfigField("CHAT_SERVER_PREFIX", "g-")
-        stringBuildConfigField("CHAT_SERVER_IPV6_PREFIX", "ds.g-")
-        stringBuildConfigField("CHAT_SERVER_SUFFIX", ".0.threema.ch")
+        stringBuildConfigField("CHAT_SERVER_PREFIX", "")
+        stringBuildConfigField("CHAT_SERVER_IPV6_PREFIX", "")
+        stringBuildConfigField("CHAT_SERVER_SUFFIX", null)
         intArrayBuildConfigField("CHAT_SERVER_PORTS", intArrayOf(5222, 443))
-        stringBuildConfigField("MEDIA_PATH", "Threema")
-        booleanBuildConfigField("CHAT_SERVER_GROUPS", true)
+        stringBuildConfigField("MEDIA_PATH", "Treslibre")
+        booleanBuildConfigField("CHAT_SERVER_GROUPS", false)
         booleanBuildConfigField("DISABLE_CERT_PINNING", false)
         booleanBuildConfigField("VIDEO_CALLS_ENABLED", true)
-        // This public key is pinned for the chat server protocol.
-        byteArrayBuildConfigField("SERVER_PUBKEY", PublicKeys.prodServer)
-        byteArrayBuildConfigField("SERVER_PUBKEY_ALT", PublicKeys.prodServerAlt)
+        byteArrayBuildConfigField("SERVER_PUBKEY", null)
+        byteArrayBuildConfigField("SERVER_PUBKEY_ALT", null)
         stringBuildConfigField("GIT_HASH", getGitHash())
         stringBuildConfigField("GIT_BRANCH", getGitBranch())
-        stringBuildConfigField("DIRECTORY_SERVER_URL", "https://apip.threema.ch/")
-        stringBuildConfigField("DIRECTORY_SERVER_IPV6_URL", "https://ds-apip.threema.ch/")
+        stringBuildConfigField("DIRECTORY_SERVER_URL", null)
+        stringBuildConfigField("DIRECTORY_SERVER_IPV6_URL", null)
         stringBuildConfigField("WORK_SERVER_URL_LEGACY", null)
         stringBuildConfigField("WORK_SERVER_IPV6_URL_LEGACY", null)
         stringBuildConfigField("WORK_SERVER_URL", null)
-        stringBuildConfigField("MEDIATOR_SERVER_URL", "wss://mediator-{deviceGroupIdPrefix4}.threema.ch/{deviceGroupIdPrefix8}/")
+        stringBuildConfigField("MEDIATOR_SERVER_URL", null)
 
         // Base blob url used for "download" and "done" calls
-        stringBuildConfigField("BLOB_SERVER_URL", "https://blobp-{blobIdPrefix}.threema.ch")
-        stringBuildConfigField("BLOB_SERVER_IPV6_URL", "https://ds-blobp-{blobIdPrefix}.threema.ch")
+        stringBuildConfigField("BLOB_SERVER_URL", null)
+        stringBuildConfigField("BLOB_SERVER_IPV6_URL", null)
 
         // Specific blob url used for "upload" calls
-        stringBuildConfigField("BLOB_SERVER_URL_UPLOAD", "https://blobp-upload.threema.ch/upload")
-        stringBuildConfigField("BLOB_SERVER_IPV6_URL_UPLOAD", "https://ds-blobp-upload.threema.ch/upload")
+        stringBuildConfigField("BLOB_SERVER_URL_UPLOAD", null)
+        stringBuildConfigField("BLOB_SERVER_IPV6_URL_UPLOAD", null)
 
         // Base blob mirror url used for "download", "upload", "done"
-        stringBuildConfigField("BLOB_MIRROR_SERVER_URL", "https://blob-mirror-{deviceGroupIdPrefix4}.threema.ch/{deviceGroupIdPrefix8}")
+        stringBuildConfigField("BLOB_MIRROR_SERVER_URL", null)
 
-        stringBuildConfigField("AVATAR_FETCH_URL", "https://avatar.threema.ch/")
-        stringBuildConfigField("SAFE_SERVER_URL", "https://safe-{backupIdPrefix8}.threema.ch/")
-        stringBuildConfigField("WEB_SERVER_URL", "https://web.threema.ch/")
-        stringBuildConfigField("APP_RATING_URL", "https://threema.com/app-rating/android/{rating}")
-        stringBuildConfigField("MAP_STYLES_URL", "https://map.threema.ch/styles/threema/style.json")
-        stringBuildConfigField("MAP_POI_AROUND_URL", "https://poi.threema.ch/around/{latitude}/{longitude}/{radius}/")
-        stringBuildConfigField("MAP_POI_NAMES_URL", "https://poi.threema.ch/names/{latitude}/{longitude}/{query}/")
-        byteArrayBuildConfigField("THREEMA_PUSH_PUBLIC_KEY", PublicKeys.threemaPush)
+        stringBuildConfigField("AVATAR_FETCH_URL", null)
+        stringBuildConfigField("SAFE_SERVER_URL", null)
+        stringBuildConfigField("WEB_SERVER_URL", null)
+        stringBuildConfigField("APP_RATING_URL", null)
+        stringBuildConfigField("MAP_STYLES_URL", null)
+        stringBuildConfigField("MAP_POI_AROUND_URL", null)
+        stringBuildConfigField("MAP_POI_NAMES_URL", null)
+        byteArrayBuildConfigField("THREEMA_PUSH_PUBLIC_KEY", null)
         stringBuildConfigField("ONPREM_ID_PREFIX", "O")
-        stringBuildConfigField("LOG_TAG", "3ma")
+        stringBuildConfigField("LOG_TAG", "treslibre")
 
         stringArrayBuildConfigField("ONPREM_CONFIG_TRUSTED_PUBLIC_KEYS", emptyArray())
         stringBuildConfigField("ONPREM_APP_IDENTIFIER", null)
@@ -143,21 +159,21 @@ android {
         booleanBuildConfigField("LOG_TOMBSTONES_FOR_NATIVE_CRASHES", BuildFeatureFlags["log_tombstones"] ?: false)
 
         // config fields for action URLs / deep links
-        stringBuildConfigField("uriScheme", "threema")
-        stringBuildConfigField("actionUrl", "go.threema.ch")
-        stringBuildConfigField("contactActionUrl", "threema.id")
+        stringBuildConfigField("uriScheme", "treslibre")
+        stringBuildConfigField("actionUrl", "")
+        stringBuildConfigField("contactActionUrl", "")
 
         // The OPPF url must be null in the default config. Do not change this.
         stringBuildConfigField("PRESET_OPPF_URL", null)
 
         with(manifestPlaceholders) {
-            put("uriScheme", "threema")
-            put("contactActionUrl", "threema.id")
-            put("actionUrl", "go.threema.ch")
+            put("uriScheme", "treslibre")
+            put("contactActionUrl", "treslibre.invalid")
+            put("actionUrl", "treslibre.invalid")
             put("callMimeType", "vnd.android.cursor.item/vnd.$applicationId.call")
         }
 
-        testInstrumentationRunner = "$applicationId.ThreemaTestRunner"
+        testInstrumentationRunner = "ch.threema.app.ThreemaTestRunner"
 
         // Only include language resources for those languages
         androidResources.localeFilters.addAll(
@@ -195,7 +211,7 @@ android {
             if (project.hasProperty("noAbiSplits")) {
                 isUniversalApk = true
             } else {
-                include("armeabi-v7a", "x86", "arm64-v8a", "x86_64")
+                include(*enabledAbiSplits)
                 isUniversalApk = project.hasProperty("buildUniversalApk")
             }
         }
@@ -221,142 +237,15 @@ android {
     namespace = "ch.threema.app"
     flavorDimensions.add("default")
     productFlavors {
-        create("none") {
-            setSentryConfig(null)
-        }
-        create("store_google") {
-            setSentryConfig(SentryConfig.PRODUCTION)
-            proguardFile("proguard-production.txt")
-        }
-        create("store_threema") {
-            versionName = "${appVersion}s$betaSuffix"
-            stringResValue("shop_download_filename", "Threema-update.apk")
-            setSentryConfig(SentryConfig.PRODUCTION)
-            proguardFile("proguard-production.txt")
-        }
-        create("store_google_work") {
-            versionName = "${appVersion}k$betaSuffix"
-            applicationId = "ch.threema.app.work"
-            testApplicationId = "$applicationId.test"
-            setProductNames(appName = "Threema Work")
-            stringResValue("package_name", applicationId!!)
-            stringResValue("contacts_mime_type", "vnd.android.cursor.item/vnd.$applicationId.profile")
-            stringResValue("call_mime_type", "vnd.android.cursor.item/vnd.$applicationId.call")
-            stringBuildConfigField("CHAT_SERVER_PREFIX", "w-")
-            stringBuildConfigField("CHAT_SERVER_IPV6_PREFIX", "ds.w-")
-            stringBuildConfigField("MEDIA_PATH", "ThreemaWork")
-            stringBuildConfigField("WORK_SERVER_URL_LEGACY", "https://apip-work.threema.ch/")
-            stringBuildConfigField("WORK_SERVER_IPV6_URL_LEGACY", "https://ds-apip-work.threema.ch/")
-            stringBuildConfigField("WORK_SERVER_URL", "https://work.threema.ch/")
-            stringBuildConfigField("APP_RATING_URL", "https://threema.com/app-rating/android-work/{rating}")
-            stringBuildConfigField("LOG_TAG", "3mawrk")
-            booleanBuildConfigField("AVAILABILITY_STATUS_ENABLED", true)
-
-            // config fields for action URLs / deep links
-            stringBuildConfigField("uriScheme", "threemawork")
-            stringBuildConfigField("actionUrl", "work.threema.ch")
-
-            stringBuildConfigField("SCREENSHOT_TEST_WORK_USERNAME", LocalProperties.getString("screenshotTestWorkUsername"))
-            stringBuildConfigField("SCREENSHOT_TEST_WORK_PASSWORD", LocalProperties.getString("screenshotTestWorkPassword"))
-
-            with(manifestPlaceholders) {
-                put("uriScheme", "threemawork")
-                put("actionUrl", "work.threema.ch")
-                put("callMimeType", "vnd.android.cursor.item/vnd.$applicationId.call")
-            }
-
-            setSentryConfig(SentryConfig.PRODUCTION)
-            proguardFile("proguard-production.txt")
-        }
-        create("green") {
-            applicationId = "ch.threema.app.green"
-            testApplicationId = "$applicationId.test"
-            setProductNames(appName = "Threema Green")
-            stringResValue("package_name", applicationId!!)
-            stringResValue("contacts_mime_type", "vnd.android.cursor.item/vnd.$applicationId.profile")
-            stringResValue("call_mime_type", "vnd.android.cursor.item/vnd.$applicationId.call")
-            stringBuildConfigField("MEDIA_PATH", "ThreemaGreen")
-            stringBuildConfigField("CHAT_SERVER_SUFFIX", ".0.test.threema.ch")
-            // This public key is pinned for the chat server protocol.
-            byteArrayBuildConfigField("SERVER_PUBKEY", PublicKeys.sandboxServer)
-            byteArrayBuildConfigField("SERVER_PUBKEY_ALT", PublicKeys.sandboxServer)
-            stringBuildConfigField("DIRECTORY_SERVER_URL", "https://apip.test.threema.ch/")
-            stringBuildConfigField("DIRECTORY_SERVER_IPV6_URL", "https://ds-apip.test.threema.ch/")
-            stringBuildConfigField("MEDIATOR_SERVER_URL", "wss://mediator-{deviceGroupIdPrefix4}.test.threema.ch/{deviceGroupIdPrefix8}/")
-            stringBuildConfigField("BLOB_SERVER_URL", "https://blobp-{blobIdPrefix}.test.threema.ch")
-            stringBuildConfigField("BLOB_SERVER_IPV6_URL", "https://ds-blobp-{blobIdPrefix}.test.threema.ch")
-            stringBuildConfigField("BLOB_SERVER_URL_UPLOAD", "https://blobp-upload.test.threema.ch/upload")
-            stringBuildConfigField("BLOB_SERVER_IPV6_URL_UPLOAD", "https://ds-blobp-upload.test.threema.ch/upload")
-            stringBuildConfigField("AVATAR_FETCH_URL", "https://avatar.test.threema.ch/")
-            stringBuildConfigField("APP_RATING_URL", "https://test.threema.com/app-rating/android/{rating}")
-            stringBuildConfigField("MAP_STYLES_URL", "https://map.test.threema.ch/styles/threema/style.json")
-            stringBuildConfigField("MAP_POI_AROUND_URL", "https://poi.test.threema.ch/around/{latitude}/{longitude}/{radius}/")
-            stringBuildConfigField("MAP_POI_NAMES_URL", "https://poi.test.threema.ch/names/{latitude}/{longitude}/{query}/")
-            stringBuildConfigField("BLOB_MIRROR_SERVER_URL", "https://blob-mirror-{deviceGroupIdPrefix4}.test.threema.ch/{deviceGroupIdPrefix8}")
-
-            booleanBuildConfigField("CROSS_PLATFORM_BACKUPS_ENABLED", true)
-
-            setSentryConfig(SentryConfig.SANDBOX)
-        }
-        create("sandbox_work") {
-            versionName = "${appVersion}k$betaSuffix"
-            applicationId = "ch.threema.app.sandbox.work"
+        create("treslibre") {
+            versionName = "${appVersion}t$betaSuffix"
+            applicationId = "org.treslibre.app"
             testApplicationId = "$applicationId.test"
             setProductNames(
-                appName = "Threema Sandbox Work",
-                appNameDesktop = "Threema Blue",
-            )
-            stringResValue("package_name", applicationId!!)
-            stringResValue("contacts_mime_type", "vnd.android.cursor.item/vnd.$applicationId.profile")
-            stringResValue("call_mime_type", "vnd.android.cursor.item/vnd.$applicationId.call")
-            stringBuildConfigField("CHAT_SERVER_PREFIX", "w-")
-            stringBuildConfigField("CHAT_SERVER_IPV6_PREFIX", "ds.w-")
-            stringBuildConfigField("CHAT_SERVER_SUFFIX", ".0.test.threema.ch")
-            stringBuildConfigField("MEDIA_PATH", "ThreemaWorkSandbox")
-            // This public key is pinned for the chat server protocol.
-            byteArrayBuildConfigField("SERVER_PUBKEY", PublicKeys.sandboxServer)
-            byteArrayBuildConfigField("SERVER_PUBKEY_ALT", PublicKeys.sandboxServer)
-            stringBuildConfigField("DIRECTORY_SERVER_URL", "https://apip.test.threema.ch/")
-            stringBuildConfigField("DIRECTORY_SERVER_IPV6_URL", "https://ds-apip.test.threema.ch/")
-            stringBuildConfigField("WORK_SERVER_URL_LEGACY", "https://apip-work.test.threema.ch/")
-            stringBuildConfigField("WORK_SERVER_IPV6_URL_LEGACY", "https://ds-apip-work.test.threema.ch/")
-            stringBuildConfigField("WORK_SERVER_URL", "https://work.test.threema.ch/")
-            stringBuildConfigField("MEDIATOR_SERVER_URL", "wss://mediator-{deviceGroupIdPrefix4}.test.threema.ch/{deviceGroupIdPrefix8}/")
-            stringBuildConfigField("BLOB_SERVER_URL", "https://blobp-{blobIdPrefix}.test.threema.ch")
-            stringBuildConfigField("BLOB_SERVER_IPV6_URL", "https://ds-blobp-{blobIdPrefix}.test.threema.ch")
-            stringBuildConfigField("BLOB_SERVER_URL_UPLOAD", "https://blobp-upload.test.threema.ch/upload")
-            stringBuildConfigField("BLOB_SERVER_IPV6_URL_UPLOAD", "https://ds-blobp-upload.test.threema.ch/upload")
-            stringBuildConfigField("AVATAR_FETCH_URL", "https://avatar.test.threema.ch/")
-            stringBuildConfigField("APP_RATING_URL", "https://test.threema.com/app-rating/android-work/{rating}")
-            stringBuildConfigField("MAP_STYLES_URL", "https://map.test.threema.ch/styles/threema/style.json")
-            stringBuildConfigField("MAP_POI_AROUND_URL", "https://poi.test.threema.ch/around/{latitude}/{longitude}/{radius}/")
-            stringBuildConfigField("MAP_POI_NAMES_URL", "https://poi.test.threema.ch/names/{latitude}/{longitude}/{query}/")
-            stringBuildConfigField("LOG_TAG", "3mawrk")
-            stringBuildConfigField("BLOB_MIRROR_SERVER_URL", "https://blob-mirror-{deviceGroupIdPrefix4}.test.threema.ch/{deviceGroupIdPrefix8}")
-
-            // config fields for action URLs / deep links
-            stringBuildConfigField("uriScheme", "threemawork")
-            stringBuildConfigField("actionUrl", "work.test.threema.ch")
-
-            booleanBuildConfigField("AVAILABILITY_STATUS_ENABLED", true)
-
-            stringBuildConfigField("MD_CLIENT_DOWNLOAD_URL", "https://three.ma/mdw")
-
-            with(manifestPlaceholders) {
-                put("uriScheme", "threemawork")
-                put("actionUrl", "work.test.threema.ch")
-            }
-
-            setSentryConfig(SentryConfig.SANDBOX)
-        }
-        create("onprem") {
-            versionName = "${appVersion}o$betaSuffix"
-            applicationId = "ch.threema.app.onprem"
-            testApplicationId = "$applicationId.test"
-            setProductNames(
-                appName = "Threema OnPrem",
-                shortAppName = "Threema",
-                companyName = "Threema",
+                appName = "Treslibre",
+                shortAppName = "Treslibre",
+                companyName = "Treslibre Project",
+                appNameDesktop = "Treslibre",
             )
             stringResValue("package_name", applicationId!!)
             stringResValue("contacts_mime_type", "vnd.android.cursor.item/vnd.$applicationId.profile")
@@ -365,7 +254,7 @@ android {
             stringBuildConfigField("CHAT_SERVER_PREFIX", "")
             stringBuildConfigField("CHAT_SERVER_IPV6_PREFIX", "")
             stringBuildConfigField("CHAT_SERVER_SUFFIX", null)
-            stringBuildConfigField("MEDIA_PATH", "ThreemaOnPrem")
+            stringBuildConfigField("MEDIA_PATH", "Treslibre")
             booleanBuildConfigField("CHAT_SERVER_GROUPS", false)
             byteArrayBuildConfigField("SERVER_PUBKEY", null)
             byteArrayBuildConfigField("SERVER_PUBKEY_ALT", null)
@@ -376,19 +265,17 @@ android {
             stringBuildConfigField("BLOB_SERVER_URL_UPLOAD", null)
             stringBuildConfigField("BLOB_SERVER_IPV6_URL_UPLOAD", null)
             stringBuildConfigField("BLOB_MIRROR_SERVER_URL", null)
-            stringArrayBuildConfigField("ONPREM_CONFIG_TRUSTED_PUBLIC_KEYS", PublicKeys.onPremTrusted)
+            stringArrayBuildConfigField("ONPREM_CONFIG_TRUSTED_PUBLIC_KEYS", emptyArray())
             stringBuildConfigField("ONPREM_APP_IDENTIFIER", null)
-            stringBuildConfigField("LOG_TAG", "3maop")
+            stringBuildConfigField("LOG_TAG", "treslibre")
 
-            // config fields for action URLs / deep links
-            val uriScheme = "threemaonprem"
-            val actionUrl = "onprem.threema.ch"
+            val uriScheme = "treslibre"
+            val actionUrl = "treslibre.invalid"
             stringBuildConfigField("uriScheme", uriScheme)
             stringBuildConfigField("actionUrl", actionUrl)
 
             stringBuildConfigField("PRESET_OPPF_URL", null)
-
-            stringBuildConfigField("MD_CLIENT_DOWNLOAD_URL", "https://three.ma/mdo")
+            stringBuildConfigField("MD_CLIENT_DOWNLOAD_URL", "https://github.com/Treslibre/treslibre-desktop")
 
             stringBuildConfigField("SCREENSHOT_TEST_ONPREM_USERNAME", LocalProperties.getString("screenshotTestOnPremUsername"))
             stringBuildConfigField("SCREENSHOT_TEST_ONPREM_PASSWORD", LocalProperties.getString("screenshotTestOnPremPassword"))
@@ -399,107 +286,6 @@ android {
                 put("actionUrl", actionUrl)
                 put("callMimeType", "vnd.android.cursor.item/vnd.$applicationId.call")
             }
-
-            setSentryConfig(null)
-            proguardFile("proguard-production.txt")
-        }
-        create("blue") {
-            // Essentially like sandbox work, but with a different icon and application id, used for internal testing
-            versionName = "${appVersion}b$betaSuffix"
-            // The app was previously named `red`. The app id remains unchanged to still be able to install updates.
-            applicationId = "ch.threema.app.red"
-            testApplicationId = "ch.threema.app.blue.test"
-            setProductNames(appName = "Threema Blue")
-            stringResValue("package_name", applicationId!!)
-            stringResValue("contacts_mime_type", "vnd.android.cursor.item/vnd.ch.threema.app.blue.profile")
-            stringResValue("call_mime_type", "vnd.android.cursor.item/vnd.ch.threema.app.blue.call")
-
-            stringBuildConfigField("CHAT_SERVER_PREFIX", "w-")
-            stringBuildConfigField("CHAT_SERVER_IPV6_PREFIX", "ds.w-")
-            stringBuildConfigField("CHAT_SERVER_SUFFIX", ".0.test.threema.ch")
-            stringBuildConfigField("MEDIA_PATH", "ThreemaBlue")
-            // This public key is pinned for the chat server protocol.
-            byteArrayBuildConfigField("SERVER_PUBKEY", PublicKeys.sandboxServer)
-            byteArrayBuildConfigField("SERVER_PUBKEY_ALT", PublicKeys.sandboxServer)
-            stringBuildConfigField("DIRECTORY_SERVER_URL", "https://apip.test.threema.ch/")
-            stringBuildConfigField("DIRECTORY_SERVER_IPV6_URL", "https://ds-apip.test.threema.ch/")
-            stringBuildConfigField("WORK_SERVER_URL_LEGACY", "https://apip-work.test.threema.ch/")
-            stringBuildConfigField("WORK_SERVER_IPV6_URL_LEGACY", "https://ds-apip-work.test.threema.ch/")
-            stringBuildConfigField("WORK_SERVER_URL", "https://work.test.threema.ch/")
-            stringBuildConfigField("MEDIATOR_SERVER_URL", "wss://mediator-{deviceGroupIdPrefix4}.test.threema.ch/{deviceGroupIdPrefix8}/")
-            stringBuildConfigField("BLOB_SERVER_URL", "https://blobp-{blobIdPrefix}.test.threema.ch")
-            stringBuildConfigField("BLOB_SERVER_IPV6_URL", "https://ds-blobp-{blobIdPrefix}.test.threema.ch")
-            stringBuildConfigField("BLOB_SERVER_URL_UPLOAD", "https://blobp-upload.test.threema.ch/upload")
-            stringBuildConfigField("BLOB_SERVER_IPV6_URL_UPLOAD", "https://ds-blobp-upload.test.threema.ch/upload")
-            stringBuildConfigField("AVATAR_FETCH_URL", "https://avatar.test.threema.ch/")
-            stringBuildConfigField("APP_RATING_URL", "https://test.threema.com/app-rating/android-work/{rating}")
-            stringBuildConfigField("MAP_STYLES_URL", "https://map.test.threema.ch/styles/threema/style.json")
-            stringBuildConfigField("MAP_POI_AROUND_URL", "https://poi.test.threema.ch/around/{latitude}/{longitude}/{radius}/")
-            stringBuildConfigField("MAP_POI_NAMES_URL", "https://poi.test.threema.ch/names/{latitude}/{longitude}/{query}/")
-            stringBuildConfigField("LOG_TAG", "3mablue")
-            stringBuildConfigField("BLOB_MIRROR_SERVER_URL", "https://blob-mirror-{deviceGroupIdPrefix4}.test.threema.ch/{deviceGroupIdPrefix8}")
-
-            booleanBuildConfigField("AVAILABILITY_STATUS_ENABLED", true)
-            booleanBuildConfigField("LOG_TOMBSTONES_FOR_NATIVE_CRASHES", true)
-
-            // config fields for action URLs / deep links
-            stringBuildConfigField("uriScheme", "threemablue")
-            stringBuildConfigField("actionUrl", "blue.threema.ch")
-
-            with(manifestPlaceholders) {
-                put("uriScheme", "threemablue")
-                put("actionUrl", "blue.threema.ch")
-                put("callMimeType", "vnd.android.cursor.item/vnd.ch.threema.app.blue.call")
-            }
-
-            setSentryConfig(SentryConfig.SANDBOX)
-        }
-        create("hms") {
-            applicationId = "ch.threema.app.hms"
-            setSentryConfig(SentryConfig.PRODUCTION)
-            proguardFile("proguard-production.txt")
-        }
-        create("hms_work") {
-            versionName = "${appVersion}k$betaSuffix"
-            applicationId = "ch.threema.app.work.hms"
-            testApplicationId = "ch.threema.app.work.test.hms"
-            setProductNames(appName = "Threema Work")
-            stringResValue("package_name", "ch.threema.app.work")
-            stringResValue("contacts_mime_type", "vnd.android.cursor.item/vnd.ch.threema.app.work.profile")
-            stringResValue("call_mime_type", "vnd.android.cursor.item/vnd.ch.threema.app.work.call")
-            stringBuildConfigField("CHAT_SERVER_PREFIX", "w-")
-            stringBuildConfigField("CHAT_SERVER_IPV6_PREFIX", "ds.w-")
-            stringBuildConfigField("MEDIA_PATH", "ThreemaWork")
-            stringBuildConfigField("WORK_SERVER_URL_LEGACY", "https://apip-work.threema.ch/")
-            stringBuildConfigField("WORK_SERVER_IPV6_URL_LEGACY", "https://ds-apip-work.threema.ch/")
-            stringBuildConfigField("WORK_SERVER_URL", "https://work.threema.ch/")
-            stringBuildConfigField("APP_RATING_URL", "https://threema.com/app-rating/android-work/{rating}")
-            stringBuildConfigField("LOG_TAG", "3mawrk")
-            booleanBuildConfigField("AVAILABILITY_STATUS_ENABLED", true)
-
-            // config fields for action URLs / deep links
-            stringBuildConfigField("uriScheme", "threemawork")
-            stringBuildConfigField("actionUrl", "work.threema.ch")
-
-            with(manifestPlaceholders) {
-                put("uriScheme", "threemawork")
-                put("actionUrl", "work.threema.ch")
-                put("callMimeType", "vnd.android.cursor.item/vnd.ch.threema.app.work.call")
-            }
-
-            setSentryConfig(SentryConfig.PRODUCTION)
-            proguardFile("proguard-production.txt")
-        }
-        create("libre") {
-            versionName = "${appVersion}l$betaSuffix"
-            applicationId = "ch.threema.app.libre"
-            testApplicationId = "$applicationId.test"
-            stringResValue("package_name", applicationId!!)
-            setProductNames(
-                appName = "Threema Libre",
-                appNameDesktop = "Threema",
-            )
-            stringBuildConfigField("MEDIA_PATH", "ThreemaLibre")
 
             setSentryConfig(null)
             proguardFile("proguard-production.txt")
@@ -528,41 +314,6 @@ android {
             ?: run {
                 logger.warn("No release keystore found. Falling back to locally generated keystore.")
             }
-
-        // Release config
-        keystores["hms_release"]
-            ?.let { keystore ->
-                create("hms_release") {
-                    apply(keystore)
-                }
-            }
-            ?: run {
-                logger.warn("No hms keystore found. Falling back to locally generated keystore.")
-            }
-
-        // Onprem release config
-        keystores["onprem_release"]
-            ?.let { keystore ->
-                create("onprem_release") {
-                    apply(keystore)
-                }
-            }
-            ?: run {
-                logger.warn("No onprem keystore found. Falling back to locally generated keystore.")
-            }
-
-        // Blue release config
-        keystores["blue_release"]
-            ?.let { keystore ->
-                create("blue_release") {
-                    apply(keystore)
-                }
-            }
-            ?: run {
-                logger.warn("No blue keystore found. Falling back to locally generated keystore.")
-            }
-
-        // Note: Libre release is signed with HSM, no config here
     }
 
     sourceSets {
@@ -574,61 +325,8 @@ android {
             java.srcDir("./build/generated/source/protobuf/main/kotlin")
         }
 
-        configureFlavor("none") {
-            threemaPrivate()
-            withGoogleServices()
-            withDevSupport()
-        }
-        configureFlavor("store_google") {
-            threemaPrivate()
-            withGoogleServices()
-        }
-        configureFlavor("store_threema") {
-            threemaPrivate()
-            withGoogleServices()
-            withSelfUpdating()
-        }
-        configureFlavor("store_google_work") {
-            threemaWork()
-            withGoogleServices()
-        }
-        configureFlavor("green") {
-            threemaPrivate()
-            withGoogleServices()
-            extra {
-                manifest.srcFile("src/store_google/AndroidManifest.xml")
-            }
-        }
-        configureFlavor("sandbox_work") {
-            threemaWork()
-            withGoogleServices()
-            extra {
-                res.srcDir("src/store_google_work/res")
-                manifest.srcFile("src/store_google_work/AndroidManifest.xml")
-            }
-        }
-        configureFlavor("onprem") {
+        configureFlavor("treslibre") {
             threemaOnPrem()
-            withGoogleServices()
-        }
-        configureFlavor("blue") {
-            threemaWork()
-            withGoogleServices()
-            withDevSupport()
-        }
-        configureFlavor("hms") {
-            threemaPrivate()
-            withHmsServices()
-        }
-        configureFlavor("hms_work") {
-            threemaWork()
-            withHmsServices()
-            extra {
-                res.srcDir("src/store_google_work/res")
-            }
-        }
-        configureFlavor("libre") {
-            threemaPrivate()
             withFossBasedServices()
         }
     }
@@ -657,30 +355,8 @@ android {
             }
 
             if (keystores["release"] != null) {
-                val releaseSigningConfig = signingConfigs["release"]
-                productFlavors["store_google"].signingConfig = releaseSigningConfig
-                productFlavors["store_google_work"].signingConfig = releaseSigningConfig
-                productFlavors["store_threema"].signingConfig = releaseSigningConfig
-                productFlavors["green"].signingConfig = releaseSigningConfig
-                productFlavors["sandbox_work"].signingConfig = releaseSigningConfig
-                productFlavors["none"].signingConfig = releaseSigningConfig
+                productFlavors["treslibre"].signingConfig = signingConfigs["release"]
             }
-
-            if (keystores["hms_release"] != null) {
-                val hmsReleaseSigningConfig = signingConfigs["hms_release"]
-                productFlavors["hms"].signingConfig = hmsReleaseSigningConfig
-                productFlavors["hms_work"].signingConfig = hmsReleaseSigningConfig
-            }
-
-            if (keystores["onprem_release"] != null) {
-                productFlavors["onprem"].signingConfig = signingConfigs["onprem_release"]
-            }
-
-            if (keystores["blue_release"] != null) {
-                productFlavors["blue"].signingConfig = signingConfigs["blue_release"]
-            }
-
-            // Note: Libre release is signed with HSM, no config here
         }
     }
 
@@ -992,65 +668,10 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     testImplementation(libs.kotlinx.coroutines.test)
 
-    // Google Play Services and related libraries
-    "noneImplementation"(libs.playServices.base)
-    "store_googleImplementation"(libs.playServices.base)
-    "store_google_workImplementation"(libs.playServices.base)
-    "store_threemaImplementation"(libs.playServices.base)
-    "onpremImplementation"(libs.playServices.base)
-    "greenImplementation"(libs.playServices.base)
-    "sandbox_workImplementation"(libs.playServices.base)
-    "blueImplementation"(libs.playServices.base)
-
-    fun ExternalModuleDependency.excludeFirebaseDependencies() {
-        exclude(group = "com.google.firebase", module = "firebase-core")
-        exclude(group = "com.google.firebase", module = "firebase-analytics")
-        exclude(group = "com.google.firebase", module = "firebase-measurement-connector")
-    }
-    "noneImplementation"(libs.firebase.messaging) { excludeFirebaseDependencies() }
-    "store_googleImplementation"(libs.firebase.messaging) { excludeFirebaseDependencies() }
-    "store_google_workImplementation"(libs.firebase.messaging) { excludeFirebaseDependencies() }
-    "store_threemaImplementation"(libs.firebase.messaging) { excludeFirebaseDependencies() }
-    "onpremImplementation"(libs.firebase.messaging) { excludeFirebaseDependencies() }
-    "greenImplementation"(libs.firebase.messaging) { excludeFirebaseDependencies() }
-    "sandbox_workImplementation"(libs.firebase.messaging) { excludeFirebaseDependencies() }
-    "blueImplementation"(libs.firebase.messaging) { excludeFirebaseDependencies() }
-
-    // Google Assistant Voice Action verification library
-    "noneImplementation"(group = "", name = "libgsaverification-client", ext = "aar")
-    "store_googleImplementation"(group = "", name = "libgsaverification-client", ext = "aar")
-    "store_google_workImplementation"(group = "", name = "libgsaverification-client", ext = "aar")
-    "onpremImplementation"(group = "", name = "libgsaverification-client", ext = "aar")
-    "store_threemaImplementation"(group = "", name = "libgsaverification-client", ext = "aar")
-    "greenImplementation"(group = "", name = "libgsaverification-client", ext = "aar")
-    "sandbox_workImplementation"(group = "", name = "libgsaverification-client", ext = "aar")
-    "blueImplementation"(group = "", name = "libgsaverification-client", ext = "aar")
-
-    // Maplibre (may have transitive dependencies on Google location services)
-    "noneImplementation"(libs.maplibre)
-    "store_googleImplementation"(libs.maplibre)
-    "store_google_workImplementation"(libs.maplibre)
-    "store_threemaImplementation"(libs.maplibre)
-    "libreImplementation"(libs.maplibre) {
+    // Maplibre (exclude Google location services for FOSS-based Treslibre build)
+    "treslibreImplementation"(libs.maplibre) {
         exclude(group = "com.google.android.gms")
     }
-    "onpremImplementation"(libs.maplibre)
-    "greenImplementation"(libs.maplibre)
-    "sandbox_workImplementation"(libs.maplibre)
-    "blueImplementation"(libs.maplibre)
-    "hmsImplementation"(libs.maplibre)
-    "hms_workImplementation"(libs.maplibre)
-
-    // Huawei related libraries (only for hms* build variants)
-    // Exclude agconnect dependency, we'll replace it with the vendored version below
-    "hmsImplementation"(libs.hmsPush) {
-        exclude(group = "com.huawei.agconnect")
-    }
-    "hms_workImplementation"(libs.hmsPush) {
-        exclude(group = "com.huawei.agconnect")
-    }
-    "hmsImplementation"(group = "", name = "agconnect-core-1.9.1.301", ext = "aar")
-    "hms_workImplementation"(group = "", name = "agconnect-core-1.9.1.301", ext = "aar")
 }
 
 // Define the cargo attributes. These will be used by the rust-android plugin that will create the
@@ -1062,8 +683,8 @@ cargo {
     module = "$projectDir/../domain/libthreema" // must contain Cargo.toml
     libname = "libthreema" // must match the Cargo.toml's package name
     profile = "release"
-    pythonCommand = "python3"
-    targets = listOf("x86_64", "arm64", "arm", "x86")
+    pythonCommand = if (System.getProperty("os.name").lowercase().contains("win")) "python" else "python3"
+    targets = cargoTargetList
     features {
         defaultAnd(arrayOf("uniffi"))
     }
@@ -1088,7 +709,11 @@ tasks.register<Exec>("compileProto") {
     group = "build"
     description = "generate class bindings from protobuf files in the 'protobuf' directory"
     workingDir(project.projectDir)
-    commandLine("./compile-proto.sh")
+    if (System.getProperty("os.name").lowercase().contains("win")) {
+        commandLine("C:\\Program Files\\Git\\bin\\bash.exe", "./compile-proto.sh")
+    } else {
+        commandLine("./compile-proto.sh")
+    }
 }
 project.tasks.preBuild.dependsOn("compileProto")
 

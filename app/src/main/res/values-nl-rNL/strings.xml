@@ -850,7 +850,7 @@ Voer een vraag in voor uw poll.</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="prefs_title_voip_enable">${app_name_short}-Oproepen inschakelen</string>
     <string name="webclient_invalid_push_token_message">Handmatige start vereist</string>
-    <string name="threema_work_contact">Contactpersoon Threema Work</string>
+    <string name="threema_work_contact">Contactpersoon Treslibre</string>
     <!-- ${app_name} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="permission_phone_required">Geef toegang tot het oproepbeheer tijdens het gebruik van ${app_name}-Oproep</string>
     <string name="strikethrough">Doorgehaald</string>
@@ -1099,7 +1099,7 @@ Wanneer u ${app_name_short} Safe gebruikt, kunt u uw ${app_name_short}-ID, conta
     <!-- ${app_name} is a placeholder for the app's name, e.g. "Threema". %1$s is a placeholder for the version number. They must not be translated. -->
     <string name="whatsnew_title">Wat is er nieuw in ${app_name} %1$s?</string>
     <string name="whatsnew_headline"><![CDATA[        <p>Je kunt je Android-apparaat nu koppelen met de nieuwe desktopapp (bèta) en de functie voor meerdere apparaten testen.</p>
-        <p>Ga voor meer informatie naar \'Menu > Threema 2.0 for Desktop (Beta)\'.</p>
+        <p>Ga voor meer informatie naar \'Menu > Treslibre 2.0 for Desktop (Beta)\'.</p>
         ]]></string>
     <string name="tap_to_start">Tik hier om %s te starten.</string>
     <string name="notification_title_restart">Opnieuw opstarten vereist</string>
@@ -1151,7 +1151,7 @@ Wanneer u ${app_name_short} Safe gebruikt, kunt u uw ${app_name_short}-ID, conta
     <!-- ${company_name} is a placeholder for the name of the company that operates the app, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="send_to_support">Naar ${company_name}-klantenservice sturen</string>
     <string name="menu_legal">Juridisch</string>
-    <string name="tooltip_work_hint">Dit contact maakt gebruik van Threema Work.</string>
+    <string name="tooltip_work_hint">Dit contact maakt gebruik van Treslibre.</string>
     <string name="video_camera_on">Videocamera ingeschakeld</string>
     <string name="video_camera_off">Videocamera uitgeschakeld</string>
     <string name="enable_picture_in_picture">Beeld-in-beeldmodus starten</string>
@@ -1179,7 +1179,7 @@ Wanneer u ${app_name_short} Safe gebruikt, kunt u uw ${app_name_short}-ID, conta
     <string name="biometrics_not_enrolled">Er zijn geen biometrics in het systeem opgenomen.</string>
     <string name="biometrics_not_avilable">Biometrics zijn niet beschikbaar in dit systeem.</string>
     <string name="biometrics_no_permission">Ontbrekende machtiging voor het benaderen van biometrische gegevens of hardware.</string>
-    <string name="verification_settings_desc">De gekleurde stippen geven het verificatieniveau van een contactpersoon aan.</string>
+    <string name="verification_settings_desc">De gekleurde balkjes geven het verificatieniveau van een contactpersoon aan.</string>
     <string name="verification_levels_title">Verificatieniveau</string>
     <string name="work_verification_levels_title">Contacten in uw organisatie</string>
     <string name="external_verification_levels_title">Andere contacten</string>
@@ -1440,7 +1440,7 @@ Wanneer u ${app_name_short} Safe gebruikt, kunt u uw ${app_name_short}-ID, conta
     <string name="prefs_dynamic_colors">Dynamische kleur</string>
     <string name="prefs_dynamic_colors_sum">Gebruik systeemkleuren</string>
     <string name="apply_changes">Pas wijzigingen toe</string>
-    <string name="prefs_threema_work_summary">Wist u dat Threema ook een oplossing voor professionele communicatie in bedrijven aanbiedt? Tik hier voor meer informatie over Threema Work.</string>
+    <string name="prefs_threema_work_summary">Wist u dat Treslibre ook een oplossing voor professionele communicatie in bedrijven aanbiedt? Tik hier voor meer informatie over Treslibre.</string>
     <string name="notification_channel_voice_message_player">Speler voor spraakberichten</string>
     <string name="voice_message_from">Spraakbericht van %s</string>
     <string name="vm_fg_service_not_allowed">Fout bij het afspelen van spraakbericht</string>
@@ -1575,7 +1575,7 @@ Wanneer u ${app_name_short} Safe gebruikt, kunt u uw ${app_name_short}-ID, conta
     <!-- Shown in the advanced settings, shows the user their own Device's uniquely generated ID, which is used for sending error reports -->
     <string name="prefs_error_reporting_id">Anonieme apparaat-ID</string>
     <!-- The %s is a placeholder for an ID. It must be left as-is. -->
-    <string name="prefs_error_reporting_id_summary">Deze ID wordt gebruikt om foutrapporten toe te wijzen. Deze is anoniem en niet gekoppeld aan uw Threema ID.\n%s</string>
+    <string name="prefs_error_reporting_id_summary">Deze ID wordt gebruikt om foutrapporten toe te wijzen. Deze is anoniem en niet gekoppeld aan uw Treslibre ID.\n%s</string>
     <string name="md_device_currently_active">Momenteel actief</string>
     <string name="md_device_last_active_at">Laatst actief: %s</string>
     <plurals name="md_max_device_slots_reached_info">
@@ -1675,18 +1675,18 @@ Wanneer u ${app_name_short} Safe gebruikt, kunt u uw ${app_name_short}-ID, conta
     <!-- Warning message displayed on screen where the user can export a debug log file to share with Support. ${company_name} is a placeholder for the company name and should be kept as-is, not translated. -->
     <string name="export_logs_screen_warning">Om privacyredenen mag u het logbestand alleen met het ondersteuningsteam van ${company_name} delen en alleen als u daartoe wordt verzocht.</string>
     <string name="work_intro_screen_work_title">HOOGBEVEILIGDE COMMUNICATIE VOOR BEDRIJVEN</string>
-    <string name="work_intro_screen_work_subtitle">Threema Work is de veilige communicatieoplossing voor bedrijven –End-to-end gecodeerd, AVG-conform en ontwikkeld in Zwitserland.</string>
+    <string name="work_intro_screen_work_subtitle">Treslibre is de veilige communicatieoplossing voor bedrijven –End-to-end gecodeerd, AVG-conform en ontwikkeld in Zwitserland.</string>
     <string name="work_intro_screen_work_sign_in_button_label">Nu aanmelden</string>
-    <string name="work_intro_screen_work_learn_more_hint">Gebruikt u Threema Work nog niet?</string>
+    <string name="work_intro_screen_work_learn_more_hint">Gebruikt u Treslibre nog niet?</string>
     <string name="work_intro_screen_work_learn_more_button_label">Meer informatie</string>
-    <string name="work_intro_screen_work_use_private_hint">Als u Threema voor privédoeleinden wilt gebruiken, raden we u de Threema Private-app aan.</string>
+    <string name="work_intro_screen_work_use_private_hint">Als u Treslibre voor privédoeleinden wilt gebruiken, raden we u de Treslibre-app aan.</string>
     <string name="work_intro_screen_work_download_private_button_label">Nu downloaden</string>
     <string name="work_intro_screen_onprem_title">COMMUNICATIE OP HET HOOGSTE VEILIGHEIDSNIVEAU</string>
-    <string name="work_intro_screen_onprem_subtitle">Threema OnPrem is de zelf-gehoste communicatieoplossing voor bedrijven, overheidsinstanties en militaire organisaties – voor volledige gegevenssoevereiniteit, versleutelde gegevensoverdracht en de hoge eisen van beveiligingsgevoelige omgevingen.</string>
+    <string name="work_intro_screen_onprem_subtitle">Treslibre is de zelf-gehoste communicatieoplossing voor bedrijven, overheidsinstanties en militaire organisaties – voor volledige gegevenssoevereiniteit, versleutelde gegevensoverdracht en de hoge eisen van beveiligingsgevoelige omgevingen.</string>
     <string name="work_intro_screen_onprem_sign_in_button_label">Nu aanmelden</string>
-    <string name="work_intro_screen_onprem_learn_more_hint">Gebruikt u Threema OnPrem nog niet?</string>
+    <string name="work_intro_screen_onprem_learn_more_hint">Gebruikt u Treslibre nog niet?</string>
     <string name="work_intro_screen_onprem_learn_more_button_label">Meer informatie</string>
-    <string name="work_intro_screen_onprem_use_private_hint">Als u Threema voor privédoeleinden wilt gebruiken, raden we u de Threema Private-app aan.</string>
+    <string name="work_intro_screen_onprem_use_private_hint">Als u Treslibre voor privédoeleinden wilt gebruiken, raden we u de Treslibre-app aan.</string>
     <string name="work_intro_screen_onprem_download_private_button_label">Nu downloaden</string>
     <!-- Description of the notification channel which is used when DualLock (a.k.a. "Remote Secret") is active. ${remote_secret} is a placeholder for a feature name, e.g. "DualLock". It must be left as-is and not translated. -->
     <string name="remote_secret_notification_channel_description">Er wordt een persistente melding weergegeven wanneer ${remote_secret} actief is.</string>
@@ -1716,12 +1716,12 @@ Wanneer u ${app_name_short} Safe gebruikt, kunt u uw ${app_name_short}-ID, conta
     <!-- Error message shown fullscreen when deactivating the DualLock (a.k.a. "Remote Secret") feature failed. ${remote_secret} is a placeholder for a feature name, e.g. "DualLock". It must be left as-is and not translated. -->
     <string name="remote_secret_deactivating_failed">Het deactiveren van ${remote_secret} is niet gelukt. Controleer uw internetverbinding en probeer het opnieuw.</string>
     <string name="referral_banner_title">Beveel ons aan en profiteer</string>
-    <string name="referral_banner_body">Nodig uw vrienden uit om Threema Work in hun bedrijf te gebruiken en verdien een doorverwijzingsbonus!</string>
+    <string name="referral_banner_body">Nodig uw vrienden uit om Treslibre in hun bedrijf te gebruiken en verdien een doorverwijzingsbonus!</string>
     <string name="referral_screen_title">Beveel ons aan en profiteer</string>
     <string name="referral_screen_subtitle">Ontvang tot 10% van de eerste factuur van het gerekruteerde bedrijf.</string>
     <string name="referral_how_it_works_title">Hoe het werkt</string>
     <string name="referral_how_it_works_referral_title">Doorverwijzing</string>
-    <string name="referral_how_it_works_referral_body">Nodig uw vrienden of hun bedrijf uit om zich aan te melden voor Threema Work. Het is belangrijk dat uw Threema ID tijdens de registratie of bij het kopen van licenties wordt vermeld zodat er rekening kan worden gehouden met uw doorverwijzing.</string>
+    <string name="referral_how_it_works_referral_body">Nodig uw vrienden of hun bedrijf uit om zich aan te melden voor Treslibre. Het is belangrijk dat uw Treslibre ID tijdens de registratie of bij het kopen van licenties wordt vermeld zodat er rekening kan worden gehouden met uw doorverwijzing.</string>
     <string name="referral_how_it_works_requirements_title">Vereisten</string>
     <string name="referral_how_it_works_requirements_body">Het doorverwezen bedrijf mag niet al klant van ons zijn en moet licenties bestellen</string>
     <string name="referral_how_it_works_confirmation_title">Bevestiging</string>
@@ -1731,7 +1731,7 @@ Wanneer u ${app_name_short} Safe gebruikt, kunt u uw ${app_name_short}-ID, conta
     <string name="referral_your_reward_body">U ontvangt voor uw doorverwijzing 10% van het eerste factuurbedrag van het gerekruteerde bedrijf (exclusief belastingen/kosten). De bonus wordt 30-60 dagen na ontvangst van de betaling naar u overgeschreven.</string>
     <string name="referral_share_invitation_link">Uitnodigingslink delen</string>
     <string name="referral_view_terms_and_conditions">Algemene voorwaarden bekijken</string>
-    <string name="referral_invitation_message_content">Hoi, ik dacht dat dit misschien wel handig voor je zou zijn: Threema Work is een uitstekende optie voor veilige zakelijke communicatie. Hier is je link om het te testen: %1$s</string>
+    <string name="referral_invitation_message_content">Hoi, ik dacht dat dit misschien wel handig voor je zou zijn: Treslibre is een uitstekende optie voor veilige zakelijke communicatie. Hier is je link om het te testen: %1$s</string>
     <string name="prefs_voip_abort_on_bluetooth_disconnect_title">Beëindig het gesprek wanneer de Bluetooth-verbinding wordt verbroken</string>
     <string name="prefs_voip_abort_on_bluetooth_disconnect_summary_on">Het gesprek wordt beëindigd wanneer de Bluetooth-headset tijdens een gesprek wordt losgekoppeld.</string>
     <string name="prefs_voip_abort_on_bluetooth_disconnect_summary_off">Het gesprek wordt voortgezet wanneer de Bluetooth-headset tijdens een gesprek wordt losgekoppeld. Let op: De ophangknop op de headset kan mogelijk niet meer werken.</string>

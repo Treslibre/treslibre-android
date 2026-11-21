@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 import com.android.build.gradle.internal.tasks.factory.dependsOn
 import utils.getGitVersion
 
@@ -70,9 +71,10 @@ afterEvaluate {
             val uniffiLibraryFilePathPrefix = "${project.projectDir}/libthreema/target/release/liblibthreema"
             val uniffiLibraryFile = file("$uniffiLibraryFilePathPrefix.so")
                 .takeIf { it.exists() }
-                ?: file("$uniffiLibraryFilePathPrefix.dylib")
+                ?: file("$uniffiLibraryFilePathPrefix.dylib").takeIf { it.exists() }
+                ?: file("${project.projectDir}/libthreema/target/release/libthreema.dll")
             assert(uniffiLibraryFile.exists()) {
-                "Error: Missing pre-generated uniffy library file in libthreema/target/*/ directory.\n"
+                "Error: Missing pre-generated uniffi library file in libthreema/target/*/ directory (${uniffiLibraryFile.path}).\n"
             }
 
             val processBuilder = ProcessBuilder(
@@ -90,7 +92,9 @@ afterEvaluate {
                 "--no-format",
             )
             processBuilder.directory(file("${project.projectDir}/libthreema"))
-            processBuilder.start().waitFor()
+            processBuilder.inheritIO()
+            val exitCode = processBuilder.start().waitFor()
+            require(exitCode == 0) { "uniffi-bindgen failed with exit code $exitCode" }
         }
     }
 
@@ -127,7 +131,11 @@ tasks.register<Exec>("compileProto") {
     group = "build"
     description = "generate class bindings from protobuf files in the 'protocol/src' directory"
     workingDir(project.projectDir)
-    commandLine("./compile-proto.sh")
+    if (System.getProperty("os.name").lowercase().contains("win")) {
+        commandLine("C:\\Program Files\\Git\\bin\\bash.exe", "./compile-proto.sh")
+    } else {
+        commandLine("./compile-proto.sh")
+    }
 }
 
 tasks.compileKotlin.dependsOn("compileProto")

@@ -110,7 +110,7 @@
     <string name="scan_id">ID (azonosító) beolvasása</string>
     <string name="id_mismatch">A beolvasott nyilvános kulcs nem egyezik a kiszolgáló által használt kulccsal, amelyet
 		a kiszolgáló a névjegyhez rögzített. Ez olyan manipulációra utal, amely veszélyeztetheti a kommunikáció biztonságát.
-		Kérjük, ha lehetséges, jelezze ezt az esetet a security@threema.ch címen az ID és a körülmények feltüntetésével.</string>
+		Kérjük, ha lehetséges, jelezze ezt az esetet a kiszolgáló adminisztrátoránál az ID és a körülmények feltüntetésével.</string>
     <string name="scan_successful">Az ID sikeresen beolvasva. A kapcsolat ellenőrzött.</string>
     <string name="scan_duplicate">Ez az ID már be lett olvasva és ellenőrizve.</string>
     <string name="linked_email">E-mail</string>
@@ -785,7 +785,7 @@
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="prefs_title_voip_enable">${app_name_short}-hívások engedélyezése</string>
     <string name="webclient_invalid_push_token_message">Kézi indítás szükséges</string>
-    <string name="threema_work_contact">Threema Work névjegy</string>
+    <string name="threema_work_contact">Treslibre névjegy</string>
     <!-- ${app_name} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="permission_phone_required">A ${app_name}-hívás közbeni hívások kezeléséhez kapcsolja be ezt az engedélyt.</string>
     <string name="strikethrough">Áthúzott</string>
@@ -1061,7 +1061,7 @@
     <!-- ${company_name} is a placeholder for the name of the company that operates the app, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="send_to_support">Küldés a ${company_name} ügyfélszolgálatnak</string>
     <string name="menu_legal">Jogi</string>
-    <string name="tooltip_work_hint">Ez a névjegy a Threema Work-ot használja.</string>
+    <string name="tooltip_work_hint">Ez a névjegy a Treslibre-ot használja.</string>
     <string name="video_camera_on">Videokamera be</string>
     <string name="video_camera_off">Videokamera ki</string>
     <string name="enable_picture_in_picture">Kép-a-képben üzemmód indítása</string>
@@ -1087,7 +1087,7 @@
     <string name="biometrics_not_enrolled">A rendszer nem tárol biometrikus adatokat.</string>
     <string name="biometrics_not_avilable">Biometrikus hitelesítés nem áll rendelkezésre.</string>
     <string name="biometrics_no_permission">Nincs felhatalmazás a biometrikus adatokhoz való hozzáférésre.</string>
-    <string name="verification_settings_desc">A pontok a kapcsolat bizalmi szintjét jelzik.</string>
+    <string name="verification_settings_desc">A sávok a kapcsolat bizalmi szintjét jelzik.</string>
     <string name="verification_levels_title">Bizalmi szintek</string>
     <string name="work_verification_levels_title">Névjegyek az Ön szervezetében</string>
     <string name="external_verification_levels_title">Egyéb névjegyek</string>

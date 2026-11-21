@@ -868,7 +868,7 @@
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="prefs_title_voip_enable">Включить звонки ${app_name_short}</string>
     <string name="webclient_invalid_push_token_message">Требуется запуск вручную</string>
-    <string name="threema_work_contact">Контакт Threema Work</string>
+    <string name="threema_work_contact">Контакт Treslibre</string>
     <!-- ${app_name} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="permission_phone_required">Предоставить разрешение на управление телефонными звонками при использовании звонков ${app_name}</string>
     <string name="strikethrough">Зачёркнутый</string>
@@ -1116,7 +1116,7 @@
     <!-- ${app_name} is a placeholder for the app's name, e.g. "Threema". %1$s is a placeholder for the version number. They must not be translated. -->
     <string name="whatsnew_title">Что нового в ${app_name} %1$s?</string>
     <string name="whatsnew_headline"><![CDATA[        <p>Теперь вы можете привязать своё Android-устройство к новому приложению для ПК (бета-версия) и попробовать функцию совместной работы нескольких устройств.</p>
-        <p>Для дополнительной информации перейдите в «Меню» → «Threema 2.0 для ПК (бета)».</p>
+        <p>Для дополнительной информации перейдите в «Меню» → «Treslibre 2.0 для ПК (бета)».</p>
         ]]></string>
     <string name="tap_to_start">Нажмите здесь, чтобы запустить %s.</string>
     <string name="notification_title_restart">Требуется перезапуск</string>
@@ -1168,7 +1168,7 @@
     <!-- ${company_name} is a placeholder for the name of the company that operates the app, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="send_to_support">Отправить в службу поддержки ${company_name}</string>
     <string name="menu_legal">Юридическая информация</string>
-    <string name="tooltip_work_hint">Этот контакт использует Threema Work.</string>
+    <string name="tooltip_work_hint">Этот контакт использует Treslibre.</string>
     <string name="video_camera_on">Видеокамера включена</string>
     <string name="video_camera_off">Видеокамера отключена</string>
     <string name="enable_picture_in_picture">Режим «картинка в картинке»</string>
@@ -1196,7 +1196,7 @@
     <string name="biometrics_not_enrolled">Биометрия не настроена в системе.</string>
     <string name="biometrics_not_avilable">Биометрия недоступна в этой системе.</string>
     <string name="biometrics_no_permission">Отсутствует разрешение на доступ к биометрическим данным или оборудованию.</string>
-    <string name="verification_settings_desc">Цветные точки являются индикатором уровня проверки контакта.</string>
+    <string name="verification_settings_desc">Цветные полосы являются индикатором уровня проверки контакта.</string>
     <string name="verification_levels_title">Уровень проверки</string>
     <string name="work_verification_levels_title">Контакты в вашей организации</string>
     <string name="external_verification_levels_title">Другие контакты</string>
@@ -1460,7 +1460,7 @@
     <string name="prefs_dynamic_colors">Динамический цвет</string>
     <string name="prefs_dynamic_colors_sum">Использовать цвета системы</string>
     <string name="apply_changes">Применить изменения</string>
-    <string name="prefs_threema_work_summary">Вы знаете, что Threema также предлагает компаниям профессиональное решение для связи и обмена данными? Нажмите здесь, чтобы узнать больше о Threema Work.</string>
+    <string name="prefs_threema_work_summary">Вы знаете, что Treslibre также предлагает компаниям профессиональное решение для связи и обмена данными? Нажмите здесь, чтобы узнать больше о Treslibre.</string>
     <string name="notification_channel_voice_message_player">Проигрыватель голосовых сообщений</string>
     <string name="voice_message_from">Голосовое сообщение от %s</string>
     <string name="vm_fg_service_not_allowed">Ошибка воспроизведения голосового сообщения</string>
@@ -1600,7 +1600,7 @@
     <!-- Shown in the advanced settings, shows the user their own Device's uniquely generated ID, which is used for sending error reports -->
     <string name="prefs_error_reporting_id">Анонимный ID устройства</string>
     <!-- The %s is a placeholder for an ID. It must be left as-is. -->
-    <string name="prefs_error_reporting_id_summary">Этот идентификатор используется для отправки отчётов об ошибках. Он является анонимным и не связан с вашим идентификатором Threema ID.\n%s</string>
+    <string name="prefs_error_reporting_id_summary">Этот идентификатор используется для отправки отчётов об ошибках. Он является анонимным и не связан с вашим идентификатором Treslibre ID.\n%s</string>
     <string name="md_device_currently_active">Сейчас активно</string>
     <string name="md_device_last_active_at">Последняя активность: %s</string>
     <plurals name="md_max_device_slots_reached_info">
@@ -1705,18 +1705,18 @@
     <!-- Warning message displayed on screen where the user can export a debug log file to share with Support. ${company_name} is a placeholder for the company name and should be kept as-is, not translated. -->
     <string name="export_logs_screen_warning">По соображениям конфиденциальности предоставляйте доступ к файлу журнала только службе поддержки ${company_name} и только в том случае, если вас об этом попросят.</string>
     <string name="work_intro_screen_work_title">ВЫСОКОЗАЩИЩЁННАЯ КОММУНИКАЦИЯ ДЛЯ БИЗНЕСА</string>
-    <string name="work_intro_screen_work_subtitle">Threema Work — это безопасное коммуникационное решение для компаний, обеспечивающее сквозное шифрование, соответствующее требованиям GDPR и разработанное в Швейцарии.</string>
+    <string name="work_intro_screen_work_subtitle">Treslibre — это безопасное коммуникационное решение для компаний, обеспечивающее сквозное шифрование, соответствующее требованиям GDPR и разработанное в Швейцарии.</string>
     <string name="work_intro_screen_work_sign_in_button_label">Войти</string>
-    <string name="work_intro_screen_work_learn_more_hint">Ещё не используете Threema Work?</string>
+    <string name="work_intro_screen_work_learn_more_hint">Ещё не используете Treslibre?</string>
     <string name="work_intro_screen_work_learn_more_button_label">Узнать больше</string>
-    <string name="work_intro_screen_work_use_private_hint">Если вы хотите использовать Threema в личных целях, мы рекомендуем приложение Threema Private.</string>
+    <string name="work_intro_screen_work_use_private_hint">Если вы хотите использовать Treslibre в личных целях, мы рекомендуем приложение Treslibre.</string>
     <string name="work_intro_screen_work_download_private_button_label">Скачать</string>
     <string name="work_intro_screen_onprem_title">КОММУНИКАЦИЯ НА ВЫСОЧАЙШЕМ УРОВНЕ БЕЗОПАСНОСТИ</string>
-    <string name="work_intro_screen_onprem_subtitle">Threema OnPrem — это автономное коммуникационное решение для предприятий, государственных учреждений и военных организаций, обеспечивающее полный суверенитет данных, зашифрованную передачу и высокие требования к безопасности.</string>
+    <string name="work_intro_screen_onprem_subtitle">Treslibre — это автономное коммуникационное решение для предприятий, государственных учреждений и военных организаций, обеспечивающее полный суверенитет данных, зашифрованную передачу и высокие требования к безопасности.</string>
     <string name="work_intro_screen_onprem_sign_in_button_label">Войти</string>
-    <string name="work_intro_screen_onprem_learn_more_hint">Ещё не используете Threema OnPrem?</string>
+    <string name="work_intro_screen_onprem_learn_more_hint">Ещё не используете Treslibre?</string>
     <string name="work_intro_screen_onprem_learn_more_button_label">Узнать больше</string>
-    <string name="work_intro_screen_onprem_use_private_hint">Если вы хотите использовать Threema в личных целях, мы рекомендуем приложение Threema Private.</string>
+    <string name="work_intro_screen_onprem_use_private_hint">Если вы хотите использовать Treslibre в личных целях, мы рекомендуем приложение Treslibre.</string>
     <string name="work_intro_screen_onprem_download_private_button_label">Скачать</string>
     <!-- Description of the notification channel which is used when DualLock (a.k.a. "Remote Secret") is active. ${remote_secret} is a placeholder for a feature name, e.g. "DualLock". It must be left as-is and not translated. -->
     <string name="remote_secret_notification_channel_description">Если активирован ${remote_secret}, отображается постоянное уведомление.</string>
@@ -1747,12 +1747,12 @@
     <!-- Error message shown fullscreen when deactivating the DualLock (a.k.a. "Remote Secret") feature failed. ${remote_secret} is a placeholder for a feature name, e.g. "DualLock". It must be left as-is and not translated. -->
     <string name="remote_secret_deactivating_failed">Невозможно деактивировать ${remote_secret}. Проверьте соединение с интернетом и повторите попытку.</string>
     <string name="referral_banner_title">Рекомендуйте и получайте выгоду</string>
-    <string name="referral_banner_body">Пригласите друзей использовать Threema Work в их компании и получите бонус за привлечение!</string>
+    <string name="referral_banner_body">Пригласите друзей использовать Treslibre в их компании и получите бонус за привлечение!</string>
     <string name="referral_screen_title">Рекомендовать и получить выгоду</string>
     <string name="referral_screen_subtitle">Получите до 10% от суммы первого счёта привлечённой компании.</string>
     <string name="referral_how_it_works_title">Как это работает</string>
     <string name="referral_how_it_works_referral_title">Привлечение</string>
-    <string name="referral_how_it_works_referral_body">Пригласите друга или его компанию присоединиться к Threema Work. Важно, чтобы ваш Threema ID был указан при регистрации или покупке лицензий, чтобы ваше участие в привлечении могло быть учтено.</string>
+    <string name="referral_how_it_works_referral_body">Пригласите друга или его компанию присоединиться к Treslibre. Важно, чтобы ваш Treslibre ID был указан при регистрации или покупке лицензий, чтобы ваше участие в привлечении могло быть учтено.</string>
     <string name="referral_how_it_works_requirements_title">Требования</string>
     <string name="referral_how_it_works_requirements_body">Приглашённая компания ещё не должна быть нашим клиентом и должна купить лицензии</string>
     <string name="referral_how_it_works_confirmation_title">Подтверждение</string>
@@ -1762,7 +1762,7 @@
     <string name="referral_your_reward_body">За каждого привлечённого вы получите 10% от суммы его первого счёта (без учёта налогов и сборов). Бонус будет перечислен вам в течение 30–60 дней после получения оплаты.</string>
     <string name="referral_share_invitation_link">Поделиться ссылкой-приглашением</string>
     <string name="referral_view_terms_and_conditions">Посмотреть условия и положения</string>
-    <string name="referral_invitation_message_content">Здравствуйте! Думаю, это может быть полезно для вас: Threema Work — отличный вариант для безопасного делового общения. Вот тестовая ссылка: %1$s</string>
+    <string name="referral_invitation_message_content">Здравствуйте! Думаю, это может быть полезно для вас: Treslibre — отличный вариант для безопасного делового общения. Вот тестовая ссылка: %1$s</string>
     <string name="prefs_voip_abort_on_bluetooth_disconnect_title">Завершать звонок при отключении Bluetooth</string>
     <string name="prefs_voip_abort_on_bluetooth_disconnect_summary_on">Звонок завершается, если во время разговора отключится Bluetooth-гарнитура.</string>
     <string name="prefs_voip_abort_on_bluetooth_disconnect_summary_off">Звонок продолжается, если во время разговора отключится Bluetooth-гарнитура. Примечание: кнопка завершения вызова на гарнитуре может перестать работать.</string>
@@ -1859,7 +1859,7 @@
     <!-- Placeholder 1 holds the display name of a group conversation -->
     <string name="group_spam_report_dialog_title_named">Жалоба на %1$s</string>
     <string name="group_spam_report_dialog_title">Жалоба на группу</string>
-    <string name="group_spam_report_dialog_message">Идентификатор данной группы, количество участников, а также ID и псевдоним создателя группы будут переданы в Threema вместе с вашим ID. Содержимое сообщений и личная информация переданы не будут, никто из участников группы не будет уведомлен.</string>
+    <string name="group_spam_report_dialog_message">Идентификатор данной группы, количество участников, а также ID и псевдоним создателя группы будут переданы в Treslibre вместе с вашим ID. Содержимое сообщений и личная информация переданы не будут, никто из участников группы не будет уведомлен.</string>
     <string name="group_spam_report_dialog_also_block_and_delete">Также заблокировать создателя и удалить чат</string>
     <string name="group_spam_report_dialog_cancel">Отмена</string>
     <string name="group_spam_report_dialog_report">Жалоба</string>

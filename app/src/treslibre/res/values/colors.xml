@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modified 2026 by Treslibre Project (Treslibre). -->
+<resources>
+
+    <!-- BRAND -->
+    <color name="brand_50">#ECFDF5</color>
+    <color name="brand_100">#D1FAE5</color>
+    <color name="brand_200">#A7F3D0</color>
+    <color name="brand_300">#6EE7B7</color>
+    <color name="brand_400">#34D399</color>
+    <color name="brand_500">#10B981</color>
+    <color name="brand_600">#059669</color>
+    <color name="brand_700">#047857</color>
+    <color name="brand_800">#0E7C61</color>
+    <color name="brand_900">#064E3B</color>
+
+    <!-- others -->
+    <color name="ic_launcher_background">#0B5E56</color>
+</resources>

@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.app
 
 import ch.threema.app.multidevice.DesktopClientFlavor
@@ -44,11 +45,9 @@ object BuildFlavor {
     const val IS_ON_PREM: Boolean =
         AppTypeConstants.IS_ON_PREM
 
-    const val IS_LIBRE: Boolean =
-        BuildConfig.FLAVOR == "libre"
+    const val IS_LIBRE: Boolean = false
 
-    const val IS_HMS: Boolean =
-        BuildConfig.FLAVOR == "hms" || BuildConfig.FLAVOR == "hms_work"
+    const val IS_HMS: Boolean = false
 
     val desktopClientFlavor: DesktopClientFlavor =
         BuildFlavorConstants.desktopClientFlavor

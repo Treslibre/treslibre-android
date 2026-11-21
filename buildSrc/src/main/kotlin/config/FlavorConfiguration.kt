@@ -1,12 +1,10 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package config
 
 import com.android.build.api.dsl.AndroidSourceSet
 import org.gradle.api.NamedDomainObjectContainer
 
-val buildFlavorsWithoutRelease = setOf(
-    "green",
-    "sandbox_work",
-)
+val buildFlavorsWithoutRelease = emptySet<String>()
 
 private enum class ServicesType(val path: String) {
     GOOGLE_SERVICES("google_services_based"),

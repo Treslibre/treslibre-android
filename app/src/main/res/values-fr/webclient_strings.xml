@@ -22,7 +22,7 @@
     <string name="webclient_invalid_qr_code">Code QR invalide</string>
     <string name="webclient_new_connection_toast">Session Desktop/Web lancée</string>
     <string name="webclient_protocol_error">Erreur de protocole</string>
-    <string name="webclient_protocol_version_to_old">Votre application ne prend pas en charge cette version de l\'application Desktop ou du client Web. Veuillez mettre à jour vers la dernière version de Threema pour Android.</string>
+    <string name="webclient_protocol_version_to_old">Votre application ne prend pas en charge cette version de l\'application Desktop ou du client Web. Veuillez mettre à jour vers la dernière version de Treslibre pour Android.</string>
     <string name="webclient_protocol_version_too_new_selfhosted">Votre application ne prend pas en charge cette version de l\'application Desktop ou du client Web. Veuillez télécharger la dernière version de l\'application Desktop ou demandez à l\'administrateur de votre client web de passer à la dernière version.</string>
     <string name="webclient_protocol_version_too_new_threema">Votre application ne prend pas en charge cette version de l\'application Desktop ou du client Web. Veuillez utiliser la version actuelle de l\'application Desktop ou du client Web.</string>
     <string name="webclient_session_already_exists">La session du code QR que vous avez scanné existe déjà. Veuillez relancer l\'application Desktop ou actualiser le client Web puis réessayer.</string>
@@ -37,7 +37,7 @@
     <string name="webclient_diagnostics">Diagnostics Desktop/Web</string>
     <string name="webclient_diagnostics_start">Commencer</string>
     <string name="webclient_diagnostics_intro">Appuyez sur le bouton « Commencer » pour lancer le test.</string>
-    <string name="webclient_diagnostics_done">Terminé. Si vous rencontrez des problèmes lors de l\'établissement d\'une connexion à l\'application Desktop ou au client Web, veuillez envoyer ce journal à l\'assistance de Threema.</string>
+    <string name="webclient_diagnostics_done">Terminé. Si vous rencontrez des problèmes lors de l\'établissement d\'une connexion à l\'application Desktop ou au client Web, veuillez envoyer ce journal à l\'assistance de Treslibre.</string>
     <string name="webclient_scanned_md_linking_qr_code_title">Mauvais code QR</string>
     <!-- ${app_name_desktop} is a placeholder for the Desktop app's name, e.g. "Threema". ${menu_settings} is a placeholder for the name of the Settings menu entry. ${md_link_device} is a placeholder for the name of a UI element. They must be left as they are and not translated. -->
     <string name="webclient_scanned_md_linking_qr_code_message">Le code QR que vous avez scanné appartient à la nouvelle application pour ordinateur de bureau en bêta.\n\nRevenez à « Menu principal &gt; ${app_name_desktop} 2.0 pour ordinateur de bureau (version bêta) » et sélectionnez « ${md_link_device} » pour vous connecter à cette application de bureau.</string>

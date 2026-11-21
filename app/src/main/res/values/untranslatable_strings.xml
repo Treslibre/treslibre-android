@@ -3,7 +3,7 @@
     <!-- Modified 2026 by Treslibre Project (Treslibre). -->
     <string name="about_copyright" translatable="false">Modified 2026 by Treslibre Project (Treslibre), an independent fork of Threema (© Threema AG). Released under the GNU AGPL-3.0 license.</string>
     <string name="enter_serial_hint" translatable="false">XXXXX-XXXXX</string>
-    <string name="threema_channel" translatable="false">Threema Channel</string>
+    <string name="threema_channel" translatable="false">Treslibre Channel</string>
     <string name="default_notification_sound" translatable="false">content://settings/system/notification_sound</string>
     <string name="default_ringtone" translatable="false">content://settings/system/ringtone</string>
     <string name="webclient_info_url" translatable="false">https://threema.com/threema-web</string>
@@ -18,10 +18,10 @@
     <string name="error_reporting_learn_more_url" translatable="false">https://threema.com/faq/error-report</string>
     <string name="threema_safe" translatable="false">${app_name_short} Safe</string>
     <string name="safe_enter_server_address_explain" translatable="false">server.example.com</string>
-    <string name="lp_map_copyright" translatable="false">© Threema © MapTiler © OpenStreetMap contributors</string>
-    <string name="lp_poi_copyright" translatable="false">Data © Threema © OpenStreetMap contributors</string>
+    <string name="lp_map_copyright" translatable="false">© Treslibre Project © MapTiler © OpenStreetMap contributors</string>
+    <string name="lp_poi_copyright" translatable="false">Data © Treslibre Project © OpenStreetMap contributors</string>
     <string name="audio_focus_loss" translatable="false">Audio focus loss</string>
-    <string name="threema_work" translatable="false">Threema Work</string>
+    <string name="threema_work" translatable="false">Treslibre</string>
     <string name="work_explain_url" translatable="false">https://threema.com/work_info/?lang=%1$s</string>
     <string name="threema_safe_password_faq" translatable="false">https://threema.com/%s/faq/safepw</string>
     <string name="threema_passwords_faq" translatable="false">https://threema.com/%s/faq/lost_pass</string>

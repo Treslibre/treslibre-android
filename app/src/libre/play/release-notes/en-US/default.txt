@@ -1,2 +1,0 @@
-- New: Receive a notification when someone reacts to your message
-- Various improvements and bug fixes

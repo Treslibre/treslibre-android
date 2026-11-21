@@ -893,7 +893,7 @@ ${app_name_short} 支援的所有表情符號。</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="prefs_title_voip_enable">開啟 ${app_name_short} 通話</string>
     <string name="webclient_invalid_push_token_message">需要手動啟動</string>
-    <string name="threema_work_contact">Threema Work 聯絡人</string>
+    <string name="threema_work_contact">Treslibre 聯絡人</string>
     <!-- ${app_name} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="permission_phone_required">使用 ${app_name} 通話時允許管理電話的權限</string>
     <string name="strikethrough">刪除線</string>
@@ -1141,7 +1141,7 @@ ${app_name_short} 支援的所有表情符號。</string>
     <!-- ${app_name} is a placeholder for the app's name, e.g. "Threema". %1$s is a placeholder for the version number. They must not be translated. -->
     <string name="whatsnew_title">${app_name} %1$s 有哪些新功能？</string>
     <string name="whatsnew_headline"><![CDATA[        <p>您現在可以將 Android 裝置連結至新的桌面版應用程式（測試版），並測試多裝置功能。</p>
-        <p>有關詳細資訊，請瀏覽「選單 > Threema 2.0 桌面版（測試版）」。</p>
+        <p>有關詳細資訊，請瀏覽「選單 > Treslibre 2.0 桌面版（測試版）」。</p>
         ]]></string>
     <string name="tap_to_start">點擊這裡立即開啟 %s。</string>
     <string name="notification_title_restart">需要重新啟動</string>
@@ -1193,7 +1193,7 @@ ${app_name_short} 支援的所有表情符號。</string>
     <!-- ${company_name} is a placeholder for the name of the company that operates the app, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="send_to_support">傳送給 ${company_name} 支援</string>
     <string name="menu_legal">法律</string>
-    <string name="tooltip_work_hint">此聯絡人使用 Threema Work。</string>
+    <string name="tooltip_work_hint">此聯絡人使用 Treslibre。</string>
     <string name="video_camera_on">攝影機已開啟</string>
     <string name="video_camera_off">攝影機已停用</string>
     <string name="enable_picture_in_picture">開啟畫中畫模式</string>
@@ -1221,7 +1221,7 @@ ${app_name_short} 支援的所有表情符號。</string>
     <string name="biometrics_not_enrolled">系統中没有錄入生物辨識資料。</string>
     <string name="biometrics_not_avilable">生物辨識資料在此系統上不可用。</string>
     <string name="biometrics_no_permission">缺少訪問生物辨識資料或硬體的權限</string>
-    <string name="verification_settings_desc">圓點是聯絡人的驗證等級指示。</string>
+    <string name="verification_settings_desc">指示條是聯絡人的驗證等級指示。</string>
     <string name="verification_levels_title">驗證等級</string>
     <string name="work_verification_levels_title">貴機構中的聯絡人</string>
     <string name="external_verification_levels_title">其他聯絡人</string>
@@ -1485,7 +1485,7 @@ ${app_name_short} 支援的所有表情符號。</string>
     <string name="prefs_dynamic_colors">動態色彩</string>
     <string name="prefs_dynamic_colors_sum">使用系統色彩</string>
     <string name="apply_changes">套用變更</string>
-    <string name="prefs_threema_work_summary">您知道 Threema 也為企業提供專業的通訊解決方案嗎？按一下這裡以了解更多關於 Threema Work 的資訊</string>
+    <string name="prefs_threema_work_summary">您知道 Treslibre 也為企業提供專業的通訊解決方案嗎？按一下這裡以了解更多關於 Treslibre 的資訊</string>
     <string name="notification_channel_voice_message_player">語音訊息播放器</string>
     <string name="voice_message_from">來自%s的語音訊息</string>
     <string name="vm_fg_service_not_allowed">語音訊息播放錯誤</string>
@@ -1625,7 +1625,7 @@ ${app_name_short} 支援的所有表情符號。</string>
     <!-- Shown in the advanced settings, shows the user their own Device's uniquely generated ID, which is used for sending error reports -->
     <string name="prefs_error_reporting_id">匿名裝置ID</string>
     <!-- The %s is a placeholder for an ID. It must be left as-is. -->
-    <string name="prefs_error_reporting_id_summary">此 ID 用於分配錯誤報告。這是匿名的 ID，與您的 Threema ID 無關聯。\n%s</string>
+    <string name="prefs_error_reporting_id_summary">此 ID 用於分配錯誤報告。這是匿名的 ID，與您的 Treslibre ID 無關聯。\n%s</string>
     <string name="md_device_currently_active">目前在線</string>
     <string name="md_device_last_active_at">最後上線時間：%s</string>
     <plurals name="md_max_device_slots_reached_info">
@@ -1727,18 +1727,18 @@ ${app_name_short} 支援的所有表情符號。</string>
     <!-- Warning message displayed on screen where the user can export a debug log file to share with Support. ${company_name} is a placeholder for the company name and should be kept as-is, not translated. -->
     <string name="export_logs_screen_warning">基於隱私考量，請僅在 ${company_name} 支援人員要求時才分享日誌檔案。</string>
     <string name="work_intro_screen_work_title">為企業提供高度安全的通訊</string>
-    <string name="work_intro_screen_work_subtitle">Threema Work 是專為公司設計的安全通訊解決方案 — 端對端加密、符合歐盟一般資料保護規則 (GDPR) 規範，應用程式在瑞士開發。</string>
+    <string name="work_intro_screen_work_subtitle">Treslibre 是專為公司設計的安全通訊解決方案 — 端對端加密、符合歐盟一般資料保護規則 (GDPR) 規範，應用程式在瑞士開發。</string>
     <string name="work_intro_screen_work_sign_in_button_label">立即登入</string>
-    <string name="work_intro_screen_work_learn_more_hint">還沒使用 Threema Work？</string>
+    <string name="work_intro_screen_work_learn_more_hint">還沒使用 Treslibre？</string>
     <string name="work_intro_screen_work_learn_more_button_label">了解更多</string>
-    <string name="work_intro_screen_work_use_private_hint">如果您想使用 Threema 作私人用途，我們建議您使用 Threema Private 應用程式。</string>
+    <string name="work_intro_screen_work_use_private_hint">如果您想使用 Treslibre 作私人用途，我們建議您使用 Treslibre 應用程式。</string>
     <string name="work_intro_screen_work_download_private_button_label">立刻下載</string>
     <string name="work_intro_screen_onprem_title">最高安全等級的通訊</string>
-    <string name="work_intro_screen_onprem_subtitle">Threema OnPrem 是專為企業、政府機關及軍事組織所設計的自託管通訊解決方案 — 可完全保護資料主權、加密資料傳輸，並滿足安全敏感環境的高要求。</string>
+    <string name="work_intro_screen_onprem_subtitle">Treslibre 是專為企業、政府機關及軍事組織所設計的自託管通訊解決方案 — 可完全保護資料主權、加密資料傳輸，並滿足安全敏感環境的高要求。</string>
     <string name="work_intro_screen_onprem_sign_in_button_label">立即登入</string>
-    <string name="work_intro_screen_onprem_learn_more_hint">還沒使用 Threema OnPrem？</string>
+    <string name="work_intro_screen_onprem_learn_more_hint">還沒使用 Treslibre？</string>
     <string name="work_intro_screen_onprem_learn_more_button_label">了解更多</string>
-    <string name="work_intro_screen_onprem_use_private_hint">如果您想使用 Threema 作私人用途，我們建議您使用 Threema Private 應用程式。</string>
+    <string name="work_intro_screen_onprem_use_private_hint">如果您想使用 Treslibre 作私人用途，我們建議您使用 Treslibre 應用程式。</string>
     <string name="work_intro_screen_onprem_download_private_button_label">立刻下載</string>
     <!-- Description of the notification channel which is used when DualLock (a.k.a. "Remote Secret") is active. ${remote_secret} is a placeholder for a feature name, e.g. "DualLock". It must be left as-is and not translated. -->
     <string name="remote_secret_notification_channel_description">當 ${remote_secret} 啟用時，顯示永久通知。</string>
@@ -1769,12 +1769,12 @@ ${app_name_short} 支援的所有表情符號。</string>
     <!-- Error message shown fullscreen when deactivating the DualLock (a.k.a. "Remote Secret") feature failed. ${remote_secret} is a placeholder for a feature name, e.g. "DualLock". It must be left as-is and not translated. -->
     <string name="remote_secret_deactivating_failed">停用 ${remote_secret} 失敗，請檢查您的網路連線並再試一次。</string>
     <string name="referral_banner_title">推薦獎金</string>
-    <string name="referral_banner_body">邀請您的好友在公司使用 Threema Work，即可賺取推薦獎金！</string>
+    <string name="referral_banner_body">邀請您的好友在公司使用 Treslibre，即可賺取推薦獎金！</string>
     <string name="referral_screen_title">推薦獎金</string>
     <string name="referral_screen_subtitle">最高可取得被招募公司首張發票金額的10%作為佣金。</string>
     <string name="referral_how_it_works_title">運作原理</string>
     <string name="referral_how_it_works_referral_title">推薦</string>
-    <string name="referral_how_it_works_referral_body">邀請好友或其公司加入 Threema Work。請注意：在註冊或購買授權時必須提供您的 Threema ID，以便我們計算您的推薦獎勵。</string>
+    <string name="referral_how_it_works_referral_body">邀請好友或其公司加入 Treslibre。請注意：在註冊或購買授權時必須提供您的 Treslibre ID，以便我們計算您的推薦獎勵。</string>
     <string name="referral_how_it_works_requirements_title">要求</string>
     <string name="referral_how_it_works_requirements_body">被推薦的公司不可以是我們已有的客戶，並且必須訂購許可證。</string>
     <string name="referral_how_it_works_confirmation_title">確認</string>
@@ -1784,7 +1784,7 @@ ${app_name_short} 支援的所有表情符號。</string>
     <string name="referral_your_reward_body">您將獲得被推薦公司首張發票金額的10%作為推薦獎勵（不包括稅費/費用），獎金將在收到款項後30至60天內轉入您的帳戶。</string>
     <string name="referral_share_invitation_link">分享邀請連結</string>
     <string name="referral_view_terms_and_conditions">檢視條款及細則</string>
-    <string name="referral_invitation_message_content">您好，我推薦您使用這款即時通訊軟體：Threema Work 是企業安全通訊的絕佳選擇。這是您的試用連結：%1$s</string>
+    <string name="referral_invitation_message_content">您好，我推薦您使用這款即時通訊軟體：Treslibre 是企業安全通訊的絕佳選擇。這是您的試用連結：%1$s</string>
     <string name="prefs_voip_abort_on_bluetooth_disconnect_title">當藍牙連線中斷時，結束通話</string>
     <string name="prefs_voip_abort_on_bluetooth_disconnect_summary_on">在通話過程中，如果藍牙耳機斷開連線，通話就會結束。</string>
     <string name="prefs_voip_abort_on_bluetooth_disconnect_summary_off">在通話過程中，即使藍牙耳機斷開連線，通話仍會繼續進行。注意：這可能會導致耳機上的掛斷按鈕無法使用。</string>
@@ -1881,7 +1881,7 @@ ${app_name_short} 支援的所有表情符號。</string>
     <!-- Placeholder 1 holds the display name of a group conversation -->
     <string name="group_spam_report_dialog_title_named">檢舉%1$s</string>
     <string name="group_spam_report_dialog_title">檢舉群組</string>
-    <string name="group_spam_report_dialog_message">此群組的ID、成員人數，以及群組建立者的ID和暱稱，將連同您的 ID 一併回報給 Threema。訊息內容或個人資料均不會被分享，而群組內任何成員都不會收到回報通知。</string>
+    <string name="group_spam_report_dialog_message">此群組的ID、成員人數，以及群組建立者的ID和暱稱，將連同您的 ID 一併回報給 Treslibre。訊息內容或個人資料均不會被分享，而群組內任何成員都不會收到回報通知。</string>
     <string name="group_spam_report_dialog_also_block_and_delete">同時封鎖建立者並刪除對話</string>
     <string name="group_spam_report_dialog_cancel">取消</string>
     <string name="group_spam_report_dialog_report">檢舉</string>

@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.app.webviews.usecases
 
 import android.net.Uri
@@ -19,9 +20,6 @@ class MayOpenUriExternallyUseCase {
             "http",
             "tel",
             "mailto",
-            "threema",
-            "threemawork",
-            "threemaonprem",
             BuildConfig.uriScheme,
         )
     }

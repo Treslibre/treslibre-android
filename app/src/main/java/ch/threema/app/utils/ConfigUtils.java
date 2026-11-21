@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.app.utils;
 
 import android.Manifest;
@@ -247,7 +248,7 @@ public class ConfigUtils {
     }
 
     public static boolean isWhitelabelOnPremBuild(@NonNull Context context) {
-        return BuildFlavor.IS_ON_PREM && !context.getPackageName().equals("ch.threema.app.onprem");
+        return false;
     }
 
     public static boolean isDemoOPServer(@NonNull PreferenceService preferenceService) {

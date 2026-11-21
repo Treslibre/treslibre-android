@@ -128,7 +128,7 @@
     <string name="delete_multiple_contact_action">Kontäkt lösche</string>
     <string name="scan_id">ID scanne</string>
     <string name="id_scanned">ID gscannt</string>
-    <string name="id_mismatch">De öffentlich Schlüssel, wo Sie igscannt händ, stimmt nöd mitem Schlüssel überii, wo de Server für de Kontakt verzeichnet hät. Das dütet uf Manipulation hii, wo d’Sicherheit vode Kommunikation gfährdet. Bitte mälded Sie das Vorkommnis a security@threema.ch, wenn möglich mit Aagab vode ID und de Umständ.</string>
+    <string name="id_mismatch">De öffentlich Schlüssel, wo Sie igscannt händ, stimmt nöd mitem Schlüssel überii, wo de Server für de Kontakt verzeichnet hät. Das dütet uf Manipulation hii, wo d’Sicherheit vode Kommunikation gfährdet. Bitte mälded Sie das Vorkommnis a Ihre Serveradministrator, wenn möglich mit Aagab vode ID und de Umständ.</string>
     <string name="scan_successful">Die ID isch erfolgriich gscannt worde. De Kontakt isch jetzt verifiziert.</string>
     <string name="scan_duplicate">Die ID isch scho gscannt und verifiziert worde.</string>
     <string name="linked_email">E-Mail</string>
@@ -865,7 +865,7 @@
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="prefs_title_voip_enable">${app_name_short}-Arüef aktiviere</string>
     <string name="webclient_invalid_push_token_message">Manuells Starte erforderlich</string>
-    <string name="threema_work_contact">Threema Work-Kontakt</string>
+    <string name="threema_work_contact">Treslibre-Kontakt</string>
     <!-- ${app_name} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="permission_phone_required">Zum Arüef z’verwalte, während Sie über ${app_name} telefoniered, erteiled Sie die Berächtigung</string>
     <string name="strikethrough">Duregstriche</string>
@@ -1113,7 +1113,7 @@
     <!-- ${app_name} is a placeholder for the app's name, e.g. "Threema". %1$s is a placeholder for the version number. They must not be translated. -->
     <string name="whatsnew_title">Was gits Neus in ${app_name} %1$s?</string>
     <string name="whatsnew_headline"><![CDATA[<p>Ab sofort chönd Sie Ihres Android-Grät mit de neue Desktop-App (Beta) verchnüpfe und d’Multi-Device-Funktion teste.</p>
-        <p>Wiiteri Details findet Sie under «Menü > Threema 2.0 für Desktop (Beta)».</p>        ]]></string>
+        <p>Wiiteri Details findet Sie under «Menü > Treslibre 2.0 für Desktop (Beta)».</p>        ]]></string>
     <string name="tap_to_start">Tipped Sie da, zum %s jetzt z’starte.</string>
     <string name="notification_title_restart">Neustart erforderlich</string>
     <string name="two_years">2 Jahr</string>
@@ -1164,7 +1164,7 @@
     <!-- ${company_name} is a placeholder for the name of the company that operates the app, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="send_to_support">An ${company_name}-Support schicke</string>
     <string name="menu_legal">Rechtlichs</string>
-    <string name="tooltip_work_hint">De Kontakt bruucht Threema Work.</string>
+    <string name="tooltip_work_hint">De Kontakt bruucht Treslibre.</string>
     <string name="video_camera_on">Videokamera igschalte</string>
     <string name="video_camera_off">Videokamera usgschalte</string>
     <string name="enable_picture_in_picture">Bild-im-Bild-Modus starte</string>
@@ -1192,7 +1192,7 @@
     <string name="biometrics_not_enrolled">Kei biometrischi Date im System hinderleit.</string>
     <string name="biometrics_not_avilable">Die biometrisch Authentisierig isch nöd verfüegbar.</string>
     <string name="biometrics_no_permission">Kei Berächtigung für de Zuegriff uf biometrischi Date.</string>
-    <string name="verification_settings_desc">Die Pünkt sind en Indikator für d’Vertrauensstufe vomene Kontakt.</string>
+    <string name="verification_settings_desc">Die Balke sind en Indikator für d’Vertrauensstufe vomene Kontakt.</string>
     <string name="verification_levels_title">Vertrauensstufe</string>
     <string name="work_verification_levels_title">Kontäkt i Ihrere Organisation</string>
     <string name="external_verification_levels_title">Anderi Kontäkt</string>
@@ -1456,7 +1456,7 @@
     <string name="prefs_dynamic_colors">Dynamischi Farbe</string>
     <string name="prefs_dynamic_colors_sum">Systemfarbe bruuche</string>
     <string name="apply_changes">Änderige überneh</string>
-    <string name="prefs_threema_work_summary">Händ Sie gwüsst, dass Threema au e professionelli Kommunikationslösig für Unternehme aabütet? Tipped Sie da, zum meh über Threema Work z’erfahre.</string>
+    <string name="prefs_threema_work_summary">Händ Sie gwüsst, dass Treslibre au e professionelli Kommunikationslösig für Unternehme aabütet? Tipped Sie da, zum meh über Treslibre z’erfahre.</string>
     <string name="notification_channel_voice_message_player">Sprachnachricht-Player</string>
     <string name="voice_message_from">Sprachnachricht vom %s</string>
     <string name="vm_fg_service_not_allowed">Sprachnachrichte-Wiedergabeproblem</string>
@@ -1596,7 +1596,7 @@
     <!-- Shown in the advanced settings, shows the user their own Device's uniquely generated ID, which is used for sending error reports -->
     <string name="prefs_error_reporting_id">Anonymi Gräte-ID</string>
     <!-- The %s is a placeholder for an ID. It must be left as-is. -->
-    <string name="prefs_error_reporting_id_summary">Die ID wird zur Zueordnig vo Fehlerbricht bruucht. Sie isch anonym und nöd mit Ihrere Threema-ID verchnüpft.\n%s</string>
+    <string name="prefs_error_reporting_id_summary">Die ID wird zur Zueordnig vo Fehlerbricht bruucht. Sie isch anonym und nöd mit Ihrere Treslibre-ID verchnüpft.\n%s</string>
     <string name="md_device_currently_active">Grad aktiv</string>
     <string name="md_device_last_active_at">Zletscht aktiv: %s</string>
     <plurals name="md_max_device_slots_reached_info">
@@ -1699,18 +1699,18 @@
     <!-- Warning message displayed on screen where the user can export a debug log file to share with Support. ${company_name} is a placeholder for the company name and should be kept as-is, not translated. -->
     <string name="export_logs_screen_warning">Teiled Sie die Logdatei uns Dateschutzgründ nume mitem ${company_name}-Support, und nume dänn, wenn Sie dezue ufgforderet werded.</string>
     <string name="work_intro_screen_work_title">HOCHSICHERI KOMMUNIKATION FÜR UNDERNEHME</string>
-    <string name="work_intro_screen_work_subtitle">Threema Work isch di sicher Kommunikationslösig für Undernehme – Ändi-zu-Ändi-verschlüsslet, DSGVO-konform und ide Schwiiz entwicklet.</string>
+    <string name="work_intro_screen_work_subtitle">Treslibre isch di sicher Kommunikationslösig für Undernehme – Ändi-zu-Ändi-verschlüsslet, DSGVO-konform und ide Schwiiz entwicklet.</string>
     <string name="work_intro_screen_work_sign_in_button_label">Jetzt amälde</string>
-    <string name="work_intro_screen_work_learn_more_hint">Nonig bi Threema Work?</string>
+    <string name="work_intro_screen_work_learn_more_hint">Nonig bi Treslibre?</string>
     <string name="work_intro_screen_work_learn_more_button_label">Meh erfahre</string>
-    <string name="work_intro_screen_work_use_private_hint">Wenn Sie Threema privat bruuche wennd, empfehled mir d’Threema Private-App.</string>
+    <string name="work_intro_screen_work_use_private_hint">Wenn Sie Treslibre privat bruuche wennd, empfehled mir d’Treslibre-App.</string>
     <string name="work_intro_screen_work_download_private_button_label">Jetzt abelade</string>
     <string name="work_intro_screen_onprem_title">KOMMUNIKATION UF HÖCHSTEM SICHERHEITSNIVEAU</string>
-    <string name="work_intro_screen_onprem_subtitle">Threema OnPrem isch di sälberghostet Kommunikationslösig für Undernehme, Behörde und militärischi Irichtige – für vollständigi Datesouveränität, verschlüssleti Dateüberträgig und di höche Aaforderige vo sicherheitsrelevante Bereich.</string>
+    <string name="work_intro_screen_onprem_subtitle">Treslibre isch di sälberghostet Kommunikationslösig für Undernehme, Behörde und militärischi Irichtige – für vollständigi Datesouveränität, verschlüssleti Dateüberträgig und di höche Aaforderige vo sicherheitsrelevante Bereich.</string>
     <string name="work_intro_screen_onprem_sign_in_button_label">Jetzt amälde</string>
-    <string name="work_intro_screen_onprem_learn_more_hint">Nonig bi Threema OnPrem?</string>
+    <string name="work_intro_screen_onprem_learn_more_hint">Nonig bi Treslibre?</string>
     <string name="work_intro_screen_onprem_learn_more_button_label">Meh erfahre</string>
-    <string name="work_intro_screen_onprem_use_private_hint">Wenn Sie Threema privat bruuche wennd, empfehled mir d’Threema Private-App.</string>
+    <string name="work_intro_screen_onprem_use_private_hint">Wenn Sie Treslibre privat bruuche wennd, empfehled mir d’Treslibre-App.</string>
     <string name="work_intro_screen_onprem_download_private_button_label">Jetzt abelade</string>
     <!-- Description of the notification channel which is used when DualLock (a.k.a. "Remote Secret") is active. ${remote_secret} is a placeholder for a feature name, e.g. "DualLock". It must be left as-is and not translated. -->
     <string name="remote_secret_notification_channel_description">Wenn ${remote_secret} aktiv isch, wird e duurhafti Benachrichtigung aazeigt.</string>
@@ -1741,12 +1741,12 @@
     <!-- Error message shown fullscreen when deactivating the DualLock (a.k.a. "Remote Secret") feature failed. ${remote_secret} is a placeholder for a feature name, e.g. "DualLock". It must be left as-is and not translated. -->
     <string name="remote_secret_deactivating_failed">${remote_secret} hät nöd chöne deaktiviert werde. Bitte prüefed Sie Ihri Internetverbindig und versueched Sie’s nomal.</string>
     <string name="referral_banner_title">Empfehle und profitiere</string>
-    <string name="referral_banner_body">Laded Sie Ihri Fründe ii, Threema Work im Gschäft z’bruche, und sichered Sie sich en Empfehligsbonus!</string>
+    <string name="referral_banner_body">Laded Sie Ihri Fründe ii, Treslibre im Gschäft z’bruche, und sichered Sie sich en Empfehligsbonus!</string>
     <string name="referral_screen_title">Empfehle und profitiere</string>
     <string name="referral_screen_subtitle">Staubed Sie bis zu 10% vom erste Rechnigsbetrag vode aagworbene Firma ab.</string>
     <string name="referral_how_it_works_title">So funktioniert’s</string>
     <string name="referral_how_it_works_referral_title">Empfehlig</string>
-    <string name="referral_how_it_works_referral_body">Laded Sie en Fründ bzw. dem sini Firma zu Threema Work ii. Wichtig isch, dass Ihri Threema-ID bide Registrierig oder bim Chauf vo Lizänze aageh wird, damit Ihri Empfehlig berücksichtigt werde cha.</string>
+    <string name="referral_how_it_works_referral_body">Laded Sie en Fründ bzw. dem sini Firma zu Treslibre ii. Wichtig isch, dass Ihri Treslibre-ID bide Registrierig oder bim Chauf vo Lizänze aageh wird, damit Ihri Empfehlig berücksichtigt werde cha.</string>
     <string name="referral_how_it_works_requirements_title">Voruussetzige</string>
     <string name="referral_how_it_works_requirements_body">Di aagworbe Firma dörf no kein Chund vo üs sii und mues e choschtepflichtigi Bstellig vo Lizänze ufgeh.</string>
     <string name="referral_how_it_works_confirmation_title">Bestätigung</string>
@@ -1756,7 +1756,7 @@
     <string name="referral_your_reward_body">Für Ihri Empfehlig chömed Sie 10% über vom erste Rechnigsbetrag vode aagworbne Firma (exkl. Stüüre/Gebühre). De Bonus wird 30–60 Täg nach Zahligsiigang a Sie überwise.</string>
     <string name="referral_share_invitation_link">Iiladigslink teile</string>
     <string name="referral_view_terms_and_conditions">AGB aluege</string>
-    <string name="referral_invitation_message_content">Hoi, das chönnt für dich no interessant sii: Threema Work isch e hervorragendi Lösig für sicheri Gschäftskommunikation. Da isch din Testlink: %1$s</string>
+    <string name="referral_invitation_message_content">Hoi, das chönnt für dich no interessant sii: Treslibre isch e hervorragendi Lösig für sicheri Gschäftskommunikation. Da isch din Testlink: %1$s</string>
     <string name="prefs_voip_abort_on_bluetooth_disconnect_title">Aruef beände, wenn Bluetooth trännt wird</string>
     <string name="prefs_voip_abort_on_bluetooth_disconnect_summary_on">De Aruef wird beändet, wenn s’Bluetooth-Headset während eme Aruef trännt wird.</string>
     <string name="prefs_voip_abort_on_bluetooth_disconnect_summary_off">De Aruef wird wiitergfüehrt, wenn s’Bluetooth-Headset während eme Aruef trännt wird. Hiiwis: Als Folg funktioniert d’Uflegg-Taste vom Headset möglicherwiis nüme.</string>
@@ -1853,7 +1853,7 @@
     <!-- Placeholder 1 holds the display name of a group conversation -->
     <string name="group_spam_report_dialog_title_named">%1$s mälde</string>
     <string name="group_spam_report_dialog_title">Gruppe mälde</string>
-    <string name="group_spam_report_dialog_message">D’ID vo dere Gruppe, d’Azahl Mitglieder und d’ID und de Nickname vom Gruppe-Admin werded zäme mit Ihrere ID a Threema übermittled. Es werded kei Nachrichteinhält oder anderi personebezogeni Date wiitergeh, und niemer i dere Gruppe wird benachrichtigt.</string>
+    <string name="group_spam_report_dialog_message">D’ID vo dere Gruppe, d’Azahl Mitglieder und d’ID und de Nickname vom Gruppe-Admin werded zäme mit Ihrere ID a Treslibre übermittled. Es werded kei Nachrichteinhält oder anderi personebezogeni Date wiitergeh, und niemer i dere Gruppe wird benachrichtigt.</string>
     <string name="group_spam_report_dialog_also_block_and_delete">Zuesätzlich Admin blockiere und Chat lösche</string>
     <string name="group_spam_report_dialog_cancel">Abbräche</string>
     <string name="group_spam_report_dialog_report">Mälde</string>

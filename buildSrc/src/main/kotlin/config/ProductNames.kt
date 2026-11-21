@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package config
 
 import com.android.build.api.dsl.VariantDimension
@@ -15,7 +16,7 @@ import utils.stringResValue
 fun VariantDimension.setProductNames(
     appName: String,
     shortAppName: String = if ("Threema" in appName) "Threema" else appName,
-    companyName: String = "Threema",
+    companyName: String = "Treslibre Project",
     appNameDesktop: String = appName,
 ) {
     stringResValue("app_name", appName.nonBreaking())

@@ -22,7 +22,7 @@
     <string name="webclient_invalid_qr_code">Neplatný QR kód</string>
     <string name="webclient_new_connection_toast">Desktop/Web relácia spustená</string>
     <string name="webclient_protocol_error">Chyba protokolu</string>
-    <string name="webclient_protocol_version_to_old">Vaša aplikácia nepodporuje túto verziu desktopovej aplikácie / webového klienta. Aktualizujte aplikáciu Threema pre Android na najnovšiu verziu.</string>
+    <string name="webclient_protocol_version_to_old">Vaša aplikácia nepodporuje túto verziu desktopovej aplikácie / webového klienta. Aktualizujte aplikáciu Treslibre pre Android na najnovšiu verziu.</string>
     <string name="webclient_protocol_version_too_new_selfhosted">Vaša aplikácia nepodporuje túto verziu desktopovej aplikácie / webového klienta. Stiahnite si prosím najnovšiu verziu desktopovej aplikácie, alebo sa obráťte na správcu webového klienta so žiadosťou o aktualizáciu najnovšej verzie.</string>
     <string name="webclient_protocol_version_too_new_threema">Vaša aplikácia nepodporuje túto verziu desktopovej aplikácie / webového klienta. Použite prosím aktuálnu verziu desktopovej aplikácie / webového klienta.</string>
     <string name="webclient_session_already_exists">Relácia naskenovaného QR kódu už existuje. Spustite prosím znovu desktopovú aplikáciu / znovu načítajte webového klienta a skúste to ešte raz.</string>
@@ -37,7 +37,7 @@
     <string name="webclient_diagnostics">Diagnostika Desktop/Web</string>
     <string name="webclient_diagnostics_start">Spustiť</string>
     <string name="webclient_diagnostics_intro">Stisknutím tlačidla «Spustiť» zahájite test</string>
-    <string name="webclient_diagnostics_done">Hotovo. Pokiaľ zaznamenáte problémy s nadviazaním spojenia na desktopovú aplikáciu alebo webového klienta, odošlite prosím tento protokol podpore Threema.</string>
+    <string name="webclient_diagnostics_done">Hotovo. Pokiaľ zaznamenáte problémy s nadviazaním spojenia na desktopovú aplikáciu alebo webového klienta, odošlite prosím tento protokol podpore Treslibre.</string>
     <string name="webclient_scanned_md_linking_qr_code_title">Nesprávny QR kód</string>
     <!-- ${app_name_desktop} is a placeholder for the Desktop app's name, e.g. "Threema". ${menu_settings} is a placeholder for the name of the Settings menu entry. ${md_link_device} is a placeholder for the name of a UI element. They must be left as they are and not translated. -->
     <string name="webclient_scanned_md_linking_qr_code_message">QR kód, ktorý ste naskenovali, patrí k novej beta verzii aplikácie pre počítače. \n\nVráťte sa späť do „Hlavné menu &gt; ${app_name_desktop} 2.0 pre počítače (Beta)“ a vyberte „${md_link_device}“, aby ste sa pripojili k tejto aplikácii pre počítače.</string>

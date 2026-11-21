@@ -22,7 +22,7 @@
     <string name="webclient_invalid_qr_code">Ungültiger QR-Code</string>
     <string name="webclient_new_connection_toast">Desktop-/Web-Sitzung gestartet</string>
     <string name="webclient_protocol_error">Protokoll-Fehler</string>
-    <string name="webclient_protocol_version_to_old">Die Desktop-App / der Web-Client ist nicht kompatibel mit dieser Android-App. Bitte aktualisieren Sie Threema für Android auf die neueste Version.</string>
+    <string name="webclient_protocol_version_to_old">Die Desktop-App / der Web-Client ist nicht kompatibel mit dieser Android-App. Bitte aktualisieren Sie Treslibre für Android auf die neueste Version.</string>
     <string name="webclient_protocol_version_too_new_selfhosted">Ihre App unterstützt diese Version der Desktop-App / des Web-Clients nicht. Laden Sie die neueste Version der Desktop-App herunter, oder bitten Sie den Administrator Ihrer Web-Client-Instanz, auf die neueste Version zu aktualisieren.</string>
     <string name="webclient_protocol_version_too_new_threema">Ihre App unterstützt diese Version der Desktop-App / des Web-Clients nicht. Bitte benutzen Sie eine neuere Version der Desktop-App bzw. des Web-Clients.</string>
     <string name="webclient_session_already_exists">Eine Sitzung für diesen QR-Code existiert bereits. Bitte starten Sie Ihren Browser / Ihre Desktop-App neu.</string>
@@ -37,7 +37,7 @@
     <string name="webclient_diagnostics">Desktop-/Web-Diagnose</string>
     <string name="webclient_diagnostics_start">Start</string>
     <string name="webclient_diagnostics_intro">Tippen Sie auf den «Start»-Button, um den Test zu starten.</string>
-    <string name="webclient_diagnostics_done">Beendet. Falls Probleme beim Aufbau der Desktop-/Web-Verbindung auftreten, senden Sie dieses Log bitte an den Threema-Support.</string>
+    <string name="webclient_diagnostics_done">Beendet. Falls Probleme beim Aufbau der Desktop-/Web-Verbindung auftreten, senden Sie dieses Log bitte an den Treslibre-Support.</string>
     <string name="webclient_scanned_md_linking_qr_code_title">Falscher QR Code</string>
     <!-- ${app_name_desktop} is a placeholder for the Desktop app's name, e.g. "Threema". ${menu_settings} is a placeholder for the name of the Settings menu entry. ${md_link_device} is a placeholder for the name of a UI element. They must be left as they are and not translated. -->
     <string name="webclient_scanned_md_linking_qr_code_message">Der von Ihnen gescannte QR Code gehört zu der neuen Desktop Beta App.\n\nNavigieren Sie zurück zu «Hauptmenü &gt; ${menu_settings} &gt; ${app_name_desktop} 2.0 für Desktop (Beta)» und wählen Sie dann «${md_link_device}» um mit dieser Desktop App zu verknüpfen.</string>

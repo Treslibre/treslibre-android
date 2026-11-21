@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.app.utils;
 
 import android.annotation.SuppressLint;
@@ -374,13 +375,10 @@ public class LinkifyUtil {
     }
 
     /**
-     * Possible target Url schemes for adding Threema contacts
+     * Possible target Url schemes for adding Treslibre contacts
      */
     private final String[] addContactSchemes = {
-        "threema",
-        "threemawork",
-        "threemablue",
-        "threemaonprem"
+        "treslibre"
     };
 
     /**

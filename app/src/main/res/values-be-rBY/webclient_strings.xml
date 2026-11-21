@@ -22,8 +22,8 @@
     <string name="webclient_invalid_qr_code">Няправільны QR-код</string>
     <string name="webclient_new_connection_toast">Сеанс праграмы для ПК / вэб-кліента запушчаны.</string>
     <string name="webclient_protocol_error">Памылка пратакола</string>
-    <string name="webclient_protocol_version_to_old">Ваша праграма не падтрымлівае гэтую версію вэб-кліента. Калі ласка, абнавіце Threema для Android да апошняй версіі.</string>
-    <string name="webclient_protocol_version_too_new_selfhosted">Ваша праграма не падтрымлівае гэтую версію вэб-кліента. Калі ласка, абнавіце Threema для Android да апошняй версіі або папрасіце адміністратара вашага вэб-кліента абнавіць яго да апошняй версіі.</string>
+    <string name="webclient_protocol_version_to_old">Ваша праграма не падтрымлівае гэтую версію вэб-кліента. Калі ласка, абнавіце Treslibre для Android да апошняй версіі.</string>
+    <string name="webclient_protocol_version_too_new_selfhosted">Ваша праграма не падтрымлівае гэтую версію вэб-кліента. Калі ласка, абнавіце Treslibre для Android да апошняй версіі або папрасіце адміністратара вашага вэб-кліента абнавіць яго да апошняй версіі.</string>
     <string name="webclient_protocol_version_too_new_threema">Ваша праграма не падтрымлівае гэтую версію праграмы для ПК / вэб-кліента. Выкарыстоўвайце апошнюю версію праграмы для ПК / вэб-кліента.</string>
     <string name="webclient_session_already_exists">Сеанс для гэтага QR-кода ўжо існуе. Калі ласка, перазапусціце праграму або перазагрузіце старонку вэб-кліента і паспрабуйце зноў.</string>
     <string name="webclient_really_start_webclient_by_payload_body">Хочаце запусціць гэты сеанс?</string>
@@ -37,7 +37,7 @@
     <string name="webclient_diagnostics">Дыягностыка для Desktop/Web</string>
     <string name="webclient_diagnostics_start">Пачаць</string>
     <string name="webclient_diagnostics_intro">Націсніце кнопку «Пачаць», каб запусціць тэст.</string>
-    <string name="webclient_diagnostics_done">Гатова! Калі ў вас узнікаюць непаладкі з наладжваннем злучэння з праграмай для ПК або вэб-кліентам, адпраўце даныя ў службу падтрымкі Threema.</string>
+    <string name="webclient_diagnostics_done">Гатова! Калі ў вас узнікаюць непаладкі з наладжваннем злучэння з праграмай для ПК або вэб-кліентам, адпраўце даныя ў службу падтрымкі Treslibre.</string>
     <string name="webclient_scanned_md_linking_qr_code_title">Памылковы QR-код</string>
     <!-- ${app_name_desktop} is a placeholder for the Desktop app's name, e.g. "Threema". ${menu_settings} is a placeholder for the name of the Settings menu entry. ${md_link_device} is a placeholder for the name of a UI element. They must be left as they are and not translated. -->
     <string name="webclient_scanned_md_linking_qr_code_message">QR-код, які вы прасканавалі, належыць новай праграме для камп’ютара (бэта).\n\nВярніцеся ў «Галоўнае меню &gt; ${app_name_desktop} 2.0 для камп’ютара (бэта)» і абярыце «${md_link_device}», каб звязацца з гэтай праграмай для камп’ютара.</string>

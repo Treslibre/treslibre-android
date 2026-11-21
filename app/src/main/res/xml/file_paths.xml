@@ -5,7 +5,7 @@
         path="share/" />
     <external-path
         name="ext_files"
-        path="Threema/" />
+        path="Treslibre/" />
     <external-path
         name="download_files"
         path="Download/" />

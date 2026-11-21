@@ -286,20 +286,6 @@
                     android:host="compose"
                     android:scheme="${uriScheme}" />
             </intent-filter>
-            <intent-filter
-                android:autoVerify="true"
-                android:label="@string/app_name">
-                <action android:name="android.intent.action.VIEW" />
-                <action android:name="android.intent.action.SENDTO" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:host="${actionUrl}"
-                    android:pathPrefix="/compose"
-                    android:scheme="https" />
-            </intent-filter>
 
             <meta-data
                 android:name="android.service.chooser.chooser_target_service"
@@ -350,19 +336,6 @@
                     android:host="add"
                     android:scheme="${uriScheme}" />
             </intent-filter>
-            <intent-filter
-                android:autoVerify="true"
-                android:label="@string/app_name">
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:host="${actionUrl}"
-                    android:pathPrefix="/add"
-                    android:scheme="https" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".webviews.LicenseActivity"
@@ -398,20 +371,6 @@
             android:launchMode="singleTop"
             android:theme="@style/Theme.Threema.WithToolbar"
             android:windowSoftInputMode="adjustPan">
-            <intent-filter
-                android:autoVerify="true"
-                android:label="@string/app_name"
-                android:priority="1000">
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:host="${actionUrl}"
-                    android:pathPrefix="/license"
-                    android:scheme="https" />
-            </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -772,22 +731,8 @@
             android:name=".activities.AppLinksActivity"
             android:autoRemoveFromRecents="true"
             android:configChanges="touchscreen|keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode"
-            android:exported="true"
-            android:theme="@style/Theme.Threema.Transparent.Background">
-            <intent-filter
-                android:autoVerify="true"
-                android:label="@string/app_name">
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:host="${contactActionUrl}"
-                    android:pathPattern="/.*"
-                    android:scheme="https" />
-            </intent-filter>
-        </activity>
+            android:exported="false"
+            android:theme="@style/Theme.Threema.Transparent.Background" />
         <activity
             android:name=".camera.CameraActivity"
             android:autoRemoveFromRecents="true"
@@ -901,19 +846,6 @@
             android:launchMode="singleTop"
             android:theme="@style/Theme.Threema.AppStartup">
 
-            <intent-filter
-                android:autoVerify="true"
-                android:label="@string/app_name">
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:host="${actionUrl}"
-                    android:path="/debug"
-                    android:scheme="https" />
-            </intent-filter>
             <intent-filter android:label="@string/app_name">
                 <action android:name="android.intent.action.VIEW" />
 

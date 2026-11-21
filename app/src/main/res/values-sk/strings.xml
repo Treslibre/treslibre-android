@@ -873,7 +873,7 @@ Vykonajte prosím zálohú vašich údajov vhodnou metódou.</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="prefs_title_voip_enable">Povoliť ${app_name_short} hovory</string>
     <string name="webclient_invalid_push_token_message">Vyžaduje sa manuálne spustenie</string>
-    <string name="threema_work_contact">Kontakt Threema Work</string>
+    <string name="threema_work_contact">Kontakt Treslibre</string>
     <!-- ${app_name} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="permission_phone_required">Povolte oprávnenie na správu telefónnych hovorov počas používania ${app_name} hovorov</string>
     <string name="strikethrough">Preškrtnuté</string>
@@ -1121,7 +1121,7 @@ Vykonajte prosím zálohú vašich údajov vhodnou metódou.</string>
     <!-- ${app_name} is a placeholder for the app's name, e.g. "Threema". %1$s is a placeholder for the version number. They must not be translated. -->
     <string name="whatsnew_title">Čo je nové v ${app_name} %1$s?</string>
     <string name="whatsnew_headline"><![CDATA[        <p>Teraz môžete prepojiť svoje zariadenie Android s novou aplikáciou pre počítače (beta) a vyskúšať funkciu viacerých zariadení.</p>
-        <p>Ďalšie informácie nájdete v časti „Menu > Threema 2.0 pre počítače (Beta)“.</p>
+        <p>Ďalšie informácie nájdete v časti „Menu > Treslibre 2.0 pre počítače (Beta)“.</p>
         ]]></string>
     <string name="tap_to_start">Kliknutím sem spustíte aplikáciu %s.</string>
     <string name="notification_title_restart">Vyžaduje sa reštart</string>
@@ -1173,7 +1173,7 @@ Vykonajte prosím zálohú vašich údajov vhodnou metódou.</string>
     <!-- ${company_name} is a placeholder for the name of the company that operates the app, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="send_to_support">Odoslať podpore ${company_name}</string>
     <string name="menu_legal">Právne</string>
-    <string name="tooltip_work_hint">Tento kontakt používa Threema Work.</string>
+    <string name="tooltip_work_hint">Tento kontakt používa Treslibre.</string>
     <string name="video_camera_on">Kamera pre video aktivovaná</string>
     <string name="video_camera_off">Kamera pre video deaktivovaná</string>
     <string name="enable_picture_in_picture">Spustiť režim obraz-v-obraze (PIP)</string>
@@ -1201,7 +1201,7 @@ Vykonajte prosím zálohú vašich údajov vhodnou metódou.</string>
     <string name="biometrics_not_enrolled">Biometrické údaje nie sú v systéme nastavené.</string>
     <string name="biometrics_not_avilable">Biometrické údaje nie sú v systéme k dispozícii.</string>
     <string name="biometrics_no_permission">Nebolo udelené povolenie k biometrickým údajom alebo k hardvéru.</string>
-    <string name="verification_settings_desc">Farebné bodky označujú úroveň overenia kontaktu</string>
+    <string name="verification_settings_desc">Farebné prúžky označujú úroveň overenia kontaktu</string>
     <string name="verification_levels_title">Úroveň overenia</string>
     <string name="work_verification_levels_title">Kontakty vo vašej organizácii</string>
     <string name="external_verification_levels_title">Ďalšie kontakty</string>
@@ -1465,7 +1465,7 @@ Vykonajte prosím zálohú vašich údajov vhodnou metódou.</string>
     <string name="prefs_dynamic_colors">Dynamická farba</string>
     <string name="prefs_dynamic_colors_sum">Použiť systémové farby</string>
     <string name="apply_changes">Aplikovať zmeny</string>
-    <string name="prefs_threema_work_summary">Vedeli ste, že Threema ponúka aj profesionálne komunikačné riešenie pre firmy? Klepnutím sem sa dozviete viac o Threema Work.</string>
+    <string name="prefs_threema_work_summary">Vedeli ste, že Treslibre ponúka aj profesionálne komunikačné riešenie pre firmy? Klepnutím sem sa dozviete viac o Treslibre.</string>
     <string name="notification_channel_voice_message_player">Prehrávač hlasových správ</string>
     <string name="voice_message_from">Hlasová správa od %s</string>
     <string name="vm_fg_service_not_allowed">Chyba prehrávania hlasovej správy</string>
@@ -1606,7 +1606,7 @@ Vykonajte prosím zálohú vašich údajov vhodnou metódou.</string>
     <!-- Shown in the advanced settings, shows the user their own Device's uniquely generated ID, which is used for sending error reports -->
     <string name="prefs_error_reporting_id">Anonymné ID zariadenia</string>
     <!-- The %s is a placeholder for an ID. It must be left as-is. -->
-    <string name="prefs_error_reporting_id_summary">Toto ID slúži na priraďovanie hlásení o chybách. Je anonymné a nie je prepojené s vaším ID v aplikácii Threema.\n%s</string>
+    <string name="prefs_error_reporting_id_summary">Toto ID slúži na priraďovanie hlásení o chybách. Je anonymné a nie je prepojené s vaším ID v aplikácii Treslibre.\n%s</string>
     <string name="md_device_currently_active">V súčasnosti aktívny</string>
     <string name="md_device_last_active_at">Naposledy aktívny: %s</string>
     <plurals name="md_max_device_slots_reached_info">
@@ -1711,18 +1711,18 @@ Vykonajte prosím zálohú vašich údajov vhodnou metódou.</string>
     <!-- Warning message displayed on screen where the user can export a debug log file to share with Support. ${company_name} is a placeholder for the company name and should be kept as-is, not translated. -->
     <string name="export_logs_screen_warning">Z dôvodov ochrany súkromia zdieľajte súbor protokolu iba s tímom technickej podpory spoločnosti ${company_name} a to len v prípade, ak vás o to požiadajú.</string>
     <string name="work_intro_screen_work_title">VYSOKO BEZPEČNÁ KOMUNIKÁCIA PRE FIRMY</string>
-    <string name="work_intro_screen_work_subtitle">Threema Work je bezpečné komunikačné riešenie pre firmy – s end-to-end šifrovaním, v súlade s GDPR a vyvinuté vo Švajčiarsku.</string>
+    <string name="work_intro_screen_work_subtitle">Treslibre je bezpečné komunikačné riešenie pre firmy – s end-to-end šifrovaním, v súlade s GDPR a vyvinuté vo Švajčiarsku.</string>
     <string name="work_intro_screen_work_sign_in_button_label">Prihlásiť sa</string>
-    <string name="work_intro_screen_work_learn_more_hint">Ešte nepoužívate Threema Work?</string>
+    <string name="work_intro_screen_work_learn_more_hint">Ešte nepoužívate Treslibre?</string>
     <string name="work_intro_screen_work_learn_more_button_label">Zistiť viac</string>
-    <string name="work_intro_screen_work_use_private_hint">Ak chcete používať Threemu na súkromné účely, odporúčame aplikáciu Threema Private.</string>
+    <string name="work_intro_screen_work_use_private_hint">Ak chcete používať Threemu na súkromné účely, odporúčame aplikáciu Treslibre.</string>
     <string name="work_intro_screen_work_download_private_button_label">Stiahnuť teraz</string>
     <string name="work_intro_screen_onprem_title">KOMUNIKÁCIA NA NAJVYŠŠEJ ÚROVNI BEZPEČNOSTI</string>
-    <string name="work_intro_screen_onprem_subtitle">Threema OnPrem je komunikačné riešenie s vlastným hosťovaním pre podniky, vládne agentúry a vojenské organizácie – pre úplnú suverenitu údajov, šifrovaný prenos údajov a vysoké požiadavky na prostredia citlivé na bezpečnosť.</string>
+    <string name="work_intro_screen_onprem_subtitle">Treslibre je komunikačné riešenie s vlastným hosťovaním pre podniky, vládne agentúry a vojenské organizácie – pre úplnú suverenitu údajov, šifrovaný prenos údajov a vysoké požiadavky na prostredia citlivé na bezpečnosť.</string>
     <string name="work_intro_screen_onprem_sign_in_button_label">Prihlásiť sa</string>
-    <string name="work_intro_screen_onprem_learn_more_hint">Ešte nepoužívate Threema OnPrem?</string>
+    <string name="work_intro_screen_onprem_learn_more_hint">Ešte nepoužívate Treslibre?</string>
     <string name="work_intro_screen_onprem_learn_more_button_label">Zistiť viac</string>
-    <string name="work_intro_screen_onprem_use_private_hint">Ak chcete používať Threemu na súkromné účely, odporúčame aplikáciu Threema Private.</string>
+    <string name="work_intro_screen_onprem_use_private_hint">Ak chcete používať Threemu na súkromné účely, odporúčame aplikáciu Treslibre.</string>
     <string name="work_intro_screen_onprem_download_private_button_label">Stiahnuť teraz</string>
     <!-- Description of the notification channel which is used when DualLock (a.k.a. "Remote Secret") is active. ${remote_secret} is a placeholder for a feature name, e.g. "DualLock". It must be left as-is and not translated. -->
     <string name="remote_secret_notification_channel_description">Trvalé upozornenie je zobrazené, keď je aktívna funkcia ${remote_secret}.</string>
@@ -1753,12 +1753,12 @@ Vykonajte prosím zálohú vašich údajov vhodnou metódou.</string>
     <!-- Error message shown fullscreen when deactivating the DualLock (a.k.a. "Remote Secret") feature failed. ${remote_secret} is a placeholder for a feature name, e.g. "DualLock". It must be left as-is and not translated. -->
     <string name="remote_secret_deactivating_failed">Deaktivácia ${remote_secret} zlyhala. Skontrolujte pripojenie k internetu a skúste to znova.</string>
     <string name="referral_banner_title">Odporučiť a získať výhody</string>
-    <string name="referral_banner_body">Pozvite svojich priateľov, aby vo svojej spoločnosti používali Threema Work a získajte bonus za odporúčanie!</string>
+    <string name="referral_banner_body">Pozvite svojich priateľov, aby vo svojej spoločnosti používali Treslibre a získajte bonus za odporúčanie!</string>
     <string name="referral_screen_title">Odporučiť a získať výhody</string>
     <string name="referral_screen_subtitle">Získajte až 10 % z čiastky prvej faktúry spoločnosti, ktorú ste sprostredkovali.</string>
     <string name="referral_how_it_works_title">Ako to funguje</string>
     <string name="referral_how_it_works_referral_title">Odporúčanie</string>
-    <string name="referral_how_it_works_referral_body">Pozvite priateľa alebo jeho spoločnosť, aby sa pripojili k Threema Work. Je dôležité, aby pri registrácii alebo pri nákupe licencií bolo uvedené vaše Threema ID, aby sa mohlo zohľadniť vaše odporúčanie.</string>
+    <string name="referral_how_it_works_referral_body">Pozvite priateľa alebo jeho spoločnosť, aby sa pripojili k Treslibre. Je dôležité, aby pri registrácii alebo pri nákupe licencií bolo uvedené vaše Treslibre ID, aby sa mohlo zohľadniť vaše odporúčanie.</string>
     <string name="referral_how_it_works_requirements_title">Požiadavky</string>
     <string name="referral_how_it_works_requirements_body">Uvedená spoločnosť nesmie byť už našim zákazníkom a musí si objednať licencie</string>
     <string name="referral_how_it_works_confirmation_title">Potvrdenie</string>
@@ -1768,7 +1768,7 @@ Vykonajte prosím zálohú vašich údajov vhodnou metódou.</string>
     <string name="referral_your_reward_body">Za odporúčanie získate 10 % z čiastky prvej faktúry prijatého klienta (bez daní a poplatkov). Bonus vám bude poukázaný 30–60 dní po prijatí platby.</string>
     <string name="referral_share_invitation_link">Zdieľať odkaz na pozvánku</string>
     <string name="referral_view_terms_and_conditions">Zobraziť všeobecné podmienky používania</string>
-    <string name="referral_invitation_message_content">Ahoj, napadlo ma, že by sa ti to mohlo hodiť: Threema Work je skvelá voľba pre bezpečnú firemnú komunikáciu. Tu je tvoj testovací odkaz: %1$s</string>
+    <string name="referral_invitation_message_content">Ahoj, napadlo ma, že by sa ti to mohlo hodiť: Treslibre je skvelá voľba pre bezpečnú firemnú komunikáciu. Tu je tvoj testovací odkaz: %1$s</string>
     <string name="prefs_voip_abort_on_bluetooth_disconnect_title">Ukončiť hovor, keď sa odpojí Bluetooth</string>
     <string name="prefs_voip_abort_on_bluetooth_disconnect_summary_on">Hovor sa ukončí, keď sa Bluetooth slúchadlá odpoja počas hovoru.</string>
     <string name="prefs_voip_abort_on_bluetooth_disconnect_summary_off">Hovor pokračuje aj v prípade, že sa počas hovoru odpojí Bluetooth slúchadlo. Poznámka: V dôsledku toho môže prestať fungovať tlačidlo na ukončenie hovoru na slúchadle.</string>
@@ -1865,7 +1865,7 @@ Vykonajte prosím zálohú vašich údajov vhodnou metódou.</string>
     <!-- Placeholder 1 holds the display name of a group conversation -->
     <string name="group_spam_report_dialog_title_named">Nahlásiť %1$s</string>
     <string name="group_spam_report_dialog_title">Nahlásiť skupinu</string>
-    <string name="group_spam_report_dialog_message">ID tejto skupiny, počet členov, ako aj ID a prezývka zakladateľa skupiny budú spolu s vaším ID odoslané spoločnosti Threema. Obsah správ ani žiadne ďalšie osobné údaje nebudú zdieľané a nikto zo skupiny o tom nebude informovaný.</string>
+    <string name="group_spam_report_dialog_message">ID tejto skupiny, počet členov, ako aj ID a prezývka zakladateľa skupiny budú spolu s vaším ID odoslané spoločnosti Treslibre. Obsah správ ani žiadne ďalšie osobné údaje nebudú zdieľané a nikto zo skupiny o tom nebude informovaný.</string>
     <string name="group_spam_report_dialog_also_block_and_delete">Tiež zablokovať tvorcu a vymazať konverzáciu</string>
     <string name="group_spam_report_dialog_cancel">Zrušiť</string>
     <string name="group_spam_report_dialog_report">Nahlásiť</string>

@@ -819,7 +819,7 @@ https://myid.threema.ch/revoke に入力することで ID を削除すること
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="prefs_title_voip_enable">${app_name_short}通話を有効化</string>
     <string name="webclient_invalid_push_token_message">手動起動が必要</string>
-    <string name="threema_work_contact">Threema Workの連絡先</string>
+    <string name="threema_work_contact">Treslibreの連絡先</string>
     <!-- ${app_name} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="permission_phone_required">${app_name}通話を使用している間、電話の管理を許可する</string>
     <string name="strikethrough">取り消し線</string>
@@ -1108,7 +1108,7 @@ https://myid.threema.ch/revoke に入力することで ID を削除すること
     <!-- ${company_name} is a placeholder for the name of the company that operates the app, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="send_to_support">${company_name}サポートに送信</string>
     <string name="menu_legal">法的情報</string>
-    <string name="tooltip_work_hint">この連絡先はThreema Workを利用しています。</string>
+    <string name="tooltip_work_hint">この連絡先はTreslibreを利用しています。</string>
     <string name="video_camera_on">ビデオカメラが有効</string>
     <string name="video_camera_off">ビデオカメラが無効</string>
     <string name="enable_picture_in_picture">ピクチャ・イン・ピクチャ・モードを開始</string>
@@ -1136,7 +1136,7 @@ https://myid.threema.ch/revoke に入力することで ID を削除すること
     <string name="biometrics_not_enrolled">生体認証は登録されていません。</string>
     <string name="biometrics_not_avilable">このシステムでは生体認証は利用できません。</string>
     <string name="biometrics_no_permission">生体認証またはハードウェアにアクセスするための許可がありません。</string>
-    <string name="verification_settings_desc">3つの点は、連絡先の検証レベルを表しています。</string>
+    <string name="verification_settings_desc">3本のバーは、連絡先の検証レベルを表しています。</string>
     <string name="verification_levels_title">認証レベル</string>
     <string name="work_verification_levels_title">組織内の連絡先</string>
     <string name="external_verification_levels_title">その他の連絡先</string>
@@ -1395,7 +1395,7 @@ https://myid.threema.ch/revoke に入力することで ID を削除すること
     <string name="prefs_dynamic_colors">ダイナミックカラー</string>
     <string name="prefs_dynamic_colors_sum">システムカラーを使用</string>
     <string name="apply_changes">変更を適応</string>
-    <string name="prefs_threema_work_summary">Threemaはビジネス向けのコミュニケーションソリューションも提供していることをご存知でたか？Threema Workについて詳しく知りたい場合は、こちらをタップしてください。</string>
+    <string name="prefs_threema_work_summary">Treslibreはビジネス向けのコミュニケーションソリューションも提供していることをご存知でたか？Treslibreについて詳しく知りたい場合は、こちらをタップしてください。</string>
     <string name="notification_channel_voice_message_player">音声メッセージプレイヤー</string>
     <string name="voice_message_from">%sからの音声メッセージ</string>
     <string name="vm_fg_service_not_allowed">音声メッセージプレイバックエラー</string>

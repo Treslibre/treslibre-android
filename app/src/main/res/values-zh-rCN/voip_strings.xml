@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="voip_title">Threema 通话</string>
+    <string name="voip_title">Treslibre 通话</string>
     <string name="voip_hangup">挂断</string>
     <string name="voip_toggle_mic">切换麦克风</string>
     <string name="voip_toggle_speaker">切换扬声器</string>
@@ -9,9 +9,9 @@
     <string name="voip_switch_cam_rear">切换到后置摄像头</string>
     <string name="voip_toggle_video">切换视频模式</string>
     <string name="voip_call_confirm">您要致电 %1$s 吗？</string>
-    <string name="voip_error_call">在 Threema 通话中出错</string>
+    <string name="voip_error_call">在 Treslibre 通话中出错</string>
     <string name="voip_error_init_call">初始化通话时出错</string>
-    <string name="voip_notification_title">Threema 通话来电</string>
+    <string name="voip_notification_title">Treslibre 通话来电</string>
     <string name="voip_notification_text">%1$s正在通话</string>
     <!-- Shown when starting a call, before the peer device is ringing -->
     <string name="voip_status_initializing">正在初始化</string>
@@ -23,13 +23,13 @@
     <string name="voip_status_ringing">响铃中</string>
     <string name="voip_mic_enable">启用麦克风</string>
     <string name="voip_mic_disable">禁用麦克风</string>
-    <string name="voip_checking_compatibility">检查此联系人是否可以接收 Threema 通话</string>
-    <string name="voip_incompatible">此联系人尚无法接收 Threema 通话。</string>
+    <string name="voip_checking_compatibility">检查此联系人是否可以接收 Treslibre 通话</string>
+    <string name="voip_incompatible">此联系人尚无法接收 Treslibre 通话。</string>
     <string name="voip_call_status_unavailable">通话接收者无法接通</string>
     <string name="voip_call_status_rejected">通话被拒</string>
     <string name="voip_call_status_busy">通话接收者忙碌中</string>
     <string name="voip_call_status_busy_short">忙碌中</string>
-    <string name="voip_call_status_disabled">Threema 通话被接收者禁用</string>
+    <string name="voip_call_status_disabled">Treslibre 通话被接收者禁用</string>
     <string name="voip_call_status_missed">未接来电</string>
     <string name="voip_call_finished_outbox">拨出通话</string>
     <string name="voip_call_finished_inbox">来电</string>
@@ -42,8 +42,8 @@
     <string name="voip_earpiece">电话</string>
     <string name="voip_bluetooth">蓝牙</string>
     <string name="voip_none">无法使用</string>
-    <string name="voip_call_finished">Threema 通话已结束</string>
-    <string name="voip_another_call">无法连接。另一个 Threema 通话目前正在进行中。</string>
+    <string name="voip_call_finished">Treslibre 通话已结束</string>
+    <string name="voip_another_call">无法连接。另一个 Treslibre 通话目前正在进行中。</string>
     <string name="voip_prefs_title_aec">回声消除</string>
     <string name="voip_prefs_aec_sw">软件回声消除</string>
     <string name="voip_prefs_aec_hw">硬件回音消除</string>
@@ -55,8 +55,8 @@
     <string name="voip_connection_failed">无法建立连接</string>
     <string name="voip_call_disconnected">通话中断</string>
     <string name="prefs_voip_reject_incoming_calls_title">拒绝手机通话</string>
-    <string name="prefs_voip_reject_incoming_calls_summary">在 Threema 通话时拒绝来电。</string>
-    <string name="voip_contact_not_found">找不到此号码与 Threema 关联的联系人。</string>
+    <string name="prefs_voip_reject_incoming_calls_summary">在 Treslibre 通话时拒绝来电。</string>
+    <string name="voip_contact_not_found">找不到此号码与 Treslibre 关联的联系人。</string>
     <string name="voip_another_pstn_call">无法建立通话，常规电话仍正在进行中。</string>
     <string name="voip_call_status_off_hours">非工作时间通话</string>
     <string name="voip_peer_video_disabled">对方已禁止视频通话。</string>
@@ -71,7 +71,7 @@
     <string name="voip_webrtc_debug">WebRTC 诊断</string>
     <string name="voip_webrtc_debug_intro">按 “开始” 按钮开始测试。</string>
     <string name="voip_webrtc_debug_start">开始</string>
-    <string name="voip_webrtc_debug_done">大功告成。如果您在建立通话连接时遇到问题，请将错误日志发送给 Threema 支持。</string>
+    <string name="voip_webrtc_debug_done">大功告成。如果您在建立通话连接时遇到问题，请将错误日志发送给 Treslibre 支持。</string>
     <string name="voip_webrtc_debug_copied">已复制到剪贴板。</string>
     <string name="voip_webrtc_debug_copy_clipboard">复制到剪贴板</string>
     <!-- Group Calls -->

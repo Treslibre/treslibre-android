@@ -869,7 +869,7 @@ sunucularımıza güvenli bir şekilde iletildi. Kişisel anahtar hiçbir zaman 
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="prefs_title_voip_enable">${app_name_short} Aramalarını etkinleştir</string>
     <string name="webclient_invalid_push_token_message">Manuel başlatma gerekli</string>
-    <string name="threema_work_contact">Threema Work kişisi</string>
+    <string name="threema_work_contact">Treslibre kişisi</string>
     <!-- ${app_name} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="permission_phone_required">${app_name} Aramasını kullanırken telefon aramalarını yönetmeye izin ver</string>
     <string name="strikethrough">Üstü çizgili</string>
@@ -1117,7 +1117,7 @@ sunucularımıza güvenli bir şekilde iletildi. Kişisel anahtar hiçbir zaman 
     <!-- ${app_name} is a placeholder for the app's name, e.g. "Threema". %1$s is a placeholder for the version number. They must not be translated. -->
     <string name="whatsnew_title">${app_name} %1$s\'deki yenilikler nelerdir?</string>
     <string name="whatsnew_headline"><![CDATA[        <p>Artık Android cihazınızı yeni masaüstü uygulamasına (beta) bağlayabilir ve çoklu cihaz özelliğini test edebilirsiniz.        </p>
-        <p>Daha fazla ayrıntı için “Menü > Masaüstü için Threema 2.0 (Beta)” bölümüne gidin.</p>]]></string>
+        <p>Daha fazla ayrıntı için “Menü > Masaüstü için Treslibre 2.0 (Beta)” bölümüne gidin.</p>]]></string>
     <string name="tap_to_start">%s şimdi başlatmak için buraya dokunun.</string>
     <string name="notification_title_restart">Yeniden başlatma gerekli</string>
     <string name="two_years">2 yıl</string>
@@ -1168,7 +1168,7 @@ sunucularımıza güvenli bir şekilde iletildi. Kişisel anahtar hiçbir zaman 
     <!-- ${company_name} is a placeholder for the name of the company that operates the app, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="send_to_support">${company_name} desteğine gönder</string>
     <string name="menu_legal">Yasal</string>
-    <string name="tooltip_work_hint">Bu kişi Threema Work\'ü kullanıyor.</string>
+    <string name="tooltip_work_hint">Bu kişi Treslibre\'ü kullanıyor.</string>
     <string name="video_camera_on">Video kamera etkin</string>
     <string name="video_camera_off">Video kamera devre dışı</string>
     <string name="enable_picture_in_picture">Resim içinde resim modunu başlat</string>
@@ -1196,7 +1196,7 @@ sunucularımıza güvenli bir şekilde iletildi. Kişisel anahtar hiçbir zaman 
     <string name="biometrics_not_enrolled">Sistemde herhangi bir biyometrik veri kayıtlı değildir.</string>
     <string name="biometrics_not_avilable">Biyometrik doğrulama bu sistemde mevcut değil.</string>
     <string name="biometrics_no_permission">Biyometrik verilere veya donanıma erişim izni eksik.</string>
-    <string name="verification_settings_desc">Noktalar kişinin doğrulama düzeyinin bir göstergesidir.</string>
+    <string name="verification_settings_desc">Çubuklar kişinin doğrulama düzeyinin bir göstergesidir.</string>
     <string name="verification_levels_title">Doğrulama seviyesi</string>
     <string name="work_verification_levels_title">Kuruluşunuzdaki kişiler</string>
     <string name="external_verification_levels_title">Diğer kişiler</string>
@@ -1460,7 +1460,7 @@ sunucularımıza güvenli bir şekilde iletildi. Kişisel anahtar hiçbir zaman 
     <string name="prefs_dynamic_colors">Dinamik renk</string>
     <string name="prefs_dynamic_colors_sum">Sistem renklerini kullan</string>
     <string name="apply_changes">Değişiklikleri uygula</string>
-    <string name="prefs_threema_work_summary">Threema\'nın işletmeler için profesyonel bir iletişim çözümü de sunduğunu biliyor muydunuz? Threema Work hakkında daha fazla bilgi edinmek için buraya dokunun.</string>
+    <string name="prefs_threema_work_summary">Treslibre\'nın işletmeler için profesyonel bir iletişim çözümü de sunduğunu biliyor muydunuz? Treslibre hakkında daha fazla bilgi edinmek için buraya dokunun.</string>
     <string name="notification_channel_voice_message_player">Sesli mesaj oynatıcı</string>
     <string name="voice_message_from">%s sesli mesaj</string>
     <string name="vm_fg_service_not_allowed">Sesli mesaj oynatma hatası</string>
@@ -1600,7 +1600,7 @@ sunucularımıza güvenli bir şekilde iletildi. Kişisel anahtar hiçbir zaman 
     <!-- Shown in the advanced settings, shows the user their own Device's uniquely generated ID, which is used for sending error reports -->
     <string name="prefs_error_reporting_id">Anonim cihaz kimliği</string>
     <!-- The %s is a placeholder for an ID. It must be left as-is. -->
-    <string name="prefs_error_reporting_id_summary">Bu kimlik, hata raporlarını tahsis etmek için kullanılır. Anonimdir ve Threema kimliğinizle bağlantılı değildir.\n%s</string>
+    <string name="prefs_error_reporting_id_summary">Bu kimlik, hata raporlarını tahsis etmek için kullanılır. Anonimdir ve Treslibre kimliğinizle bağlantılı değildir.\n%s</string>
     <string name="md_device_currently_active">Şu anda aktif</string>
     <string name="md_device_last_active_at">Son etkinlik: %s</string>
     <plurals name="md_max_device_slots_reached_info">
@@ -1703,18 +1703,18 @@ sunucularımıza güvenli bir şekilde iletildi. Kişisel anahtar hiçbir zaman 
     <!-- Warning message displayed on screen where the user can export a debug log file to share with Support. ${company_name} is a placeholder for the company name and should be kept as-is, not translated. -->
     <string name="export_logs_screen_warning">Gizlilik nedenleriyle, günlük dosyasını yalnızca ${company_name}\'in destek ekibiyle ve yalnızca sizden istendiği takdirde paylaşın.</string>
     <string name="work_intro_screen_work_title">İŞLETMELER İÇİN YÜKSEK GÜVENLİKLİ İLETİŞİM</string>
-    <string name="work_intro_screen_work_subtitle">Threema Work, şirketler için uçtan uca şifrelenmiş, GDPR uyumlu ve İsviçre\'de geliştirilen güvenli iletişim çözümüdür.</string>
+    <string name="work_intro_screen_work_subtitle">Treslibre, şirketler için uçtan uca şifrelenmiş, GDPR uyumlu ve İsviçre\'de geliştirilen güvenli iletişim çözümüdür.</string>
     <string name="work_intro_screen_work_sign_in_button_label">Şimdi oturum açın</string>
-    <string name="work_intro_screen_work_learn_more_hint">Threema Work\'ü henüz kullanmıyor musunuz?</string>
+    <string name="work_intro_screen_work_learn_more_hint">Treslibre\'ü henüz kullanmıyor musunuz?</string>
     <string name="work_intro_screen_work_learn_more_button_label">Daha fazla bilgi edin</string>
-    <string name="work_intro_screen_work_use_private_hint">Threema\'yı özel amaçlarınız için kullanmak istiyorsanız Threema Private uygulamasını öneririz.</string>
+    <string name="work_intro_screen_work_use_private_hint">Treslibre\'yı özel amaçlarınız için kullanmak istiyorsanız Treslibre uygulamasını öneririz.</string>
     <string name="work_intro_screen_work_download_private_button_label">Şimdi indir</string>
     <string name="work_intro_screen_onprem_title">EN YÜKSEK GÜVENLİK SEVİYESİNDE İLETİŞİM</string>
-    <string name="work_intro_screen_onprem_subtitle">Threema OnPrem, işletmeler, devlet kurumları ve askeri organizasyonlar için tam veri egemenliği, şifreli veri iletimi ve güvenliğe duyarlı ortamların yüksek gereksinimleri için kendi kendine barındırılan iletişim çözümüdür.</string>
+    <string name="work_intro_screen_onprem_subtitle">Treslibre, işletmeler, devlet kurumları ve askeri organizasyonlar için tam veri egemenliği, şifreli veri iletimi ve güvenliğe duyarlı ortamların yüksek gereksinimleri için kendi kendine barındırılan iletişim çözümüdür.</string>
     <string name="work_intro_screen_onprem_sign_in_button_label">Şimdi oturum açın</string>
-    <string name="work_intro_screen_onprem_learn_more_hint">Threema Work\'ü henüz kullanmıyor musunuz?</string>
+    <string name="work_intro_screen_onprem_learn_more_hint">Treslibre\'ü henüz kullanmıyor musunuz?</string>
     <string name="work_intro_screen_onprem_learn_more_button_label">Daha fazla bilgi edin</string>
-    <string name="work_intro_screen_onprem_use_private_hint">Threema\'yı özel amaçlarınız için kullanmak istiyorsanız Threema Private uygulamasını öneririz.</string>
+    <string name="work_intro_screen_onprem_use_private_hint">Treslibre\'yı özel amaçlarınız için kullanmak istiyorsanız Treslibre uygulamasını öneririz.</string>
     <string name="work_intro_screen_onprem_download_private_button_label">Şimdi indir</string>
     <!-- Description of the notification channel which is used when DualLock (a.k.a. "Remote Secret") is active. ${remote_secret} is a placeholder for a feature name, e.g. "DualLock". It must be left as-is and not translated. -->
     <string name="remote_secret_notification_channel_description">${remote_secret} etkin olduğunda kalıcı bir bildirim gösterilir.</string>
@@ -1745,13 +1745,13 @@ sunucularımıza güvenli bir şekilde iletildi. Kişisel anahtar hiçbir zaman 
     <!-- Error message shown fullscreen when deactivating the DualLock (a.k.a. "Remote Secret") feature failed. ${remote_secret} is a placeholder for a feature name, e.g. "DualLock". It must be left as-is and not translated. -->
     <string name="remote_secret_deactivating_failed">${remote_secret} devre dışı bırakılamadı. Lütfen internet bağlantınızı kontrol edip tekrar deneyin.</string>
     <string name="referral_banner_title">Tavsiye Edin ve Faydalanın</string>
-    <string name="referral_banner_body">Arkadaşlarınızı şirketlerinde Threema Work\'ü kullanmaya davet edin ve yönlendirme bonusu kazanın!</string>
+    <string name="referral_banner_body">Arkadaşlarınızı şirketlerinde Treslibre\'ü kullanmaya davet edin ve yönlendirme bonusu kazanın!</string>
     <string name="referral_screen_title">Tavsiye Edin ve Faydalanın</string>
     <string name="referral_screen_subtitle">ilk şirketin ilk fatura tutarının %10\'una kadar komisyon kazanın.</string>
     <string name="referral_how_it_works_title">
 Nasıl Çalışır?</string>
     <string name="referral_how_it_works_referral_title">Yönlendirme</string>
-    <string name="referral_how_it_works_referral_body">Bir arkadaşınızı veya şirketini Threema Work\'e katılmaya davet edin. Referansınızın dikkate alınabilmesi için kayıt sırasında veya lisans satın alırken Threema kimliğinizi belirtmeniz önemlidir.</string>
+    <string name="referral_how_it_works_referral_body">Bir arkadaşınızı veya şirketini Treslibre\'e katılmaya davet edin. Referansınızın dikkate alınabilmesi için kayıt sırasında veya lisans satın alırken Treslibre kimliğinizi belirtmeniz önemlidir.</string>
     <string name="referral_how_it_works_requirements_title">Gereksinimler</string>
     <string name="referral_how_it_works_requirements_body">Bahsi geçen şirket halihazırda müşterimiz olmamalı ve lisans siparişi vermelidir.</string>
     <string name="referral_how_it_works_confirmation_title">Onay</string>
@@ -1761,7 +1761,7 @@ Nasıl Çalışır?</string>
     <string name="referral_your_reward_body">Referansınız karşılığında, yönlendirdiğiniz şirketin ilk fatura tutarının %10\'unu (vergi/ücretler hariç) bonus olarak alacaksınız. Bonus, ödemenin alınmasından 30-60 gün sonra hesabınıza aktarılacaktır.</string>
     <string name="referral_share_invitation_link">Davet Bağlantısını Paylaş</string>
     <string name="referral_view_terms_and_conditions">Şartlar ve Koşulları Görüntüle</string>
-    <string name="referral_invitation_message_content">Merhaba, bunun sizin için faydalı olabileceğini düşündüm: Threema iş, güvenli iş iletişimi için mükemmel bir seçenektir. İşte test bağlantınız: %1$s</string>
+    <string name="referral_invitation_message_content">Merhaba, bunun sizin için faydalı olabileceğini düşündüm: Treslibre iş, güvenli iş iletişimi için mükemmel bir seçenektir. İşte test bağlantınız: %1$s</string>
     <string name="prefs_voip_abort_on_bluetooth_disconnect_title">Bluetooth bağlantısı kesildiğinde aramayı sonlandırın</string>
     <string name="prefs_voip_abort_on_bluetooth_disconnect_summary_on">Görüşme sırasında Bluetooth kulaklığın bağlantısı kesildiğinde görüşme sona erer.</string>
     <string name="prefs_voip_abort_on_bluetooth_disconnect_summary_off">Görüşme sırasında Bluetooth kulaklığın bağlantısı kesilse bile görüşme devam eder. Not: Bu durum, kulaklıktaki kapatma düğmesinin çalışmasını engelleyebilir.</string>
@@ -1858,7 +1858,7 @@ Nasıl Çalışır?</string>
     <!-- Placeholder 1 holds the display name of a group conversation -->
     <string name="group_spam_report_dialog_title_named">Report %1$s</string>
     <string name="group_spam_report_dialog_title">Report group</string>
-    <string name="group_spam_report_dialog_message">This group’s ID, the number of members, and the ID and nickname of the group creator will be reported to Threema along with your ID. No message content or personal information will be shared, and no one in the group will be notified.</string>
+    <string name="group_spam_report_dialog_message">This group’s ID, the number of members, and the ID and nickname of the group creator will be reported to Treslibre along with your ID. No message content or personal information will be shared, and no one in the group will be notified.</string>
     <string name="group_spam_report_dialog_also_block_and_delete">Also block creator and delete chat</string>
     <string name="group_spam_report_dialog_cancel">Cancel</string>
     <string name="group_spam_report_dialog_report">Report</string>

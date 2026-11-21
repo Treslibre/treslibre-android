@@ -22,7 +22,7 @@
     <string name="webclient_invalid_qr_code">Неправильный QR-код</string>
     <string name="webclient_new_connection_toast">Сессия приложения Desktop/Web запущена</string>
     <string name="webclient_protocol_error">Ошибка протокола</string>
-    <string name="webclient_protocol_version_to_old">Ваше приложение не поддерживает данную версию приложения Desktop/Web. Обновите Threema для Android до последней версии.</string>
+    <string name="webclient_protocol_version_to_old">Ваше приложение не поддерживает данную версию приложения Desktop/Web. Обновите Treslibre для Android до последней версии.</string>
     <string name="webclient_protocol_version_too_new_selfhosted">Ваше приложение не поддерживает данную версию данную версию приложения Desktop/Web. Загрузите последнюю версию приложения для ПК или попросите администратора web-клиента перейти на последнюю версию.</string>
     <string name="webclient_protocol_version_too_new_threema">Ваше приложение не поддерживает данную версию приложения Desktop/Web. Используйте более новую версию приложения Desktop/Web.</string>
     <string name="webclient_session_already_exists">Сессия, соответствующая считанному вами QR-коду, уже существует. Перезапустите приложение для ПК или перезагрузите web-клиент и повторите попытку.</string>
@@ -37,7 +37,7 @@
     <string name="webclient_diagnostics">Диагностика приложения Desktop/Web</string>
     <string name="webclient_diagnostics_start">Пуск</string>
     <string name="webclient_diagnostics_intro">Нажмите кнопку «Пуск» для запуска теста</string>
-    <string name="webclient_diagnostics_done">Готово! Если у вас возникают неполадки с настройкой соединения с приложением для ПК или web-клиентом, отправьте данные в службу поддержки Threema.</string>
+    <string name="webclient_diagnostics_done">Готово! Если у вас возникают неполадки с настройкой соединения с приложением для ПК или web-клиентом, отправьте данные в службу поддержки Treslibre.</string>
     <string name="webclient_scanned_md_linking_qr_code_title">Неправильный QR-код</string>
     <!-- ${app_name_desktop} is a placeholder for the Desktop app's name, e.g. "Threema". ${menu_settings} is a placeholder for the name of the Settings menu entry. ${md_link_device} is a placeholder for the name of a UI element. They must be left as they are and not translated. -->
     <string name="webclient_scanned_md_linking_qr_code_message">Считанный QR-код относится к новой бета-версии приложения для ПК.\n\nПерейдите в «Главное меню» → «${app_name_desktop} 2.0 для ПК (бета)» и выберите «${md_link_device}», чтобы привязать это приложение для ПК.</string>
