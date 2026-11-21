@@ -92,6 +92,7 @@
     <string name="preferences__server_config" translatable="false">pref_server_config</string>
     <string name="preferences__work_license_name" translatable="false">pref_work_license_name</string>
     <string name="preferences__licenses" translatable="false">pref_licenses</string>
+    <string name="preferences__source_code" translatable="false">pref_source_code</string>
     <string name="preferences__privacy_policy" translatable="false">pref_privacy_policy</string>
     <string name="preferences__terms_of_service" translatable="false">pref_terms_of_service</string>
     <string name="preferences__eula" translatable="false">pref_eula</string>

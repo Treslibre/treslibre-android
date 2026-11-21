@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="about_copyright" translatable="false">Copyright © Threema AG</string>
+    <!-- Modified 2026 by Treslibre Project (Treslibre). -->
+    <string name="about_copyright" translatable="false">Modified 2026 by Treslibre Project (Treslibre), an independent fork of Threema (© Threema AG). Released under the GNU AGPL-3.0 license.</string>
     <string name="enter_serial_hint" translatable="false">XXXXX-XXXXX</string>
     <string name="threema_channel" translatable="false">Threema Channel</string>
     <string name="default_notification_sound" translatable="false">content://settings/system/notification_sound</string>

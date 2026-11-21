@@ -11,10 +11,11 @@
 
 ---
 
-# Threema for Android
+> **Notice (AGPL-3.0 Section 5a):** Modified by Treslibre Project (2026) as part of Treslibre, an independent fork of Threema. Not affiliated with or endorsed by Threema AG.
 
-This repository contains the complete source code of
-[Threema](https://threema.com/) for Android.
+# Treslibre for Android
+
+This repository contains the source code of Treslibre for Android, an independent fork of Threema for Android licensed under GNU AGPL-3.0.
 
 ## Table of Contents
 
@@ -32,16 +33,8 @@ This repository contains the complete source code of
 
 ## <a name="issues"></a>Bug Reports / Feature Requests / Security Issues
 
-To report bugs and request new features, please contact the Threema support
-team through [threema.com/support](https://threema.com/support).
-
-If you discover a security issue in Threema, please adhere to the coordinated
-vulnerability disclosure model. To be eligible for a bug bounty, please [file a
-report on GObugfree](https://app.gobugfree.com/programs/threema) (where all the
-details, including the bounty levels, are listed). If you’re not interested in
-the bug bounty program, you can contact us via Threema or by email; for contact
-details, see [threema.com/contact](https://threema.com/en/contact) (section
-“Security”).
+To report bugs, request features, or report security issues in Treslibre, please open an issue at
+<https://github.com/Treslibre/treslibre-android/issues>.
 
 ## <a name="release-policy"></a>Source Code Release Policy
 
@@ -255,24 +248,19 @@ Common code not specific to Threema is located in the
 
 ## <a name="contributions"></a>Contributions
 
-We accept GitHub pull requests. Please refer to
-<https://threema.com/open-source/contributions>
-for more information on how to contribute.
-
-Note that translation fixes should not be contributed through GitHub but
-on Crowdin, see next section.
+Contributions are welcome via GitHub pull requests at
+<https://github.com/Treslibre/treslibre-android>.
 
 ## <a name="translating"></a>Translating
 
-We manage our app translations on Crowdin. If you’re interested in
-improving translations, or if you would like to translate Threema to a new
-language, please contact us at `support at threema dot ch`.
+App localization strings live in `app/src/main/res/values*/strings.xml`.
 
 ## <a name="license"></a>License
 
-Threema for Android is licensed under the GNU Affero General Public License v3.
+Treslibre for Android (forked from Threema for Android) is licensed under the GNU Affero General Public License v3.
 
-    Copyright (c) Threema AG
+    Modified 2026 by Treslibre Project (Treslibre), an independent fork of Threema.
+    Original work: Copyright (c) Threema AG
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License, version 3,
@@ -286,11 +274,5 @@ Threema for Android is licensed under the GNU Affero General Public License v3.
     You should have received a copy of the GNU Affero General Public License
     along with this program. If not, see <https://www.gnu.org/licenses/>.
 
-The full license text can be found in [`LICENSE.txt`](LICENSE.txt).
-
-If you have questions about the use of self-compiled apps or the license in
-general, feel free to [contact us](mailto:opensource@threema.ch). We are
-publishing the source code in good faith, with transparency being the main
-goal. By having users pay for the development of the app, we can ensure that
-our goals sustainably align with the goals of our users: Great privacy and
-security, no ads, no collection of user data!
+The full license text can be found in [`LICENSE.txt`](LICENSE.txt). Source code is available at
+<https://github.com/Treslibre/treslibre-android>.

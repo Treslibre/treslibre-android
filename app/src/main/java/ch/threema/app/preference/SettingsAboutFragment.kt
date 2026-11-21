@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.app.preference
 
 import android.annotation.SuppressLint
@@ -55,6 +56,7 @@ class SettingsAboutFragment : ThreemaPreferenceFragment() {
 
     override fun initializePreferences() {
         initLicensePref()
+        initSourceCodePref()
         initPrivacyPolicyPref()
         initTermsOfServicePref()
         initEndUserLicensePref()
@@ -74,6 +76,17 @@ class SettingsAboutFragment : ThreemaPreferenceFragment() {
         val licensePreference = getPref<Preference>(R.string.preferences__licenses)
         licensePreference.onClick {
             startActivity(LicenseActivity.createIntent(requireContext()))
+        }
+    }
+
+    private fun initSourceCodePref() {
+        val sourceCodePreference = getPrefOrNull<Preference>(R.string.preferences__source_code) ?: return
+        sourceCodePreference.onClick {
+            try {
+                startActivity(Intent(Intent.ACTION_VIEW, "https://github.com/Treslibre/treslibre-android".toUri()))
+            } catch (e: ActivityNotFoundException) {
+                logger.warn("No activity found to open source code URL")
+            }
         }
     }
 
