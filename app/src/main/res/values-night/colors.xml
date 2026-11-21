@@ -32,7 +32,7 @@
 
     <!-- Fixed color from the work brand color palette. Used to display components in the work
     color outside of work the apps (e.g.: Referral banner) -->
-    <color name="work_primary_fixed">#51CFFF</color> <!-- work-500 -->
+    <color name="work_primary_fixed">#D0CFEC</color> <!-- lavender-500 -->
     <color name="work_onPrimary_fixed">#000000</color>
 
     <!-- Availability Status-->

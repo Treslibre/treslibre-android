@@ -6,10 +6,10 @@
     android:viewportHeight="56">
     <!-- Shield mark -->
     <path
-        android:fillColor="#0E7C61"
+        android:fillColor="?attr/colorPrimary"
         android:pathData="M28,6 L48,14 L46,35 L28,50 L10,35 L8,14 Z" />
     <path
-        android:fillColor="#FFFFFF"
+        android:fillColor="?attr/colorOnPrimary"
         android:pathData="M28,17 A4,4 0 1 1 27.99,17 Z M25,24 H31 L29.8,34 H26.2 Z" />
     <!-- Geometric wordmark TRESLIBRE -->
     <!-- T -->

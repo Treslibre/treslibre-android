@@ -28,6 +28,7 @@ All proprietary Threema visual assets below were replaced with temporary geometr
 - `app/src/main/res/drawable-xxhdpi/ic_notification_push.png`
 - `app/src/main/res/drawable/ic_badge_work.xml`
 - `app/src/main/res/drawable/ic_badge_work_24dp.xml`
+- `app/src/main/res/drawable/ic_app_icon_private.xml`
 - `app/src/main/res/drawable/threema_work_app_icon.xml`
 
 ## 3-Tier Contact Verification Badges (Preserves Logic, Replaces 3-Dot Art)
@@ -38,5 +39,5 @@ All proprietary Threema visual assets below were replaced with temporary geometr
 - `app/src/main/res/drawable/ic_verification_full_work.xml`
 
 ## Palette & Font Audit
-- `app/src/treslibre/res/values/colors.xml` (emerald/teal `#0E7C61` / `#0B3D35` palette)
+- `app/src/treslibre/res/values/colors.xml` (Lavender `#D0CFEC` / `#4B468A` / `#312D61` palette)
 - Fonts audited: no proprietary font binaries exist in `treslibre-android/app/src` or `app/assets`.

@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.app.compose.theme.color
 
 /**
@@ -5,14 +6,14 @@ package ch.threema.app.compose.theme.color
  */
 @Suppress("unused")
 object BrandColor {
-    const val SHADE_50 = 0xFFDCF5FF
-    const val SHADE_100 = 0xFFC0EDFF
-    const val SHADE_200 = 0xFFA4E6FF
-    const val SHADE_300 = 0xFF89DEFF
-    const val SHADE_400 = 0xFF6DD7FF
-    const val SHADE_500 = 0xFF51CFFF
-    const val SHADE_600 = 0xFF41AFE0
-    const val SHADE_700 = 0xFF318FC1
-    const val SHADE_800 = 0xFF002E63
-    const val SHADE_900 = 0xFF001C3B
+    const val SHADE_50 = 0xFFF6F6FC
+    const val SHADE_100 = 0xFFEEEDF9
+    const val SHADE_200 = 0xFFE4E3F6
+    const val SHADE_300 = 0xFFDFDEF4
+    const val SHADE_400 = 0xFFDCDBF2
+    const val SHADE_500 = 0xFFD0CFEC
+    const val SHADE_600 = 0xFFB5B3DE
+    const val SHADE_700 = 0xFF8F8CC4
+    const val SHADE_800 = 0xFF4B468A
+    const val SHADE_900 = 0xFF312D61
 }

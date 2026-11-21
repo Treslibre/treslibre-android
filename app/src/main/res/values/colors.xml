@@ -3,16 +3,16 @@
 
     <!-- BRAND -->
     <!-- Changes here must also be made to every BrandColor.kt file for Compose -->
-    <color name="brand_50">#ECFDF4</color>
-    <color name="brand_100">#D9FAE9</color>
-    <color name="brand_200">#9CF2C6</color>
-    <color name="brand_300">#7DEEB5</color>
-    <color name="brand_400">#5FEAA3</color>
-    <color name="brand_500">#40E692</color>
-    <color name="brand_600">#36D588</color>
-    <color name="brand_700">#2CC47E</color>
-    <color name="brand_800">#0B734E</color>
-    <color name="brand_900">#00412A</color>
+    <color name="brand_50">#F6F6FC</color>
+    <color name="brand_100">#EEEDF9</color>
+    <color name="brand_200">#E4E3F6</color>
+    <color name="brand_300">#DFDEF4</color>
+    <color name="brand_400">#DCDBF2</color>
+    <color name="brand_500">#D0CFEC</color>
+    <color name="brand_600">#B5B3DE</color>
+    <color name="brand_700">#8F8CC4</color>
+    <color name="brand_800">#4B468A</color>
+    <color name="brand_900">#312D61</color>
 
     <!-- Changes here must also be made to BrandGreyColors.kt for Compose -->
     <color name="brand_grey_50">#F4F4F3</color>
@@ -42,7 +42,7 @@
 
     <!-- Fixed color from the work brand color palette. Used to display components in the work
     color outside of work the apps (e.g.: Referral banner) -->
-    <color name="work_primary_fixed">#002E63</color> <!-- work-800 -->
+    <color name="work_primary_fixed">#4B468A</color> <!-- lavender-800 -->
     <color name="work_onPrimary_fixed">#FFFFFF</color>
 
     <!-- emoji picker color -->
@@ -96,7 +96,7 @@
     <color name="qrscanner_masking_color">#50000000</color>
     <color name="media_viewer_caption_background_color">#77000000</color>
     <color name="media_attach_button_background_default">#FFEEEEEE</color>
-    <color name="ic_launcher_background">#0B3D35</color>
+    <color name="ic_launcher_background">#312D61</color>
 
     <!--**********************************************************************************************************-->
     <!-- theme-agnostic colors -->
