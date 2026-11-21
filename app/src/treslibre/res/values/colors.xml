@@ -11,9 +11,9 @@
     <color name="brand_500">#D0CFEC</color>
     <color name="brand_600">#B5B3DE</color>
     <color name="brand_700">#8F8CC4</color>
-    <color name="brand_800">#4B468A</color>
-    <color name="brand_900">#312D61</color>
+    <color name="brand_800">#58559A</color>
+    <color name="brand_900">#3D3A72</color>
 
     <!-- others -->
-    <color name="ic_launcher_background">#312D61</color>
+    <color name="ic_launcher_background">#58559A</color>
 </resources>
