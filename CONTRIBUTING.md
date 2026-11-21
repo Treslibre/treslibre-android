@@ -3,13 +3,13 @@
 ## Submitting Patches
 
 We accept GitHub pull requests. Please refer to
-<https://threema.com/open-source/contributions>
+<https://treslibre.invalid/open-source/contributions>
 for more information on how to contribute.
 
 ## Bug Reports / Feature Requests
 
 To report bugs and request new features, please contact the Threema support
-team through [threema.com/support](https://threema.com/support).
+team through [treslibre.invalid/support](https://treslibre.invalid/support).
 
 ## Translations
 

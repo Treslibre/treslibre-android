@@ -2,9 +2,9 @@
   # Servers
 
   work-servers: &work-servers
-    - url: https://ds-apip-work.threema.ch
+    - url: https://ds-apip-work.treslibre.invalid
       description: Production server
-    - url: https://ds-apip-work.test.threema.ch
+    - url: https://ds-apip-work.test.treslibre.invalid
       description: Sandbox server
 
   # Primitives
@@ -69,7 +69,7 @@
     description: Work license username.
     type: string
     minLength: 1
-    example: echoecho@threema.ch
+    example: echoecho@treslibre.invalid
 
   work-password: &work-password
     description: Work license password.
@@ -516,10 +516,10 @@
 
             IMPORTANT: We intentionally only check if the _SFU Base URL_'s
             hostname **ends** with one of the provided hostname suffixes to
-            allow for wildcard usage, e.g. `sfu.threema.ch` where any subdomain
-            ending with `sfu.threema.ch` would be valid. But this has the caveat
-            of being a footgun for root domains like `threema.ch` which would
-            then accept `evil-threema.ch`. Therefore, root domains must not be
+            allow for wildcard usage, e.g. `sfu.treslibre.invalid` where any subdomain
+            ending with `sfu.treslibre.invalid` would be valid. But this has the caveat
+            of being a footgun for root domains like `treslibre.invalid` which would
+            then accept `evil-treslibre.invalid`. Therefore, root domains must not be
             included here!
           type: array
         sfuToken:
@@ -536,9 +536,9 @@
             must be discarded.
       example:
         success: true
-        sfuBaseUrl: https://ch-1-sfu.threema.ch
+        sfuBaseUrl: https://ch-1-sfu.treslibre.invalid
         allowedSfuHostnameSuffixes:
-          - sfu.threema.ch
+          - sfu.treslibre.invalid
         sfuToken: givemeaccessplz
         expiration: 600
 
@@ -912,9 +912,9 @@ info:
   version: 1.0.0
 
 servers:
-  - url: https://ds-apip.threema.ch
+  - url: https://ds-apip.treslibre.invalid
     description: Production server
-  - url: https://ds-apip.test.threema.ch
+  - url: https://ds-apip.test.treslibre.invalid
     description: Sandbox server
 
 paths:

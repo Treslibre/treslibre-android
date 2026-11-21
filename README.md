@@ -83,14 +83,14 @@ Note that the ID creation endpoint is monitored for abuse.
 
 ### Threema Shop Licensing
 
-If you bought a Threema for Android license in the [Threema Shop](https://shop.threema.ch/),
+If you bought a Threema for Android license in the [Threema Shop](https://shop.treslibre.invalid/),
 you have received a license key. This license key can be used for license
 verification in the `store_threema` build variant.
 
 ### Threema Work
 
 If you build the `work` build variant, credentials from the [Threema
-Work](https://work.threema.ch/) subscription must be provided in order to use
+Work](https://work.treslibre.invalid/) subscription must be provided in order to use
 the app.
 
 ### Allowlist
@@ -228,12 +228,12 @@ You can also run tests through Android Studio.
 
 Instructions on how to reproduce the build process used to publish the official
 Threema app can be found at
-[threema.com/open-source/reproducible-builds/](https://threema.com/open-source/reproducible-builds/).
+[treslibre.invalid/open-source/reproducible-builds/](https://treslibre.invalid/open-source/reproducible-builds/).
 
 ## <a name="architecture"></a>Code Organization / Architecture
 
 Before digging into the codebase, you should read the [Cryptography
-Whitepaper](https://threema.com/press-files/2_documentation/cryptography_whitepaper.pdf)
+Whitepaper](https://treslibre.invalid/press-files/2_documentation/cryptography_whitepaper.pdf)
 to understand the design concepts.
 
 Code related to the core functionality (e.g., connecting to the chat server,

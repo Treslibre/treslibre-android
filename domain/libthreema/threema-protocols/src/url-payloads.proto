@@ -103,9 +103,9 @@ message DeviceGroupJoinRequestOrOffer {
 // The following steps define the _Conference Call URL_:
 //
 // 1. If the application is built for the _Consumer_ or _Work_ flavour, return
-//    the URL `https://conference.threema.ch/join`.
+//    the URL `https://conference.treslibre.invalid/join`.
 // 2. If the application is built for the _Green_ or _Blue_ flavour, return the
-//    URL `https://conference.test.threema.ch/join`.
+//    URL `https://conference.test.treslibre.invalid/join`.
 // 3. If the application is built for the _OnPrem_ flavour (including the
 //    _White-Labeled OnPrem_ flavour), return the URL defined by the OPPF
 //    configuration (if any).

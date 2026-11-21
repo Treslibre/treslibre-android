@@ -161,6 +161,6 @@ else
     log_warning "APK could not be verified."
     log_warning "Don't panic! First, make sure that you have compiled the correct version!"
     log_warning "If you cannot figure out why the verification failed,"
-    log_warning "send us an e-mail to opensource@threema.ch containing the log above."
+    log_warning "send us an e-mail to opensource@treslibre.invalid containing the log above."
     exit 2
 fi

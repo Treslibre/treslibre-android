@@ -107,6 +107,7 @@ class ThreemaApplication : Application() {
 
         logger.info("*** App launched")
 
+        System.setProperty("uniffi.component.libthreema.libraryOverride", "libthreema")
         initLibthreema(LogLevel.TRACE, LibthreemaLogger())
 
         setUpSecureRandom()

@@ -157,4 +157,67 @@ class ServerObservationEngineTest {
         assertEquals(ObservationEventType.UNVERIFIED_MANUAL_OVERRIDE, overridden.history.last().event)
         assertFalse(overridden.history.last().verifiedByAdminKey)
     }
+
+    @Test
+    fun `live cleanroom TOFU provisioning and key rotation against thr 2sx me (Section 5_2)`() {
+        val verifier = ch.threema.domain.onprem.OnPremConfigVerifier(emptyArray())
+        val url = java.net.URI.create("https://thr.2sx.me/prov/config.oppf").toURL()
+        val conn = (url.openConnection() as javax.net.ssl.HttpsURLConnection).apply {
+            connectTimeout = 10_000
+            readTimeout = 10_000
+            val basicAuth = java.util.Base64.getEncoder()
+                .encodeToString("demo:demo-password".toByteArray(Charsets.UTF_8))
+            setRequestProperty("Authorization", "Basic $basicAuth")
+        }
+        conn.connect()
+        assertEquals(200, conn.responseCode)
+
+        // Extract live TLS SPKI SHA-256 and leaf SHA-256 from server peer certificate
+        val peerCert = conn.serverCertificates.first() as java.security.cert.X509Certificate
+        val sha256 = java.security.MessageDigest.getInstance("SHA-256")
+        val liveSpkiB64 = java.util.Base64.getEncoder().encodeToString(sha256.digest(peerCert.publicKey.encoded))
+        val liveLeafHex = sha256.digest(peerCert.encoded).joinToString("") { b -> "%02x".format(b) }
+        val rawOppfText = conn.inputStream.bufferedReader(Charsets.UTF_8).use { it.readText() }
+
+        // Verify unlocked OPPF v1.0 Ed25519 self-signature
+        val parsedObj = verifier.verify(rawOppfText)
+        val chatPubB64 = parsedObj.getJSONObject("chat").getString("publicKey")
+        val adminPubB64 = parsedObj.getString("signatureKey")
+        val chatPubHex = java.util.Base64.getDecoder().decode(chatPubB64).joinToString("") { b -> "%02x".format(b) }
+        val adminPubHex = java.util.Base64.getDecoder().decode(adminPubB64).joinToString("") { b -> "%02x".format(b) }
+        assertEquals(64, chatPubHex.length)
+        assertEquals(64, adminPubHex.length)
+
+        val liveEndpoint = ch.threema.domain.observation.ObservedHttpEndpoint(
+            host = "thr.2sx.me",
+            spkiSha256 = liveSpkiB64,
+            leafSha256 = liveLeafHex,
+        )
+        val record = ServerObservationEngine.createInitialRecord(
+            serverId = "chat.thr.2sx.me",
+            chatServerPubkeyCurve25519 = chatPubHex,
+            httpEndpoints = ch.threema.domain.observation.ObservedHttpEndpoints(
+                directory = liveEndpoint,
+                blob = liveEndpoint,
+                safe = liveEndpoint,
+            ),
+            adminSigningPubkeyEd25519 = adminPubHex,
+        )
+
+        // Subsequent connection with unchanged SPKI succeeds silently
+        val matchEval = ServerObservationEngine.evaluateObservedFingerprint(
+            record = record,
+            component = ObservedComponent.DIRECTORY,
+            observedFingerprint = liveSpkiB64,
+        )
+        assertIs<ObservationEvaluationResult.Matched>(matchEval)
+
+        // Simulated MitM SPKI mismatch hard-aborts immediately
+        val mitmEval = ServerObservationEngine.evaluateObservedFingerprint(
+            record = record,
+            component = ObservedComponent.DIRECTORY,
+            observedFingerprint = "MITM_ROGUE_SPKI_BASE64====================",
+        )
+        assertIs<ObservationEvaluationResult.MismatchBlocked>(mitmEval)
+    }
 }
