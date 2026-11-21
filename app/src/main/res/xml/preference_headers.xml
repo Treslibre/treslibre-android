@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Modified 2026 by Treslibre Project (Treslibre). -->
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     app:key="pref_screen_header">
     <Preference
@@ -13,6 +14,15 @@
         app:icon="@drawable/ic_lock"
         app:key="pref_key_security"
         app:title="@string/prefs_security" />
+    <Preference
+        app:icon="@drawable/ic_key_outline"
+        app:key="pref_key_server_trust"
+        app:summary="Inspect pinned TOFU server keys, TLS SPKI hashes &amp; rotation history"
+        app:title="Server Trust &amp; Keys">
+        <intent
+            android:targetClass="ch.threema.app.observation.SettingsServerTrustActivity"
+            android:targetPackage="org.treslibre.app" />
+    </Preference>
     <Preference
         app:fragment="ch.threema.app.preference.SettingsAppearanceFragment"
         app:icon="@drawable/ic_palette_outline"

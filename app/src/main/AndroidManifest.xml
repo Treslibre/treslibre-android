@@ -1099,6 +1099,18 @@
             android:name="com.samsung.android.keepalive.density"
             android:value="true" />
 
+        <activity
+            android:name=".observation.ServerKeyChangedActivity"
+            android:configChanges="uiMode"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.Threema.WithToolbar" />
+        <activity
+            android:name=".observation.SettingsServerTrustActivity"
+            android:configChanges="uiMode"
+            android:exported="false"
+            android:theme="@style/Theme.Threema.WithToolbar" />
+
     </application>
 
 </manifest>

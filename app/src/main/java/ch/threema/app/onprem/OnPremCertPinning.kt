@@ -1,5 +1,8 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.app.onprem
 
+import android.content.Context
+import ch.threema.app.observation.EncryptedServerObservationStore
 import ch.threema.base.ThreemaException
 import ch.threema.base.utils.getThreemaLogger
 import ch.threema.common.buildNew
@@ -14,6 +17,7 @@ import javax.net.ssl.SSLSocketFactory
 import javax.net.ssl.X509TrustManager
 import okhttp3.OkHttpClient
 import org.koin.core.component.KoinComponent
+import org.koin.core.component.get
 
 private val logger = getThreemaLogger("OnPremCertPinning")
 
@@ -83,6 +87,9 @@ class OnPremCertPinning(
         getOnPremConfig: (OnPremConfigFetcher) -> OnPremConfig?,
     ): OkHttpClient {
         val hostnameProvider = ThreadLocalHostnameProvider()
+        val observationStore = runCatching {
+            EncryptedServerObservationStore.getInstance(get<Context>())
+        }.getOrNull()
         val trustManager = OnPremCertPinningTrustManager(
             getOnPremConfigDomains = {
                 getOnPremConfigDomains(
@@ -90,6 +97,7 @@ class OnPremCertPinning(
                 )
             },
             hostnameProvider = hostnameProvider,
+            observationStore = observationStore,
         )
         return baseClient.buildNew {
             sslSocketFactory(createSocketFactory(trustManager), trustManager)
@@ -135,6 +143,9 @@ class OnPremCertPinning(
     }
 
     fun createSslSocketFactory(hostname: String): SSLSocketFactory {
+        val observationStore = runCatching {
+            EncryptedServerObservationStore.getInstance(get<Context>())
+        }.getOrNull()
         val trustManager = OnPremCertPinningTrustManager(
             getOnPremConfigDomains = {
                 getOnPremConfigDomains(
@@ -144,6 +155,7 @@ class OnPremCertPinning(
                 )
             },
             hostnameProvider = { hostname },
+            observationStore = observationStore,
         )
         return createSocketFactory(trustManager)
     }

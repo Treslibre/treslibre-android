@@ -14,24 +14,45 @@ import android.text.method.LinkMovementMethod;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
+
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputLayout;
 
+import org.json.JSONObject;
 import org.koin.java.KoinJavaComponent;
 import org.slf4j.Logger;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.text.HtmlCompat;
 import ch.threema.android.LifecycleAwareAsyncTask;
 import ch.threema.app.BuildConfig;
 import ch.threema.app.BuildFlavor;
 import ch.threema.app.R;
+import ch.threema.app.observation.EncryptedServerObservationStore;
+import ch.threema.app.onprem.OnPremConfigFetcherProvider;
+import ch.threema.common.Base64;
+import ch.threema.domain.observation.ObservedHttpEndpoint;
+import ch.threema.domain.observation.ObservedHttpEndpoints;
+import ch.threema.domain.observation.ServerObservationEngine;
+import ch.threema.domain.observation.ServerObservationRecord;
+import ch.threema.domain.onprem.OnPremConfig;
+import ch.threema.domain.onprem.OnPremConfigParser;
+import ch.threema.domain.onprem.OnPremConfigStore;
+import ch.threema.domain.onprem.OnPremConfigVerifier;
 import ch.threema.app.license.ParameterSource;
 import ch.threema.app.license.Parameters;
 import ch.threema.app.license.PasswordParameter;
@@ -80,6 +101,9 @@ public class EnterSerialActivity extends ThreemaActivity {
     private final DependencyContainer dependencies = KoinJavaComponent.get(DependencyContainer.class);
 
     private final Lazy<BackgroundExecutor> backgroundExecutor = lazy(BackgroundExecutor::new);
+
+    private final ActivityResultLauncher<String[]> importProvisioningFileLauncher =
+        registerForActivityResult(new ActivityResultContracts.OpenDocument(), this::onProvisioningFileSelected);
 
     // We need to use getResources().getIdentifier(...) because of flavor specific layout files for this fragment
     @SuppressLint("DiscouragedApi")
@@ -225,7 +249,170 @@ public class EnterSerialActivity extends ThreemaActivity {
                 setLoginButtonEnabled(false);
                 onMissingPresetUrl();
             }
+
+            ViewGroup parentLayout = findViewById(R.id.layout_parent_top);
+            if (parentLayout != null) {
+                Button importFileButton = new Button(this);
+                importFileButton.setText("Import .oppf / .tlpf / .json File");
+                importFileButton.setOnClickListener(v ->
+                    importProvisioningFileLauncher.launch(new String[]{"*/*"})
+                );
+                parentLayout.addView(importFileButton);
+
+                Button qrPayloadButton = new Button(this);
+                qrPayloadButton.setText("Enter QR Provisioning Payload");
+                qrPayloadButton.setOnClickListener(v -> showQrProvisioningDialog());
+                parentLayout.addView(qrPayloadButton);
+            }
         }
+    }
+
+    private void onProvisioningFileSelected(@Nullable Uri uri) {
+        if (uri == null) {
+            return;
+        }
+        try (InputStream is = getContentResolver().openInputStream(uri)) {
+            if (is == null) {
+                return;
+            }
+            BufferedReader reader = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8));
+            StringBuilder sb = new StringBuilder();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                if (sb.length() > 0) {
+                    sb.append('\n');
+                }
+                sb.append(line);
+            }
+            ingestProvisioningContent(sb.toString());
+        } catch (Exception e) {
+            logger.error("Failed to import provisioning file", e);
+            changeState("Failed to read provisioning file: " + e.getMessage());
+        }
+    }
+
+    private void showQrProvisioningDialog() {
+        final EditText input = new EditText(this);
+        input.setHint("https://... or cleanroom JSON");
+        new AlertDialog.Builder(this)
+            .setTitle("QR Provisioning Payload")
+            .setMessage("Paste a scanned QR provisioning URL (treslibre:// or https://) or cleanroom JSON payload:")
+            .setView(input)
+            .setNegativeButton(R.string.cancel, null)
+            .setPositiveButton(R.string.ok, (d, w) -> {
+                String text = input.getText() != null ? input.getText().toString().trim() : "";
+                if (!text.isEmpty()) {
+                    ingestProvisioningContent(text);
+                }
+            })
+            .show();
+    }
+
+    private void ingestProvisioningContent(@NonNull String rawContent) {
+        String trimmed = rawContent.trim();
+        try {
+            if (trimmed.startsWith("http://") || trimmed.startsWith("https://") || trimmed.startsWith(BuildConfig.uriScheme + "://")) {
+                Uri parsedUri = Uri.parse(trimmed);
+                String serverParam = parsedUri.getQueryParameter("server");
+                String targetUrl = (serverParam != null && !serverParam.isEmpty()) ? serverParam : trimmed;
+                if (serverText != null) {
+                    serverText.setText(targetUrl);
+                }
+                doUnlock();
+                return;
+            }
+            OnPremConfigVerifier verifier = new OnPremConfigVerifier(new String[]{});
+            JSONObject verifiedJson = verifier.verify(trimmed);
+            OnPremConfig config = new OnPremConfigParser().parse(verifiedJson, java.time.Instant.now());
+            OnPremConfigStore configStore = KoinJavaComponent.get(OnPremConfigStore.class);
+            configStore.store(trimmed);
+            if (serverText != null) {
+                serverText.setText(config.getChat().getHostname());
+            }
+            showFirstTimeServerTrustPrompt(
+                config,
+                verifiedJson,
+                () -> {
+                    dependencies.getPreferenceService().setOppfUrl(config.getDirectory().getUrl());
+                    dependencies.getPreferenceService().setLicensedStatus(true);
+                    ConfigUtils.recreateActivity(EnterSerialActivity.this);
+                }
+            );
+        } catch (Exception e) {
+            logger.error("Invalid provisioning payload", e);
+            changeState("Invalid provisioning payload: " + e.getMessage());
+        }
+    }
+
+    private void showFirstTimeServerTrustPrompt(
+        @NonNull OnPremConfig config,
+        @Nullable JSONObject rawJson,
+        @NonNull Runnable onTrusted
+    ) {
+        backgroundExecutor.getValue().execute(new BackgroundTask<ServerObservationRecord>() {
+            @Override
+            public void runBefore() {}
+
+            @Override
+            public ServerObservationRecord runInBackground() {
+                String serverId = (rawJson != null && rawJson.has("server_id"))
+                    ? rawJson.optString("server_id", config.getChat().getHostname())
+                    : config.getChat().getHostname();
+                String chatPubHex = EncryptedServerObservationStore.bytesToHex(config.getChat().getPublicKey());
+                String adminPubHex = null;
+                if (rawJson != null && rawJson.has("signatureKey")) {
+                    try {
+                        byte[] sigKeyBytes = Base64.decode(rawJson.getString("signatureKey"));
+                        boolean allZero = true;
+                        for (byte b : sigKeyBytes) {
+                            if (b != 0) {
+                                allZero = false;
+                                break;
+                            }
+                        }
+                        if (!allZero) {
+                            adminPubHex = EncryptedServerObservationStore.bytesToHex(sigKeyBytes);
+                        }
+                    } catch (Exception ignored) {}
+                }
+                ObservedHttpEndpoint dirEp = EncryptedServerObservationStore.probeHttpsEndpoint(config.getDirectory().getUrl());
+                ObservedHttpEndpoint blobEp = EncryptedServerObservationStore.probeHttpsEndpoint(config.getBlob().getUploadUrl());
+                ObservedHttpEndpoint safeEp = EncryptedServerObservationStore.probeHttpsEndpoint(config.getSafe().getUrl());
+                return ServerObservationEngine.INSTANCE.createInitialRecord(
+                    serverId,
+                    chatPubHex,
+                    new ObservedHttpEndpoints(dirEp, blobEp, safeEp),
+                    adminPubHex,
+                    java.time.Instant.now().toString()
+                );
+            }
+
+            @Override
+            public void runAfter(ServerObservationRecord previewRecord) {
+                if (previewRecord == null) {
+                    onTrusted.run();
+                    return;
+                }
+                String msg = "Server Hostname / ID:\n  " + previewRecord.getServerId() +
+                    "\n\nChat Server Public Key (Curve25519):\n  " + previewRecord.getChatServerPubkeyCurve25519() +
+                    "\n\nDirectory TLS SPKI SHA-256 (" + previewRecord.getHttpEndpoints().getDirectory().getHost() + "):\n  " +
+                    previewRecord.getHttpEndpoints().getDirectory().getSpkiSha256() +
+                    "\n\nBlob TLS SPKI SHA-256 (" + previewRecord.getHttpEndpoints().getBlob().getHost() + "):\n  " +
+                    previewRecord.getHttpEndpoints().getBlob().getSpkiSha256() +
+                    "\n\nSafe TLS SPKI SHA-256 (" + previewRecord.getHttpEndpoints().getSafe().getHost() + "):\n  " +
+                    previewRecord.getHttpEndpoints().getSafe().getSpkiSha256();
+                new AlertDialog.Builder(EnterSerialActivity.this)
+                    .setTitle("First-Time Server Trust Prompt (TOFU)")
+                    .setMessage(msg)
+                    .setNegativeButton(R.string.cancel, (d, w) -> setLoginButtonEnabled(true))
+                    .setPositiveButton("Trust & Pin Server", (d, w) -> {
+                        EncryptedServerObservationStore.getInstance(EnterSerialActivity.this).save(previewRecord);
+                        onTrusted.run();
+                    })
+                    .setCancelable(false)
+                    .show();
+            }
+        });
     }
 
     private void handleUrlIntent(@Nullable Intent intent) {
@@ -546,6 +733,22 @@ public class EnterSerialActivity extends ThreemaActivity {
                 setLoginButtonEnabled(true);
                 DialogUtil.dismissDialog(getSupportFragmentManager(), DIALOG_TAG_CHECKING);
                 if (error == null) {
+                    if (BuildFlavor.IS_ON_PREM) {
+                        try {
+                            OnPremConfigFetcherProvider fetcherProvider = KoinJavaComponent.get(OnPremConfigFetcherProvider.class);
+                            OnPremConfig cachedConfig = fetcherProvider.getOnPremConfigFetcher().getCached();
+                            if (cachedConfig != null && EncryptedServerObservationStore.getInstance(EnterSerialActivity.this).load() == null) {
+                                showFirstTimeServerTrustPrompt(
+                                    cachedConfig,
+                                    null,
+                                    () -> ConfigUtils.recreateActivity(EnterSerialActivity.this)
+                                );
+                                return;
+                            }
+                        } catch (Exception e) {
+                            logger.warn("Unable to show TOFU prompt after check", e);
+                        }
+                    }
                     ConfigUtils.recreateActivity(EnterSerialActivity.this);
                 } else {
                     changeState(error);

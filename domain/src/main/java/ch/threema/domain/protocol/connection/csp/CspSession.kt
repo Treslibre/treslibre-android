@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.domain.protocol.connection.csp
 
 import ch.threema.base.crypto.KeyPair
@@ -215,6 +216,9 @@ internal class CspSession(
         // protocol. This gives us the same security protections as certificate pinning in the tls
         // context.
         serverPubKeyPerm = serverAddressProvider.getChatServerPublicKey()
+        if (serverPubKeyPerm.all { it == 0.toByte() }) {
+            throw ServerConnectionException("Chat server Curve25519 public key is unconfigured (all-zero)")
+        }
         try {
             return NaCl(clientTempKeypair.privateKey, serverPubKeyPerm).decrypt(
                 data = serverHelloBox,

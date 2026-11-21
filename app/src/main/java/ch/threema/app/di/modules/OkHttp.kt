@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.app.di.modules
 
 import ch.threema.app.di.Qualifiers
@@ -26,12 +27,12 @@ val okHttpClientsModule = module {
     }
     single<OkHttpClient>(qualifier = Qualifiers.okHttpBlobDownload) {
         buildBlobDownloadOkHttpClient(
-            baseOkHttpClient = get(qualifier = Qualifiers.okHttpBase),
+            baseOkHttpClient = get(),
         )
     }
     single<OkHttpClient>(qualifier = Qualifiers.okHttpBlobUpload) {
         buildBlobUploadOkHttpClient(
-            baseOkHttpClient = get(qualifier = Qualifiers.okHttpBase),
+            baseOkHttpClient = get(),
             identityStore = get(),
             challengeResponseHelper = get(),
             timeSource = get(),
