@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.domain.protocol.urls
 
 import ch.threema.common.emptyByteArray
@@ -9,22 +10,22 @@ class MediatorUrlTest {
     @Test
     fun `trailing slash is required`() {
         assertFailsWith<IllegalArgumentException> {
-            MediatorUrl("wss://mediator-{deviceGroupIdPrefix4}.threema.ch/{deviceGroupIdPrefix8}")
+            MediatorUrl("wss://mediator-{deviceGroupIdPrefix4}.treslibre.invalid/{deviceGroupIdPrefix8}")
         }
     }
 
     @Test
     fun `placeholders are replaced`() {
-        val mediatorUrl = MediatorUrl("wss://mediator-{deviceGroupIdPrefix4}.threema.ch/{deviceGroupIdPrefix8}/")
+        val mediatorUrl = MediatorUrl("wss://mediator-{deviceGroupIdPrefix4}.treslibre.invalid/{deviceGroupIdPrefix8}/")
 
         val url = mediatorUrl.get(deviceGroupId = byteArrayOf(0xDC.toByte()))
 
-        assertEquals("wss://mediator-d.threema.ch/dc/", url)
+        assertEquals("wss://mediator-d.treslibre.invalid/dc/", url)
     }
 
     @Test
     fun `empty device group id is considered invalid`() {
-        val mediatorUrl = MediatorUrl("wss://mediator-{deviceGroupIdPrefix4}.threema.ch/{deviceGroupIdPrefix8}/")
+        val mediatorUrl = MediatorUrl("wss://mediator-{deviceGroupIdPrefix4}.treslibre.invalid/{deviceGroupIdPrefix8}/")
 
         assertFailsWith<IllegalArgumentException> {
             mediatorUrl.get(deviceGroupId = emptyByteArray())

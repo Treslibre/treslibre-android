@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.app.errorreporting
 
 import ch.threema.common.minus
@@ -190,7 +191,7 @@ class SentryServiceTest {
     }
 
     companion object {
-        private const val HOST = "test.threema.ch"
+        private const val HOST = "test.treslibre.invalid"
         private const val PROJECT_ID = 42
         private const val PUBLIC_API_KEY = "abcd1234"
         private const val SENTRY_ID = "98385cec-e748-468c-9c5e-a30ff6a458d0"

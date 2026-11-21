@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.app.threemasafe
 
 import ch.threema.app.managers.ServiceManager
@@ -42,15 +43,15 @@ class ThreemaSafeServerInfoTest {
 
     @Test
     fun `uses basic auth when username and password can be extracted from custom server name`() {
-        val serverInfo = threemaSafeServerInfo(customServerName = "username:password@my-custom-server.threema.com")
+        val serverInfo = threemaSafeServerInfo(customServerName = "username:password@my-custom-server.treslibre.invalid")
         assertEquals("Basic dXNlcm5hbWU6cGFzc3dvcmQ=", serverInfo.authorization)
     }
 
     @Test
     fun `empty username or password is ignored in custom server name`() {
-        assertNull(threemaSafeServerInfo(customServerName = "username:@my-custom-server.threema.com").authorization)
-        assertNull(threemaSafeServerInfo(customServerName = ":password@my-custom-server.threema.com").authorization)
-        assertNull(threemaSafeServerInfo(customServerName = ":@my-custom-server.threema.com").authorization)
+        assertNull(threemaSafeServerInfo(customServerName = "username:@my-custom-server.treslibre.invalid").authorization)
+        assertNull(threemaSafeServerInfo(customServerName = ":password@my-custom-server.treslibre.invalid").authorization)
+        assertNull(threemaSafeServerInfo(customServerName = ":@my-custom-server.treslibre.invalid").authorization)
     }
 
     private fun threemaSafeServerInfo(customServerName: String? = null, username: String? = null, password: String? = null) =

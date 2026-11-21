@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.app.license
 
 class UsernameParameter private constructor(
@@ -16,5 +17,12 @@ class UsernameParameter private constructor(
                 source = parameterSource,
             )
         }
+
+        @JvmStatic
+        fun createOrEmpty(username: String?, parameterSource: ParameterSource): UsernameParameter =
+            UsernameParameter(
+                value = username ?: "",
+                source = parameterSource,
+            )
     }
 }

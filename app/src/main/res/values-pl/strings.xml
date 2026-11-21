@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Modified 2026 by Treslibre Project (Treslibre). -->
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="title_section2">Kontakty</string>
     <!-- Label on first tab on app's main screen, selecting it leads to the list of chats -->
@@ -14,9 +15,9 @@
     <string name="title_invite_friend">Zaproś znajomego</string>
     <string name="invite_via">Zaproś znajomego przez…</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
-    <string name="invite_email_body">Cześć,\n\nI korzystaj z %1$s,bezpiecznego komunikatora, który chroni prywatność użytkowników .\n\nNMój identyfikator w ${app_name_short}: https://threema.id/%2$s\n\nKontaktujmy się przez %1$s!\n\nPozdro,\n</string>
+    <string name="invite_email_body">Cześć,\n\nI korzystaj z %1$s,bezpiecznego komunikatora, który chroni prywatność użytkowników .\n\nNMój identyfikator w ${app_name_short}: treslibre://add?id=%2$s\n\nKontaktujmy się przez %1$s!\n\nPozdro,\n</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
-    <string name="invite_sms_body">Hej! Korzystajmy z %1$s do komunikacji w sposób bezpieczny i respektujący prywatność! Mój identyfikator w ${app_name_short}: https://threema.id/%2$s</string>
+    <string name="invite_sms_body">Hej! Korzystajmy z %1$s do komunikacji w sposób bezpieczny i respektujący prywatność! Mój identyfikator w ${app_name_short}: treslibre://add?id=%2$s</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="invite_email_subject">${app_name_short}, bezpieczny komunikator, który chroni Twoją prywatność.</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
@@ -162,7 +163,7 @@
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="backup_sum">Eksportuj swój identyfikator ${app_name_short}</string>
     <string name="backup_and_delete">Zrób backup i skasuj</string>
-    <string name="delete_id_message">Jeśli nie utworzyłeś kopii zapasowej lub nie wyeksportowałeś i nie zapisałeś kopii tego identyfikatora, nie będziesz mógł więcej wysyłać ani otrzymywać wiadomości za jego pomocą.\n\nJeśli nie chcesz już korzystać z tego identyfikatora, zaleca się ustawienie hasła unieważnienia i unieważnienie identyfikatora na myid.threema.ch/revoke przed jego usunięciem.</string>
+    <string name="delete_id_message">Jeśli nie utworzyłeś kopii zapasowej lub nie wyeksportowałeś i nie zapisałeś kopii tego identyfikatora, nie będziesz mógł więcej wysyłać ani otrzymywać wiadomości za jego pomocą.\n\nJeśli nie chcesz już korzystać z tego identyfikatora, zaleca się ustawienie hasła unieważnienia i unieważnienie identyfikatora na github.com/Treslibre/treslibre-android/revoke przed jego usunięciem.</string>
     <string name="delete_id_message2">Ostatnie ostrzeżenie: czy na pewno chcesz usunąć swój identyfikator?</string>
     <string name="delete_all_data_prompt">Usunąć wszystkie dane dotyczące aplikacji?</string>
     <string name="backup_password_summary">Twój eksport identyfikatora zostanie zabezpieczony hasłem. Użyj kombinacji liter, cyfr i symboli. Nie zapomnij swojego hasła!</string>
@@ -240,7 +241,7 @@
     <string name="save_message_action">Zapisz</string>
     <string name="masterkey_is_unlocked">Klucz generalny jest odlokowany</string>
     <string name="file_too_large">Wielkość pliku przekracza limit wynoszący %1$d MB</string>
-    <string name="enter_serial_body"><![CDATA[Proszę wpisać sklepowy klucz autoryzacyjny albo kliknąć tutaj, aby go odzyskać: https://shop.threema.ch/retrieve_keys]]></string>
+    <string name="enter_serial_body"><![CDATA[Proszę wpisać sklepowy klucz autoryzacyjny albo kliknąć tutaj, aby go odzyskać: https://github.com/Treslibre/treslibre-android]]></string>
     <!-- ${app_name_short} is a placeholder for the app's name, it must be kept as-is, not translated. -->
     <string name="work_enter_serial_body">Wpisz dane uwierzytelniające do aplikacji ${app_name_short} przekazane przez Twoją firmę.</string>
     <!-- ${app_name} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
@@ -507,7 +508,7 @@ Wprowadź pytanie do swojej ankiety.</string>
     <string name="wallpapers_removed">Tapety usunięte</string>
     <string name="invalid_backup">Nieprawidłowe dane kopii zapasowej. Nie można jej przywrócić.</string>
     <string name="invalid_zip_restore_failed">Przywracanie niepomyślne. Niewłaściwy plik kopii zapasowej: %1$s</string>
-    <string name="revocation_explain">Wprowadzone tutaj hasło pozwala Ci unieważnić identyfikator pod adresem https://myid.threema.ch/revoke, na przykład gdy go zgubisz lub gdy zostanie ukradziony.</string>
+    <string name="revocation_explain">Wprowadzone tutaj hasło pozwala Ci unieważnić identyfikator pod adresem https://github.com/Treslibre/treslibre-android na przykład gdy go zgubisz lub gdy zostanie ukradziony.</string>
     <!-- Empty state text shown on home screen widget when there are no unread messages -->
     <string name="no_unread_messages">Brak nieprzeczytanych wiadomości</string>
     <string name="send_media">Wyślij media</string>
@@ -1363,7 +1364,7 @@ podanie wyłącznie imienia lub pseudonimu. Jeśli nie ustawisz pseudonimu, będ
     <string name="forward_security_notification_rejected_text_contact">Nie powiodło się wysłanie co najmniej jednej wiadomości do %1$s.</string>
     <string name="forward_security_notification_rejected_text_group">Nie powiodło się wysłanie co najmniej jednej wiadomości do „%1$s”.</string>
     <string name="forward_security_notification_rejected_text_generic">Nie powiodło się wysłanie co najmniej jednej wiadomości.</string>
-    <string name="self_updater_installation_failed">Pobranie aktualizacji nie powiodło się. Pobierz ją ze strony <a href="https://shop.threema.ch/download">https://shop.threema.ch/download</a> i zainstaluj ręcznie.</string>
+    <string name="self_updater_installation_failed">Pobranie aktualizacji nie powiodło się. Pobierz ją ze strony <a href="https://github.com/Treslibre/treslibre-android">https://github.com/Treslibre/treslibre-android</a> i zainstaluj ręcznie.</string>
     <string name="spam_first_contact">Ten czat jest z nieznanym kontaktem</string>
     <string name="spam_report">Zgłoś Spam</string>
     <!-- ${company_name} is a placeholder for the name of the company that operates the app, e.g. "Threema". It must be left as-is and not translated. -->
@@ -1402,7 +1403,7 @@ podanie wyłącznie imienia lub pseudonimu. Jeśli nie ustawisz pseudonimu, będ
     <string name="prefs_summary_hibernation_api">Aby zapobiec wstrzymywaniu aplikacji ${app_name} przez system po dłuższej nieaktywności, wyłącz ustawienie systemowe „Wstrzymuj aktywność aplikacji w razie nieużywania”.</string>
     <string name="unable_to_fetch_configuration">Nie można pobrać danych z serwera konfiguracji. Spróbuj ponownie później.</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
-    <string name="rogue_device_warning"><![CDATA[Wykryto połączenie nawiązane na innym urządzeniu o takim samym identyfikatorze ${app_name_short}. Czy zdarzyło Ci się ostatnio użyć identyfikatora ${app_name_short} na innym urządzeniu?<br><br>Jeśli tak, to możesz zignorować tę wiadomość.<br><br>W przeciwnym razie mogło dojść do ujawnienia Twojego prywatnego klucza. <a href="https://threema.com/faq/another_connection">Postępuj zgodnie z naszymi sugestiami</a>, aby zabezpieczyć swoje urządzenie oraz dane, zanim utworzysz nowy identyfikator.]]></string>
+    <string name="rogue_device_warning"><![CDATA[Wykryto połączenie nawiązane na innym urządzeniu o takim samym identyfikatorze ${app_name_short}. Czy zdarzyło Ci się ostatnio użyć identyfikatora ${app_name_short} na innym urządzeniu?<br><br>Jeśli tak, to możesz zignorować tę wiadomość.<br><br>W przeciwnym razie mogło dojść do ujawnienia Twojego prywatnego klucza. <a href="https://github.com/Treslibre/treslibre-android">Postępuj zgodnie z naszymi sugestiami</a>, aby zabezpieczyć swoje urządzenie oraz dane, zanim utworzysz nowy identyfikator.]]></string>
     <string name="fetch2_failure">Synchronizacja z serwerem udostępniającym nie powiodła się.</string>
     <string name="no_members_support_group_calls">W tej grupie nie ma innych członków, którzy mogą odpowiadać na połączenia grupowe</string>
     <string name="group_calls">Poł. grupowe</string>

@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.app.activities;
 
 import android.app.AlertDialog;
@@ -227,7 +228,7 @@ public class DownloadApkActivity extends ThreemaActivity implements GenericAlert
         SpannableString failMessage = new SpannableString(getString(R.string.self_updater_installation_failed));
         Linkify.addLinks(failMessage, Linkify.WEB_URLS);
         builder.setMessage(failMessage).setTitle(R.string.error).setPositiveButton(R.string.ok, (dialog, which) -> {
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://shop.threema.ch/download"));
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Treslibre/treslibre-android"));
             startActivity(browserIntent);
             finish();
         }).setNegativeButton(R.string.cancel, (dialog, which) -> finish());

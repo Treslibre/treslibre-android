@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.app.activities;
 
 import android.annotation.SuppressLint;
@@ -251,11 +252,11 @@ public class EnterSerialActivity extends ThreemaActivity {
 
             if (BuildFlavor.IS_ON_PREM) {
                 ServerUrlParameter configuredServerUrl = getConfiguredOnPremServerUrl();
-                if (configuredUsername != null && configuredPassword != null && configuredServerUrl != null) {
+                if (configuredServerUrl != null) {
                     check(
                         new Parameters.OnPremParameters(
-                            configuredUsername,
-                            configuredPassword,
+                            configuredUsername != null ? configuredUsername : UsernameParameter.createOrEmpty("", ParameterSource.MDM),
+                            configuredPassword != null ? configuredPassword : PasswordParameter.createOrEmpty("", ParameterSource.MDM),
                             configuredServerUrl
                         )
                     );
@@ -364,12 +365,12 @@ public class EnterSerialActivity extends ThreemaActivity {
             // Also show the server url if available
             serverText.setText(effectiveServerUrl != null ? effectiveServerUrl.getValue() : null);
 
-            // Check license if credentials and server url are available
-            if (effectiveUsername != null && effectivePassword != null && effectiveServerUrl != null) {
+            // Check license if server url is available (credentials are optional for cleanroom OnPrem servers)
+            if (effectiveServerUrl != null) {
                 check(
                     new Parameters.OnPremParameters(
-                        effectiveUsername,
-                        effectivePassword,
+                        effectiveUsername != null ? effectiveUsername : UsernameParameter.createOrEmpty("", ParameterSource.ACTIVATION_LINK),
+                        effectivePassword != null ? effectivePassword : PasswordParameter.createOrEmpty("", ParameterSource.ACTIVATION_LINK),
                         effectiveServerUrl
                     )
                 );
@@ -398,11 +399,15 @@ public class EnterSerialActivity extends ThreemaActivity {
             PasswordParameter configuredPassword = getConfiguredPassword();
             ServerUrlParameter configuredServerUrl = getConfiguredOnPremServerUrl();
 
-            UsernameParameter effectiveUsername = configuredUsername != null ? configuredUsername : getEnteredUsername();
-            PasswordParameter effectivePassword = configuredPassword != null ? configuredPassword : getEnteredPassword();
+            UsernameParameter enteredUsername = getEnteredUsername();
+            PasswordParameter enteredPassword = getEnteredPassword();
+            UsernameParameter effectiveUsername = configuredUsername != null ? configuredUsername :
+                (enteredUsername != null ? enteredUsername : UsernameParameter.createOrEmpty("", ParameterSource.USER));
+            PasswordParameter effectivePassword = configuredPassword != null ? configuredPassword :
+                (enteredPassword != null ? enteredPassword : PasswordParameter.createOrEmpty("", ParameterSource.USER));
             ServerUrlParameter effectiveServerUrl = configuredServerUrl != null ? configuredServerUrl : getEnteredServerUrl();
 
-            if (effectiveUsername != null && effectivePassword != null && effectiveServerUrl != null) {
+            if (effectiveServerUrl != null) {
                 this.check(
                     new Parameters.OnPremParameters(
                         effectiveUsername,

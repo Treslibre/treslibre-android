@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.app.multidevice
 
 import android.Manifest
@@ -175,9 +176,7 @@ class LinkedDevicesActivity : ThreemaToolbarActivity() {
             .linkifyWeb(
                 url = getString(desktopClientFlavour.downloadLink),
                 onClickLink = { downloadLinkUri ->
-                    if (downloadLinkUri.host == "three.ma") {
-                        startActivity(Intent(Intent.ACTION_VIEW, downloadLinkUri))
-                    }
+                    startActivity(Intent(Intent.ACTION_VIEW, downloadLinkUri))
                 },
             )
         emptyHintTextView.movementMethod = LinkMovementMethod.getInstance()

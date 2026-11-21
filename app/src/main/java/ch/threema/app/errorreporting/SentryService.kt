@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.app.errorreporting
 
 import ch.threema.base.utils.getThreemaLogger
@@ -34,19 +35,8 @@ class SentryService(
 ) {
     @Throws(IOException::class)
     suspend fun sendErrorRecord(record: ErrorRecord) {
-        if (config.publicApiKey.isEmpty()) {
-            return
-        }
-        val request = buildRequest(
-            body = buildRequestBody(record),
-            attachments = record.attachments ?: emptyList(),
-        )
-        okHttpClient.executeAsync(request).use { response ->
-            if (!response.isSuccessful) {
-                logger.error("Sentry responded with error: {}", response.body.string())
-            }
-            response.throwIfNotSuccessful()
-        }
+        // Outbound Sentry reporting is permanently disabled in Treslibre.
+        return
     }
 
     private fun buildRequest(

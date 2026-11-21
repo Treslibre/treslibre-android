@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.app.restrictions
 
 import android.content.Context
@@ -117,30 +118,30 @@ class AppRestrictionsTest {
         mockStringRestriction(R.string.restriction__web_hosts, "")
         assertNull(appRestrictions.getAllowedWebHosts())
 
-        mockStringRestriction(R.string.restriction__web_hosts, "saltyrtc.threema.ch")
+        mockStringRestriction(R.string.restriction__web_hosts, "saltyrtc.treslibre.invalid")
         assertEquals(
-            listOf("saltyrtc.threema.ch"),
+            listOf("saltyrtc.treslibre.invalid"),
             appRestrictions.getAllowedWebHosts(),
         )
 
         mockStringRestriction(R.string.restriction__web_hosts, ",")
         assertNull(appRestrictions.getAllowedWebHosts())
 
-        mockStringRestriction(R.string.restriction__web_hosts, "saltyrtc.threema.ch,test.threema.ch,*.example.com")
+        mockStringRestriction(R.string.restriction__web_hosts, "saltyrtc.treslibre.invalid,test.treslibre.invalid,*.example.com")
         assertEquals(
-            listOf("saltyrtc.threema.ch", "test.threema.ch", "*.example.com"),
+            listOf("saltyrtc.treslibre.invalid", "test.treslibre.invalid", "*.example.com"),
             appRestrictions.getAllowedWebHosts(),
         )
 
-        mockStringRestriction(R.string.restriction__web_hosts, "saltyrtc.threema.ch,,foo.bar")
+        mockStringRestriction(R.string.restriction__web_hosts, "saltyrtc.treslibre.invalid,,foo.bar")
         assertEquals(
-            listOf("saltyrtc.threema.ch", "foo.bar"),
+            listOf("saltyrtc.treslibre.invalid", "foo.bar"),
             appRestrictions.getAllowedWebHosts(),
         )
 
-        mockStringRestriction(R.string.restriction__web_hosts, "  saltyrtc.threema.ch  ,, ")
+        mockStringRestriction(R.string.restriction__web_hosts, "  saltyrtc.treslibre.invalid  ,, ")
         assertEquals(
-            listOf("saltyrtc.threema.ch"),
+            listOf("saltyrtc.treslibre.invalid"),
             appRestrictions.getAllowedWebHosts(),
         )
     }
@@ -150,29 +151,29 @@ class AppRestrictionsTest {
         mockStringRestriction(R.string.restriction__web_hosts, null)
         assertTrue(appRestrictions.isWebHostAllowed("example.com"))
         assertTrue(appRestrictions.isWebHostAllowed("x.example.com"))
-        assertTrue(appRestrictions.isWebHostAllowed("threema.com"))
+        assertTrue(appRestrictions.isWebHostAllowed("treslibre.invalid"))
 
         mockStringRestriction(R.string.restriction__web_hosts, "example.com")
         assertTrue(appRestrictions.isWebHostAllowed("example.com"))
         assertFalse(appRestrictions.isWebHostAllowed("x.example.com"))
-        assertFalse(appRestrictions.isWebHostAllowed("threema.com"))
+        assertFalse(appRestrictions.isWebHostAllowed("treslibre.invalid"))
 
         mockStringRestriction(R.string.restriction__web_hosts, "*.example.com")
         assertFalse(appRestrictions.isWebHostAllowed("example.com"))
         assertTrue(appRestrictions.isWebHostAllowed("x.example.com"))
-        assertFalse(appRestrictions.isWebHostAllowed("threema.com"))
+        assertFalse(appRestrictions.isWebHostAllowed("treslibre.invalid"))
 
         mockStringRestriction(R.string.restriction__web_hosts, "example.com,x.example.com")
         assertTrue(appRestrictions.isWebHostAllowed("example.com"))
         assertTrue(appRestrictions.isWebHostAllowed("x.example.com"))
         assertFalse(appRestrictions.isWebHostAllowed("xyz.example.com"))
-        assertFalse(appRestrictions.isWebHostAllowed("threema.com"))
+        assertFalse(appRestrictions.isWebHostAllowed("treslibre.invalid"))
 
         mockStringRestriction(R.string.restriction__web_hosts, "example.com,*.example.com")
         assertTrue(appRestrictions.isWebHostAllowed("example.com"))
         assertTrue(appRestrictions.isWebHostAllowed("x.example.com"))
         assertTrue(appRestrictions.isWebHostAllowed("xyz.example.com"))
-        assertFalse(appRestrictions.isWebHostAllowed("threema.com"))
+        assertFalse(appRestrictions.isWebHostAllowed("treslibre.invalid"))
     }
 
     @Test

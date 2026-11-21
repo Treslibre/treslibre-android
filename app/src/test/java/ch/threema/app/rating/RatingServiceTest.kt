@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.app.rating
 
 import ch.threema.base.ThreemaException
@@ -20,7 +21,7 @@ class RatingServiceTest {
             ratingReferenceProvider = mockRatingReferenceProvider(),
             okHttpClient = mockOkHttpClient { request ->
                 assertEquals("POST", request.method)
-                assertEquals("https://test.threema.ch/rating/4", request.url.toString())
+                assertEquals("https://test.treslibre.invalid/rating/4", request.url.toString())
                 assertEquals(
                     "ref=my-ref&feedback=Hello+world%0A%0A---%0A1.2.3%0A",
                     request.getBodyAsUtf8String(),
@@ -83,6 +84,6 @@ class RatingServiceTest {
 
     private fun mockServerAddressProvider(): ServerAddressProvider =
         mockk {
-            every { getAppRatingUrl() } returns AppRatingUrl("https://test.threema.ch/rating/{rating}")
+            every { getAppRatingUrl() } returns AppRatingUrl("https://test.treslibre.invalid/rating/{rating}")
         }
 }

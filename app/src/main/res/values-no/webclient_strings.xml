@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Modified 2026 by Treslibre Project (Treslibre). -->
 <resources>
     <string name="webclient_init_session">Start ny økt</string>
     <string name="webclient_sessions_really_delete">Vil du virkelig slette denne skrivebord/web økten?</string>
@@ -6,7 +7,7 @@
     <string name="webclient_created_at">Opprettet den: %1$s (%2$s)</string>
     <string name="webclient_active_since">Aktiv siden: %s</string>
     <string name="webclient_enable">Aktiver Skrivebordsapp / Webklient</string>
-    <string name="webclient_no_sessions_found">For å koble til, last ned Skrivebordsappen (<b>https://threema.com/download</b>) eller åpne Webklienten (<b>%s</b>) på datamaskinen din og trykk på knappen under for å skanne QR-koden som vises på skjermen til datamaskinen.</string>
+    <string name="webclient_no_sessions_found">For å koble til, last ned Skrivebordsappen (<b>https://github.com/Treslibre/treslibre-android</b>) eller åpne Webklienten (<b>%s</b>) på datamaskinen din og trykk på knappen under for å skanne QR-koden som vises på skjermen til datamaskinen.</string>
     <string name="webclient_session_rename">Gi nytt navn til økt</string>
     <string name="webclient_session_label">Nytt navn</string>
     <string name="webclient_session_start">Start økt</string>

@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.app.onprem
 
 import ch.threema.common.Base64
@@ -21,7 +22,7 @@ class OnPremCertPinningTrustManagerTest {
         val delegate = mockk<TrustManagerDelegate>(relaxed = true)
         val trustManager = OnPremCertPinningTrustManager(
             getOnPremConfigDomains = mockGetOnPremConfigDomains(),
-            hostnameProvider = { "3ma.ch" },
+            hostnameProvider = { "treslibre.invalid" },
             delegate = delegate,
         )
         val chain = emptyArray<X509Certificate>()
@@ -39,7 +40,7 @@ class OnPremCertPinningTrustManagerTest {
         }
         val trustManager = OnPremCertPinningTrustManager(
             getOnPremConfigDomains = mockGetOnPremConfigDomains(),
-            hostnameProvider = { "3ma.ch" },
+            hostnameProvider = { "treslibre.invalid" },
             delegate = delegate,
         )
 
@@ -69,7 +70,7 @@ class OnPremCertPinningTrustManagerTest {
         val delegate = mockk<TrustManagerDelegate>(relaxed = true)
         val trustManager = OnPremCertPinningTrustManager(
             getOnPremConfigDomains = mockGetOnPremConfigDomains(),
-            hostnameProvider = { "3ma.ch" },
+            hostnameProvider = { "treslibre.invalid" },
             delegate = delegate,
         )
         val chain = emptyArray<X509Certificate>()
@@ -77,24 +78,24 @@ class OnPremCertPinningTrustManagerTest {
 
         trustManager.checkServerTrusted(chain, authType)
 
-        verify { delegate.checkServerTrusted(chain, authType, "3ma.ch") }
+        verify { delegate.checkServerTrusted(chain, authType, "treslibre.invalid") }
     }
 
     @Test
     fun `delegate's exceptions are propagated for checkServerTrusted`() {
         val delegate = mockk<TrustManagerDelegate> {
-            every { checkServerTrusted(any(), any(), any()) } throws OnPremCertificateException("3ma.ch")
+            every { checkServerTrusted(any(), any(), any()) } throws OnPremCertificateException("treslibre.invalid")
         }
         val trustManager = OnPremCertPinningTrustManager(
             getOnPremConfigDomains = mockGetOnPremConfigDomains(),
-            hostnameProvider = { "3ma.ch" },
+            hostnameProvider = { "treslibre.invalid" },
             delegate = delegate,
         )
 
         val exception = assertFailsWith<OnPremCertificateException> {
             trustManager.checkServerTrusted(emptyArray<X509Certificate>(), "RSA")
         }
-        assertContains(exception.message, "3ma.ch")
+        assertContains(exception.message, "treslibre.invalid")
     }
 
     @Test
@@ -103,7 +104,7 @@ class OnPremCertPinningTrustManagerTest {
             getOnPremConfigDomains = mockGetOnPremConfigDomains(
                 rules = listOf(
                     OnPremConfigDomainRule(
-                        fqdn = "3ma.ch",
+                        fqdn = "treslibre.invalid",
                         matchMode = OnPremConfigDomainRuleMatchMode.EXACT,
                         spkis = listOf(
                             OnPremConfigDomainRuleSpki(
@@ -114,7 +115,7 @@ class OnPremCertPinningTrustManagerTest {
                     ),
                 ),
             ),
-            hostnameProvider = { "3ma.ch" },
+            hostnameProvider = { "treslibre.invalid" },
             delegate = mockk(relaxed = true),
         )
         val certificate = mockCertificate(ENCODED_FINGERPRINT)
@@ -128,7 +129,7 @@ class OnPremCertPinningTrustManagerTest {
             getOnPremConfigDomains = mockGetOnPremConfigDomains(
                 rules = listOf(
                     OnPremConfigDomainRule(
-                        fqdn = "3ma.ch",
+                        fqdn = "treslibre.invalid",
                         matchMode = OnPremConfigDomainRuleMatchMode.EXACT,
                         spkis = listOf(
                             OnPremConfigDomainRuleSpki(
@@ -139,7 +140,7 @@ class OnPremCertPinningTrustManagerTest {
                     ),
                 ),
             ),
-            hostnameProvider = { "3ma.ch" },
+            hostnameProvider = { "treslibre.invalid" },
             delegate = mockk(relaxed = true),
         )
         val certificate = mockCertificate(ENCODED_FINGERPRINT.replace("5", "6"))
@@ -155,7 +156,7 @@ class OnPremCertPinningTrustManagerTest {
             getOnPremConfigDomains = mockGetOnPremConfigDomains(
                 rules = listOf(
                     OnPremConfigDomainRule(
-                        fqdn = "3ma.ch",
+                        fqdn = "treslibre.invalid",
                         matchMode = OnPremConfigDomainRuleMatchMode.INCLUDE_SUBDOMAINS,
                         spkis = listOf(
                             OnPremConfigDomainRuleSpki(
@@ -166,7 +167,7 @@ class OnPremCertPinningTrustManagerTest {
                     ),
                 ),
             ),
-            hostnameProvider = { "some-subdomain.3ma.ch" },
+            hostnameProvider = { "some-subdomain.treslibre.invalid" },
             delegate = mockk(relaxed = true),
         )
         val certificate = mockCertificate(ENCODED_FINGERPRINT)
@@ -180,7 +181,7 @@ class OnPremCertPinningTrustManagerTest {
             getOnPremConfigDomains = mockGetOnPremConfigDomains(
                 rules = listOf(
                     OnPremConfigDomainRule(
-                        fqdn = "3ma.ch",
+                        fqdn = "treslibre.invalid",
                         matchMode = OnPremConfigDomainRuleMatchMode.INCLUDE_SUBDOMAINS,
                         spkis = listOf(
                             OnPremConfigDomainRuleSpki(
@@ -191,7 +192,7 @@ class OnPremCertPinningTrustManagerTest {
                     ),
                 ),
             ),
-            hostnameProvider = { "some-subdomain.3ma.ch" },
+            hostnameProvider = { "some-subdomain.treslibre.invalid" },
             delegate = mockk(relaxed = true),
         )
         val certificate = mockCertificate(ENCODED_FINGERPRINT.replace("5", "6"))

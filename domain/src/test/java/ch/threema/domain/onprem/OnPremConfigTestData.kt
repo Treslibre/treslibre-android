@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.domain.onprem
 
 import ch.threema.testhelpers.loadResource
@@ -32,5 +33,5 @@ object OnPremConfigTestData {
      * An OPPF with an invalid signature
      */
     val badOppf
-        get() = goodOppf.replace("threema.ch", "zweima.ch")
+        get() = goodOppf.replace("treslibre.invalid", "zweima.ch")
 }

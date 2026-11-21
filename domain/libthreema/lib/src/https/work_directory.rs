@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 //! Work directory endpoint.
 use libthreema_dependencies::crypto::digest::{self, Mac as _};
 use serde::{Deserialize, Serialize};
@@ -719,7 +720,7 @@ mod tests {
 
         assert_eq!(
             request.url,
-            "https://work.example.threema.ch/api-client/v1/user-properties"
+            "https://work.example.treslibre.invalid/api-client/v1/user-properties"
         );
 
         assert_eq!(request.method, HttpsMethod::Post);
@@ -747,7 +748,7 @@ mod tests {
 
         assert_eq!(
             request.url,
-            "https://work.example.threema.ch/api-client/v1/user-properties"
+            "https://work.example.treslibre.invalid/api-client/v1/user-properties"
         );
         assert_eq!(request.method, HttpsMethod::Post);
         let body: serde_json::Value = serde_json::from_slice(&request.body)?;
@@ -772,7 +773,7 @@ mod tests {
         );
         assert_eq!(
             request.url,
-            "https://work.example.threema.ch/api-client/v1/remote-secret"
+            "https://work.example.treslibre.invalid/api-client/v1/remote-secret"
         );
         assert_eq!(request.method, HttpsMethod::Put);
         let body: serde_json::Value = serde_json::from_slice(&request.body)?;
@@ -798,7 +799,7 @@ mod tests {
         );
         assert_eq!(
             request.url,
-            "https://work.example.threema.ch/api-client/v1/remote-secret"
+            "https://work.example.treslibre.invalid/api-client/v1/remote-secret"
         );
         assert_eq!(request.method, HttpsMethod::Put);
         let body: serde_json::Value = serde_json::from_slice(&request.body)?;
@@ -834,7 +835,7 @@ mod tests {
         );
         assert_eq!(
             request.url,
-            "https://work.example.threema.ch/api-client/v1/remote-secret"
+            "https://work.example.treslibre.invalid/api-client/v1/remote-secret"
         );
         assert_eq!(request.method, HttpsMethod::Delete);
         let body: serde_json::Value = serde_json::from_slice(&request.body)?;
@@ -863,7 +864,7 @@ mod tests {
         );
         assert_eq!(
             request.url,
-            "https://work.example.threema.ch/api-client/v1/remote-secret"
+            "https://work.example.treslibre.invalid/api-client/v1/remote-secret"
         );
         assert_eq!(request.method, HttpsMethod::Delete);
         let body: serde_json::Value = serde_json::from_slice(&request.body)?;
@@ -888,7 +889,7 @@ mod tests {
         );
         assert_eq!(
             request.url,
-            "https://work.example.threema.ch/api-client/v1/remote-secret"
+            "https://work.example.treslibre.invalid/api-client/v1/remote-secret"
         );
         assert_eq!(request.method, HttpsMethod::Post);
         let body: serde_json::Value = serde_json::from_slice(&request.body)?;

@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.domain.onprem
 
 import androidx.annotation.AnyThread
@@ -123,8 +124,8 @@ class OnPremConfigFetcher(
         val request = buildRequest {
             url(oppfUrl)
             header(Http.Header.USER_AGENT, getUserAgent())
-            if (username != null && password != null) {
-                header(Http.Header.AUTHORIZATION, Credentials.basic(username, password))
+            if (!username.isNullOrEmpty() || !password.isNullOrEmpty()) {
+                header(Http.Header.AUTHORIZATION, Credentials.basic(username ?: "", password ?: ""))
             }
             if (appIdentifier != null) {
                 header(HEADER_APP_IDENTIFIER, appIdentifier)

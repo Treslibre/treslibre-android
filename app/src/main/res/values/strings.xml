@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Modified 2026 by Treslibre Project (Treslibre). -->
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="title_section2">Contacts</string>
     <!-- Label on first tab on app's main screen, selecting it leads to the list of chats -->
@@ -14,9 +15,9 @@
     <string name="title_invite_friend">Invite a Friend</string>
     <string name="invite_via">Invite a friend via…</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
-    <string name="invite_email_body">Hello,\n\nI use %1$s, the secure instant messenger that protects users’ privacy.\n\nMy ${app_name_short} ID: https://threema.id/%2$s\n\nLet’s communicate via %1$s!\n\nCheers,\n</string>
+    <string name="invite_email_body">Hello,\n\nI use %1$s, the secure instant messenger that protects users’ privacy.\n\nMy ${app_name_short} ID: treslibre://add?id=%2$s\n\nLet’s communicate via %1$s!\n\nCheers,\n</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
-    <string name="invite_sms_body">Hi! Let’s use %1$s to communicate in a safe and privacy-compliant way! My ${app_name_short} ID: https://threema.id/%2$s</string>
+    <string name="invite_sms_body">Hi! Let’s use %1$s to communicate in a safe and privacy-compliant way! My ${app_name_short} ID: treslibre://add?id=%2$s</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="invite_email_subject">${app_name_short}. The secure messenger that protects our privacy</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
@@ -175,7 +176,7 @@
     <string name="backup_and_delete">Backup and delete</string>
     <string name="delete_id_menu_title">Remove ID and data</string>
     <string name="delete_id_message">Unless you have created a backup or exported and saved a copy of this ID, you will never be able to send or receive
-        messages with this ID again.\n\nIf you don’t want to use this ID anymore, it is recommended to set a revocation password and revoke the ID on myid.threema.ch/revoke before deleting it.</string>
+        messages with this ID again.\n\nIf you don’t want to use this ID anymore, it is recommended to set a revocation password and revoke the ID on github.com/Treslibre/treslibre-android/revoke before deleting it.</string>
     <string name="delete_id_message2">Last warning: do you really want to delete your ID on this device?</string>
     <string name="delete_id_summary">Remove your ${app_name_short}-ID and all data from this device</string>
     <string name="delete_all_data_prompt">Delete all app data?</string>
@@ -260,7 +261,7 @@
     <string name="save_message_action">Save</string>
     <string name="masterkey_is_unlocked">Master key is unlocked</string>
     <string name="file_too_large">File is larger than the maximum of %1$d MB</string>
-    <string name="enter_serial_body"><![CDATA[Please enter your shop license key. You can <a href="https://shop.threema.ch/">purchase</a> a license or <a href="https://shop.threema.ch/retrieve_keys">retrieve</a> your keys in case you already purchased a license previously.]]></string>
+    <string name="enter_serial_body"><![CDATA[Please enter your shop license key. You can <a href="https://github.com/Treslibre/treslibre-android">purchase</a> a license or <a href="https://github.com/Treslibre/treslibre-android">retrieve</a> your keys in case you already purchased a license previously.]]></string>
     <!-- ${app_name_short} is a placeholder for the app's name, it must be kept as-is, not translated. -->
     <string name="work_enter_serial_body">Please enter the ${app_name_short} credentials provided by your company.</string>
     <!-- ${app_name} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
@@ -539,7 +540,7 @@
     <string name="invalid_backup">Invalid backup data. Cannot restore.</string>
     <string name="invalid_zip_restore_failed">Restore failed. Invalid backup file: %1$s</string>
     <string name="revocation_explain">The password you enter here allows you to revoke your ID at
-        https://myid.threema.ch/revoke in case you lose it or it gets stolen</string>
+        https://github.com/Treslibre/treslibre-android in case you lose it or it gets stolen</string>
     <!-- Empty state text shown on home screen widget when there are no unread messages -->
     <string name="no_unread_messages">No unread messages</string>
     <string name="send_media">Send media</string>
@@ -1410,7 +1411,7 @@
     <string name="forward_security_notification_rejected_text_contact">One or more messages could not be sent to %1$s.</string>
     <string name="forward_security_notification_rejected_text_group">One or more messages could not be sent to “%1$s.”</string>
     <string name="forward_security_notification_rejected_text_generic">One or more messages could not be sent.</string>
-    <string name="self_updater_installation_failed">The download of the update failed. Please download and install the update from <a href="https://shop.threema.ch/download">https://shop.threema.ch/download</a> manually.</string>
+    <string name="self_updater_installation_failed">The download of the update failed. Please download and install the update from <a href="https://github.com/Treslibre/treslibre-android">https://github.com/Treslibre/treslibre-android</a> manually.</string>
     <string name="spam_first_contact">This chat is from an unknown contact</string>
     <string name="spam_report">Report Spam</string>
     <!-- ${company_name} is a placeholder for the name of the company that operates the app, e.g. "Threema". It must be left as-is and not translated. -->
@@ -1449,7 +1450,7 @@
     <string name="prefs_summary_hibernation_api">To prevent that ${app_name} gets paused by the system after longer inactivity, please disable the system setting “Pause app activity if unused”.</string>
     <string name="unable_to_fetch_configuration">Unable to fetch data from configuration server. Try again later.</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
-    <string name="rogue_device_warning"><![CDATA[A connection from a different device with the same ${app_name_short} ID has been detected. Have you recently used your ${app_name_short} ID on another device? <br><br> If you have, you can ignore this message. <br><br> If you haven\'t, your private key may be compromised. Please <a href="https://threema.com/faq/another_connection">follow our suggestions</a> to protect your device and data before creating a new ID.]]></string>
+    <string name="rogue_device_warning"><![CDATA[A connection from a different device with the same ${app_name_short} ID has been detected. Have you recently used your ${app_name_short} ID on another device? <br><br> If you have, you can ignore this message. <br><br> If you haven\'t, your private key may be compromised. Please <a href="https://github.com/Treslibre/treslibre-android">follow our suggestions</a> to protect your device and data before creating a new ID.]]></string>
     <string name="fetch2_failure">Synchronization with the provisioning server failed.</string>
     <string name="no_members_support_group_calls">There are no other members in this group that are able to answer group calls</string>
     <string name="group_calls">Group calls</string>

@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.app.workers
 
 import ch.threema.app.GlobalAppState
@@ -38,7 +39,7 @@ class GatewayProfilePicturesWorkerTest {
     private lateinit var contactServiceMock: ContactService
     private lateinit var fileServiceMock: FileService
     private val apiServiceMock = mockk<ApiService> {
-        every { getAvatarURL(IDENTITY) } returns URL("https://test.threema.com/avatar")
+        every { getAvatarURL(IDENTITY) } returns URL("https://test.treslibre.invalid/avatar")
         every { getAuthToken() } returns "my-token-123"
     }
     private val globalAppStateMock = mockk<GlobalAppState> {
@@ -80,7 +81,7 @@ class GatewayProfilePicturesWorkerTest {
         }
         okHttpClientMock = mockOkHttpClient { request ->
             assertEquals("GET", request.method)
-            assertEquals("https://test.threema.com/avatar", request.url.toString())
+            assertEquals("https://test.treslibre.invalid/avatar", request.url.toString())
 
             request.buildResponse {
                 header("Expires", "Tue, 05 Aug 2025 07:28:00 GMT")
@@ -120,7 +121,7 @@ class GatewayProfilePicturesWorkerTest {
         }
         okHttpClientMock = mockOkHttpClient { request ->
             assertEquals("GET", request.method)
-            assertEquals("https://test.threema.com/avatar", request.url.toString())
+            assertEquals("https://test.treslibre.invalid/avatar", request.url.toString())
 
             request.buildResponse {
                 header("Expires", "Tue, 05 Aug 2025 07:28:00 GMT")
@@ -195,7 +196,7 @@ class GatewayProfilePicturesWorkerTest {
         }
         okHttpClientMock = mockOkHttpClient { request ->
             assertEquals("GET", request.method)
-            assertEquals("https://test.threema.com/avatar", request.url.toString())
+            assertEquals("https://test.treslibre.invalid/avatar", request.url.toString())
 
             request.respondWith(code = Http.StatusCode.NOT_FOUND)
         }

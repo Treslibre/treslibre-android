@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Modified 2026 by Treslibre Project (Treslibre). -->
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="title_section2">Контакти</string>
     <!-- Label on first tab on app's main screen, selecting it leads to the list of chats -->
@@ -14,9 +15,9 @@
     <string name="title_invite_friend">Поканете приятел</string>
     <string name="invite_via">Поканете приятел чрез…</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
-    <string name="invite_email_body">Здравейте, \n\n използвам %1$s, приложението за сигурна и мигновена комуникация, което защитава поверителността на потребителя.\n\n Моят ${app_name_short} идентификатор: https://threema.id/%2$s\n\n Нека си общуваме чрез %1$s!\n\n Поздрави, \n</string>
+    <string name="invite_email_body">Здравейте, \n\n използвам %1$s, приложението за сигурна и мигновена комуникация, което защитава поверителността на потребителя.\n\n Моят ${app_name_short} идентификатор: treslibre://add?id=%2$s\n\n Нека си общуваме чрез %1$s!\n\n Поздрави, \n</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
-    <string name="invite_sms_body">Здравейте! Нека използваме %1$s, за да си общуваме по сигурен и поверителен начин! Моят ${app_name_short} идентификатор: https://threema.id/%2$s</string>
+    <string name="invite_sms_body">Здравейте! Нека използваме %1$s, за да си общуваме по сигурен и поверителен начин! Моят ${app_name_short} идентификатор: treslibre://add?id=%2$s</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="invite_email_subject">${app_name_short}. Сигурният месинджър, който защитава нашата поверителност</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
@@ -170,7 +171,7 @@
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="backup_sum">Експортирайте Вашия ${app_name_short} идентификатор</string>
     <string name="backup_and_delete">Резервно копие и изтриване</string>
-    <string name="delete_id_message">Освен ако не сте създали резервно копие или експортирали/копирали този идентификатор, Вие никога няма да можете да изпращате или получавате         съобщения с този идентификатор отново.\n\nАко не искате да използвате този идентификатор повече, се препоръчва да създадете парола за анулиране и да анулирате идентификатора на myid.threema.ch/revoke преди да го изтриете.</string>
+    <string name="delete_id_message">Освен ако не сте създали резервно копие или експортирали/копирали този идентификатор, Вие никога няма да можете да изпращате или получавате         съобщения с този идентификатор отново.\n\nАко не искате да използвате този идентификатор повече, се препоръчва да създадете парола за анулиране и да анулирате идентификатора на github.com/Treslibre/treslibre-android/revoke преди да го изтриете.</string>
     <string name="delete_id_message2">Последно предупреждение: наистина ли искате да изтриете идентификатора на това устройство?</string>
     <string name="delete_all_data_prompt">Искате ли да изтриете всички данни на приложението?</string>
     <string name="backup_password_summary">Вашият експортиран идентификатор ще бъде криптиран с парола. Използвайте комбинация от букви, цифри и символи. Не забравяйте какво е въведено тук!</string>
@@ -250,7 +251,7 @@
     <string name="save_message_action">Запазете</string>
     <string name="masterkey_is_unlocked">Главният ключ е отблокиран</string>
     <string name="file_too_large">Размерът на файла надвишава допустимия размер от %1$d мегабайта</string>
-    <string name="enter_serial_body"><![CDATA[Въведете Вашият лицензионен ключ. Можете да <a href="https://shop.threema.ch/">купите</a>лиценз или да <a href="https://shop.threema.ch/retrieve_keys"> възстановите</a>Вашия ключ, ако вече сте закупили лиценз.]]></string>
+    <string name="enter_serial_body"><![CDATA[Въведете Вашият лицензионен ключ. Можете да <a href="https://github.com/Treslibre/treslibre-android">купите</a>лиценз или да <a href="https://github.com/Treslibre/treslibre-android"> възстановите</a>Вашия ключ, ако вече сте закупили лиценз.]]></string>
     <!-- ${app_name_short} is a placeholder for the app's name, it must be kept as-is, not translated. -->
     <string name="work_enter_serial_body">Моля, въведете ${app_name_short} данните, които са Ви предоставени от фирмата.</string>
     <!-- ${app_name} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
@@ -520,7 +521,7 @@
     <string name="wallpapers_removed">Фоновете са премахнати</string>
     <string name="invalid_backup">Невалидно резервно копие. Възстановяването не може да се извърши.</string>
     <string name="invalid_zip_restore_failed">Възстановяването се провали. Невалидно резервно копие: %1$s</string>
-    <string name="revocation_explain">Паролата, която въвеждате тук, Ви позволява да анулирате Вашия идентификатор на        https://myid.threema.ch/revoke в случай, че го изгубите или е бил откраднат</string>
+    <string name="revocation_explain">Паролата, която въвеждате тук, Ви позволява да анулирате Вашия идентификатор на        https://github.com/Treslibre/treslibre-android в случай, че го изгубите или е бил откраднат</string>
     <!-- Empty state text shown on home screen widget when there are no unread messages -->
     <string name="no_unread_messages">Няма непрочетени съобщения</string>
     <string name="send_media">Изпратете мултимедия</string>
@@ -1379,7 +1380,7 @@
     <string name="forward_security_notification_rejected_text_contact">Едно или повече съобщения не могат да бъдат изпратени на %1$s.</string>
     <string name="forward_security_notification_rejected_text_group">Едно или повече съобщения не могат да бъдат изпратени на %1$s.”</string>
     <string name="forward_security_notification_rejected_text_generic">Едно или повече съобщения не могат да бъдат изпратени.</string>
-    <string name="self_updater_installation_failed">Изтеглянето на актуализацията е неуспешно. Моля, изтеглете и инсталирайте актуализацията от <a href="https://shop.threema.ch/download">https://shop.threema.ch/download</a> ръчно.</string>
+    <string name="self_updater_installation_failed">Изтеглянето на актуализацията е неуспешно. Моля, изтеглете и инсталирайте актуализацията от <a href="https://github.com/Treslibre/treslibre-android">https://github.com/Treslibre/treslibre-android</a> ръчно.</string>
     <string name="spam_first_contact">Чатът е от непознат контакт</string>
     <string name="spam_report">Докладвайте за спам</string>
     <!-- ${company_name} is a placeholder for the name of the company that operates the app, e.g. "Threema". It must be left as-is and not translated. -->
@@ -1418,7 +1419,7 @@
     <string name="prefs_summary_hibernation_api">За да предотвратите приложението ${app_name} да бъде поставено на пауза от системата след дълга неактивност, деактивирайте системната настройка „Поставете на пауза приложението, ако не се използва“.</string>
     <string name="unable_to_fetch_configuration">Няма достъп до данните от сървъра за настройки. Опитайте отново по-късно.</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
-    <string name="rogue_device_warning"><![CDATA[Засечена е връзка от друго устройство със същия ${app_name_short} идентификатор. Наскоро да сте използвали Вашия ${app_name_short} идентификатор от друго устройство? <br><br> Ако сте го направила, може да игнорирате това съобщение. <br><br> Ако не сте, поверителният Ви ключ може да е компрометиран. Моля, <a href="https://threema.com/faq/another_connection"> последвайте нашите предложения,</a> за да защитите Вашето устройство и Вашите данни преди да създадете нов идентификатор.]]></string>
+    <string name="rogue_device_warning"><![CDATA[Засечена е връзка от друго устройство със същия ${app_name_short} идентификатор. Наскоро да сте използвали Вашия ${app_name_short} идентификатор от друго устройство? <br><br> Ако сте го направила, може да игнорирате това съобщение. <br><br> Ако не сте, поверителният Ви ключ може да е компрометиран. Моля, <a href="https://github.com/Treslibre/treslibre-android"> последвайте нашите предложения,</a> за да защитите Вашето устройство и Вашите данни преди да създадете нов идентификатор.]]></string>
     <string name="fetch2_failure">Синхронизацията със сървъра за предоставяне на услуги е неуспешна.</string>
     <string name="no_members_support_group_calls">Няма повече членове в тази група, които да могат да отговорят на групови обаждания</string>
     <string name="group_calls">Групови обаждания</string>

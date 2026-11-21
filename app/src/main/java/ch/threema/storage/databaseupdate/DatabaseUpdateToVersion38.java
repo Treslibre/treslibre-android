@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.storage.databaseupdate;
 
 import android.database.Cursor;
@@ -57,7 +58,7 @@ public class DatabaseUpdateToVersion38 implements DatabaseUpdate {
 
                         this.sqLiteDatabase.execSQL("UPDATE " + WebClientSessionModel.TABLE +
                             " SET " + WebClientSessionModel.COLUMN_SALTY_RTC_HOST + " = ? WHERE id=?", new String[]{
-                            "saltyrtc-" + keyAsHex.substring(0, 2) + ".threema.ch",
+                            "saltyrtc-" + keyAsHex.substring(0, 2) + ".treslibre.invalid",
                             String.valueOf(id)
                         });
 

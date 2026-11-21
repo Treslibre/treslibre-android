@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package config
 
 import com.android.build.api.dsl.VariantDimension
@@ -8,23 +9,23 @@ import utils.stringBuildConfigField
 enum class SentryConfig(
     val projectId: Int,
     val publicApiKey: String,
-    val host: String = "bugs.threema.ch",
+    val host: String = "",
 ) {
     SANDBOX(
-        projectId = 33,
-        publicApiKey = "b3e20afbf356a8748bb62ac165aa780c",
+        projectId = 0,
+        publicApiKey = "",
     ),
     PRODUCTION(
-        projectId = 34,
-        publicApiKey = "615af77cb3d980c41b3b04b07417cc7d",
+        projectId = 0,
+        publicApiKey = "",
     ),
 }
 
 fun VariantDimension.setSentryConfig(config: SentryConfig?) {
     setSentryConfig(
-        projectId = config?.projectId ?: 0,
-        publicApikey = config?.publicApiKey ?: "",
-        host = config?.host ?: "",
+        projectId = 0,
+        publicApikey = "",
+        host = "",
     )
 }
 
@@ -33,8 +34,8 @@ private fun VariantDimension.setSentryConfig(
     publicApikey: String,
     host: String,
 ) {
-    intBuildConfigField("SENTRY_PROJECT_ID", projectId)
-    stringBuildConfigField("SENTRY_PUBLIC_API_KEY", publicApikey)
-    stringBuildConfigField("SENTRY_HOST", host)
-    booleanBuildConfigField("ERROR_REPORTING_SUPPORTED", projectId != 0)
+    intBuildConfigField("SENTRY_PROJECT_ID", 0)
+    stringBuildConfigField("SENTRY_PUBLIC_API_KEY", "")
+    stringBuildConfigField("SENTRY_HOST", "")
+    booleanBuildConfigField("ERROR_REPORTING_SUPPORTED", false)
 }

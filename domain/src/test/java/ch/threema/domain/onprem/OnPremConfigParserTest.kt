@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.domain.onprem
 
 import ch.threema.common.Base64
@@ -50,7 +51,7 @@ class OnPremConfigParserTest {
     @Test
     fun testChatConfig() {
         val chatConfig = config.chat
-        assertEquals("chat.onprem.example.threema.ch", chatConfig.hostname)
+        assertEquals("chat.onprem.example.treslibre.invalid", chatConfig.hostname)
         assertContentEquals(intArrayOf(5222, 443), chatConfig.ports)
         assertContentEquals(Base64.decode("r9utIHN9ngo21q9OlZcotsQu1f2HwAW2Wi+u6Psp4Wc="), chatConfig.publicKey)
     }
@@ -58,48 +59,48 @@ class OnPremConfigParserTest {
     @Test
     fun testDirectoryConfig() {
         val directoryConfig = config.directory
-        assertEquals("https://onprem.example.threema.ch/directory", directoryConfig.url)
+        assertEquals("https://onprem.example.treslibre.invalid/directory", directoryConfig.url)
     }
 
     @Test
     fun testBlobConfig() {
         val blobConfig = config.blob
-        assertEquals("https://blob.onprem.example.threema.ch/blob/upload", blobConfig.uploadUrl)
-        assertEquals(BlobUrl("https://blob-{blobIdPrefix}.onprem.example.threema.ch/blob/{blobId}"), blobConfig.downloadUrl)
-        assertEquals(BlobUrl("https://blob-{blobIdPrefix}.onprem.example.threema.ch/blob/{blobId}/done"), blobConfig.doneUrl)
+        assertEquals("https://blob.onprem.example.treslibre.invalid/blob/upload", blobConfig.uploadUrl)
+        assertEquals(BlobUrl("https://blob-{blobIdPrefix}.onprem.example.treslibre.invalid/blob/{blobId}"), blobConfig.downloadUrl)
+        assertEquals(BlobUrl("https://blob-{blobIdPrefix}.onprem.example.treslibre.invalid/blob/{blobId}/done"), blobConfig.doneUrl)
     }
 
     @Test
     fun testWorkConfig() {
         val workConfig = config.work
-        assertEquals("https://work.onprem.example.threema.ch/", workConfig.url)
+        assertEquals("https://work.onprem.example.treslibre.invalid/", workConfig.url)
     }
 
     @Test
     fun testAvatarConfig() {
         val avatarConfig = config.avatar
-        assertEquals("https://avatar.onprem.example.threema.ch/", avatarConfig.url)
+        assertEquals("https://avatar.onprem.example.treslibre.invalid/", avatarConfig.url)
     }
 
     @Test
     fun testSafeConfig() {
         val safeConfig = config.safe
-        assertEquals("https://safe.onprem.example.threema.ch/", safeConfig.url)
+        assertEquals("https://safe.onprem.example.treslibre.invalid/", safeConfig.url)
     }
 
     @Test
     fun testWebConfig() {
         val webConfig = config.web!!
-        assertEquals("https://web.onprem.example.threema.ch/", webConfig.url)
+        assertEquals("https://web.onprem.example.treslibre.invalid/", webConfig.url)
     }
 
     @Test
     fun testMediatorConfig() {
         val mediatorConfig = config.mediator!!
-        assertEquals(MediatorUrl("wss://mediator.onprem.example.threema.ch/"), mediatorConfig.url)
-        assertEquals("https://blob-mirror.onprem.example.threema.ch/blob/upload", mediatorConfig.blob.uploadUrl)
-        assertEquals(BlobUrl("https://blob-mirror.onprem.example.threema.ch/blob/{blobId}"), mediatorConfig.blob.downloadUrl)
-        assertEquals(BlobUrl("https://blob-mirror.onprem.example.threema.ch/blob/{blobId}/done"), mediatorConfig.blob.doneUrl)
+        assertEquals(MediatorUrl("wss://mediator.onprem.example.treslibre.invalid/"), mediatorConfig.url)
+        assertEquals("https://blob-mirror.onprem.example.treslibre.invalid/blob/upload", mediatorConfig.blob.uploadUrl)
+        assertEquals(BlobUrl("https://blob-mirror.onprem.example.treslibre.invalid/blob/{blobId}"), mediatorConfig.blob.downloadUrl)
+        assertEquals(BlobUrl("https://blob-mirror.onprem.example.treslibre.invalid/blob/{blobId}/done"), mediatorConfig.blob.doneUrl)
     }
 
     @Test
@@ -108,7 +109,7 @@ class OnPremConfigParserTest {
             OnPremConfigDomains(
                 rules = listOf(
                     OnPremConfigDomainRule(
-                        fqdn = "onprem.example.threema.ch",
+                        fqdn = "onprem.example.treslibre.invalid",
                         matchMode = OnPremConfigDomainRuleMatchMode.INCLUDE_SUBDOMAINS,
                         spkis = listOf(
                             OnPremConfigDomainRuleSpki(
@@ -122,7 +123,7 @@ class OnPremConfigParserTest {
                         ),
                     ),
                     OnPremConfigDomainRule(
-                        fqdn = "another-host.example.threema.ch",
+                        fqdn = "another-host.example.treslibre.invalid",
                         matchMode = OnPremConfigDomainRuleMatchMode.EXACT,
                         spkis = listOf(
                             OnPremConfigDomainRuleSpki(
@@ -141,9 +142,9 @@ class OnPremConfigParserTest {
     fun testMapsConfig() {
         assertEquals(
             OnPremConfigMaps(
-                styleUrl = "https://map.onprem.example.threema.ch/styles/threema/style.json",
-                poiNamesUrl = MapPoiNamesUrl("https://poi.onprem.example.threema.ch/names/{latitude}/{longitude}/{query}"),
-                poiAroundUrl = MapPoiAroundUrl("https://poi.onprem.example.threema.ch/around/{latitude}/{longitude}/{radius}"),
+                styleUrl = "https://map.onprem.example.treslibre.invalid/styles/threema/style.json",
+                poiNamesUrl = MapPoiNamesUrl("https://poi.onprem.example.treslibre.invalid/names/{latitude}/{longitude}/{query}"),
+                poiAroundUrl = MapPoiAroundUrl("https://poi.onprem.example.treslibre.invalid/around/{latitude}/{longitude}/{radius}"),
             ),
             config.maps,
         )

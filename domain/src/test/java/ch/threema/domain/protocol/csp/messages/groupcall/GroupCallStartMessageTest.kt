@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.domain.protocol.csp.messages.groupcall
 
 import ch.threema.domain.models.GroupId
@@ -20,7 +21,7 @@ class GroupCallStartMessageTest {
 
     private val protocolVersionTest = 1.toUInt()
     private val gckTest = nextBytes(GroupCallStartData.GCK_LENGTH)
-    private val sfuBaseUrlTest = "https://sfu.test.threema.ch"
+    private val sfuBaseUrlTest = "https://sfu.test.treslibre.invalid"
 
     private val groupCallStartData = GroupCallStartData(
         protocolVersion = protocolVersionTest,

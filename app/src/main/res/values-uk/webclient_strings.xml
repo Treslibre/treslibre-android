@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Modified 2026 by Treslibre Project (Treslibre). -->
 <resources>
     <string name="webclient_init_session">Почати новий сеанс</string>
     <string name="webclient_sessions_really_delete">Справді видалити цей сеанс у веб-клієнті або додатку для ПК?</string>
@@ -6,7 +7,7 @@
     <string name="webclient_created_at">Створено: %1$s (%2$s)</string>
     <string name="webclient_active_since">Активний з: %s</string>
     <string name="webclient_enable">Увімкнути веб-клієнт або додаток для ПК</string>
-    <string name="webclient_no_sessions_found">Щоб підключитися, завантажте додаток для ПК (<b>https://threema.com/download</b>) або відкрийте веб-клієнт (<b>%s</b>), а тоді натисніть кнопку нижче й відскануйте QR-код з екрана комп\'ютера.</string>
+    <string name="webclient_no_sessions_found">Щоб підключитися, завантажте додаток для ПК (<b>https://github.com/Treslibre/treslibre-android</b>) або відкрийте веб-клієнт (<b>%s</b>), а тоді натисніть кнопку нижче й відскануйте QR-код з екрана комп\'ютера.</string>
     <string name="webclient_session_rename">Перейменувати сеанс</string>
     <string name="webclient_session_label">Нова назва</string>
     <string name="webclient_session_start">Почати сеанс</string>

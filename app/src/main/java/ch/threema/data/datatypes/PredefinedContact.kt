@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.data.datatypes
 
 import ch.threema.app.BuildFlavor
@@ -107,101 +108,11 @@ data class PredefinedContact(
          * Return all predefined contacts for current build environment.
          */
         private fun getAllForCurrentEnvironment(): Map<IdentityString, PredefinedContact> =
-            when (BuildFlavor.buildEnvironment) {
-                BuildFlavor.BuildEnvironment.LIVE -> buildProduction()
-                BuildFlavor.BuildEnvironment.SANDBOX -> buildSandbox()
-                BuildFlavor.BuildEnvironment.ON_PREM -> emptyMap() // TODO(ONPREM-164)
-            }
+            emptyMap()
 
-        private fun buildProduction(): Map<IdentityString, PredefinedContact> = listOf(
-            PredefinedContact(
-                identity = SPECIAL_CONTACT_3MAPUSH_IDENTITY,
-                isSpecial = true,
-                publicKey = "fd711e1a0db0e2f03fcaab6c43da2575b9513664a62a12bd0728d87f7125cc24".hexToByteArray(),
-                nickname = "Threema Push",
-            ),
-            PredefinedContact(
-                identity = "*3MATOKN",
-                isSpecial = false,
-                publicKey = "04884d12d668f855d00d71fb1d9d413c95f271312f7e077846af671875c4101b".hexToByteArray(),
-                nickname = "Threema Token",
-            ),
-            PredefinedContact(
-                identity = SPECIAL_CONTACT_3MAW0RK_IDENTITY,
-                isSpecial = true,
-                publicKey = "c0e8ad0f50c5c7315c402d3dc26db169408c117613e9b852d3d6c0e87fca536b".hexToByteArray(),
-                nickname = "Threema Work Delta Sync",
-            ),
-            PredefinedContact(
-                identity = "*3MAWORK",
-                isSpecial = false,
-                publicKey = "9aa0a72a8fb6f0cc53727fea6096f1b7b0ebefcc2650ad39a1e54837bba0bc4b".hexToByteArray(),
-                nickname = "Threema Work Channel",
-            ),
-            PredefinedContact(
-                identity = "*BETAFBK",
-                isSpecial = false,
-                publicKey = "5684d6dcd32a16488df8371095fc9a1fc25baeb6b97366d99fdf2aba00e2bc5c".hexToByteArray(),
-                nickname = "Threema Beta Feedback",
-            ),
-            PredefinedContact(
-                identity = "*MY3DATA",
-                isSpecial = false,
-                publicKey = "3b01854f24736e2d0d2dc387eaf2c0273c5049052147132369bf3960d0a0bf02".hexToByteArray(),
-                nickname = "My Threema Data",
-            ),
-            PredefinedContact(
-                identity = THREEMA_SUPPORT_IDENTITY,
-                isSpecial = false,
-                publicKey = "0f944d18324b2132c61d8e40afce60a0ebd701bb11e89be94972d4229e94722a".hexToByteArray(),
-                nickname = "Threema Support",
-            ),
-            PredefinedContact(
-                identity = THREEMA_CHANNEL_IDENTITY,
-                isSpecial = false,
-                publicKey = "3a38650c681435bd1fb8498e213a2919b09388f5803aa44640e0f706326a865c".hexToByteArray(),
-                nickname = "Threema Channel",
-            ),
-        ).associateBy { it.identity }
+        private fun buildProduction(): Map<IdentityString, PredefinedContact> = emptyMap()
 
-        private fun buildSandbox(): Map<IdentityString, PredefinedContact> = listOf(
-            PredefinedContact(
-                identity = SPECIAL_CONTACT_3MAPUSH_IDENTITY,
-                isSpecial = true,
-                publicKey = "fd711e1a0db0e2f03fcaab6c43da2575b9513664a62a12bd0728d87f7125cc24".hexToByteArray(),
-                nickname = "Threema Push",
-            ),
-            PredefinedContact(
-                identity = SPECIAL_CONTACT_3MAW0RK_IDENTITY,
-                isSpecial = true,
-                publicKey = "c79d9e0f70342e653b0c6df027af8c8681db40e11bf556dd33ec78ee6f810c6d".hexToByteArray(),
-                nickname = "Threema Work Delta Sync",
-            ),
-            PredefinedContact(
-                identity = "*3MAWORK",
-                isSpecial = false,
-                publicKey = "9aa0a72a8fb6f0cc53727fea6096f1b7b0ebefcc2650ad39a1e54837bba0bc4b".hexToByteArray(),
-                nickname = "Threema Work Channel",
-            ),
-            PredefinedContact(
-                identity = "*MY3DATA",
-                isSpecial = false,
-                publicKey = "83adfee6558b68ae3cd6bbe2a33f4e4409d5624a7cea23a18975aea6272a0070".hexToByteArray(),
-                nickname = "My Threema Data",
-            ),
-            PredefinedContact(
-                identity = THREEMA_SUPPORT_IDENTITY,
-                isSpecial = false,
-                publicKey = "0f944d18324b2132c61d8e40afce60a0ebd701bb11e89be94972d4229e94722a".hexToByteArray(),
-                nickname = "Threema Support",
-            ),
-            PredefinedContact(
-                identity = THREEMA_CHANNEL_IDENTITY,
-                isSpecial = false,
-                publicKey = "3a38650c681435bd1fb8498e213a2919b09388f5803aa44640e0f706326a865c".hexToByteArray(),
-                nickname = "Threema Channel",
-            ),
-        ).associateBy { it.identity }
+        private fun buildSandbox(): Map<IdentityString, PredefinedContact> = emptyMap()
     }
 
     override fun equals(other: Any?): Boolean {

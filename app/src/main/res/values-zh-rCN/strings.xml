@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Modified 2026 by Treslibre Project (Treslibre). -->
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="title_section2">联系人</string>
     <!-- Label on first tab on app's main screen, selecting it leads to the list of chats -->
@@ -14,9 +15,9 @@
     <string name="title_invite_friend">邀请朋友</string>
     <string name="invite_via">通过…邀请朋友</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
-    <string name="invite_email_body">您好，\n\n我使用 %1$s，这是保护用户隐私的安全即时通讯工具。\n\n我的 ${app_name_short} ID：https://threema.id/%2$s\n\n让我们通过%1$s进行通信吧！\n\n\n谨启</string>
+    <string name="invite_email_body">您好，\n\n我使用 %1$s，这是保护用户隐私的安全即时通讯工具。\n\n我的 ${app_name_short} ID：treslibre://add?id=%2$s\n\n让我们通过%1$s进行通信吧！\n\n\n谨启</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
-    <string name="invite_sms_body">嗨！让我们使用 %1$s 以安全和符合隐私的方式进行交流！我的 ${app_name_short} ID：https://threema.id/%2$s</string>
+    <string name="invite_sms_body">嗨！让我们使用 %1$s 以安全和符合隐私的方式进行交流！我的 ${app_name_short} ID：treslibre://add?id=%2$s</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="invite_email_subject">${app_name_short}，保护隐私的安全通讯工具。</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
@@ -172,7 +173,7 @@
     <string name="backup_sum">导出您的 ${app_name_short} ID</string>
     <string name="backup_and_delete">备份和删除</string>
     <string name="delete_id_menu_title">移除ID和数据</string>
-    <string name="delete_id_message">除非您已创建备份或导出并保存了此ID的副本，否则您将永远无法使用该ID再次发送或接收消息。\n\n如果您不想再使用此ID，建议在删除ID之前，在 myid.threema.ch/revoke 上设置撤销密码并撤销该ID。</string>
+    <string name="delete_id_message">除非您已创建备份或导出并保存了此ID的副本，否则您将永远无法使用该ID再次发送或接收消息。\n\n如果您不想再使用此ID，建议在删除ID之前，在 github.com/Treslibre/treslibre-android/revoke 上设置撤销密码并撤销该ID。</string>
     <string name="delete_id_message2">最后警告：您确定要删除此设备上的ID吗？</string>
     <string name="delete_id_summary">移除您的 ${app_name_short} ID和此设备上的所有数据</string>
     <string name="delete_all_data_prompt">删除所有应用数据？</string>
@@ -257,7 +258,7 @@
     <string name="save_message_action">保存</string>
     <string name="masterkey_is_unlocked">主钥匙已解锁</string>
     <string name="file_too_large">文件大于最大大小 %1$d MB</string>
-    <string name="enter_serial_body"><![CDATA[请输入您的商店许可证密钥。如果您之前已经购买了许可证，您可以<a href="https://shop.threema.ch/">购买</a>许可证或<a href="https://shop.threema.ch/retrieve_keys">找回</a>您的密钥。]]></string>
+    <string name="enter_serial_body"><![CDATA[请输入您的商店许可证密钥。如果您之前已经购买了许可证，您可以<a href="https://github.com/Treslibre/treslibre-android">购买</a>许可证或<a href="https://github.com/Treslibre/treslibre-android">找回</a>您的密钥。]]></string>
     <!-- ${app_name_short} is a placeholder for the app's name, it must be kept as-is, not translated. -->
     <string name="work_enter_serial_body">请输入贵公司提供的 ${app_name_short} 凭证。</string>
     <!-- ${app_name} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
@@ -534,7 +535,7 @@ http://www.7-zip.org 或 https://itunes.apple.com/us/app/the-unarchiver/id425424
     <string name="wallpapers_removed">壁纸已删除</string>
     <string name="invalid_backup">无效的备份数据。无法恢复。</string>
     <string name="invalid_zip_restore_failed">恢复失败，这是无效的备份数据：%1$s</string>
-    <string name="revocation_explain">您在这里输入的密码，可让您通过 https://myid.threema.ch/revoke 吊销您的ID，以防丢失或被盗</string>
+    <string name="revocation_explain">您在这里输入的密码，可让您通过 https://github.com/Treslibre/treslibre-android 吊销您的ID，以防丢失或被盗</string>
     <!-- Empty state text shown on home screen widget when there are no unread messages -->
     <string name="no_unread_messages">没有未读消息</string>
     <string name="send_media">发送媒体</string>
@@ -1403,7 +1404,7 @@ ${app_name_short} 支持的所有表情符号。</string>
     <string name="forward_security_notification_rejected_text_contact">一条或多条消息无法发送到%1$s。</string>
     <string name="forward_security_notification_rejected_text_group">一条或多条消息无法发送到 “%1$s”。</string>
     <string name="forward_security_notification_rejected_text_generic">一条或多条消息无法发送。</string>
-    <string name="self_updater_installation_failed">下载更新失败。请手动从 <a href="https://shop.threema.ch/download">https://shop.threema.ch/download</a> 下载并安装更新。</string>
+    <string name="self_updater_installation_failed">下载更新失败。请手动从 <a href="https://github.com/Treslibre/treslibre-android">https://github.com/Treslibre/treslibre-android</a> 下载并安装更新。</string>
     <string name="spam_first_contact">此会话来自一个未知联系人</string>
     <string name="spam_report">举报垃圾消息</string>
     <!-- ${company_name} is a placeholder for the name of the company that operates the app, e.g. "Threema". It must be left as-is and not translated. -->
@@ -1442,7 +1443,7 @@ ${app_name_short} 支持的所有表情符号。</string>
     <string name="prefs_summary_hibernation_api">为防止 ${app_name} 在长时间不使用后被系统暂停，请禁用系统设置中的 “暂停闲置应用的活动” 。</string>
     <string name="unable_to_fetch_configuration">无法从配置服务器获取数据，请稍后再试。</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
-    <string name="rogue_device_warning"><![CDATA[我们的服务器检测到有人试图从另一台设备登录现有的 ${app_name_short} ID，您最近是否在其他设备上登录过您的 ${app_name_short} ID？<br><br>如果有，就可以忽略此消息。<br><br>如果没有，您的私钥可能已经泄露。在创建新ID之前，请<a href="https://threema.com/faq/another_connection">按照我们的建议</a>保护您的设备和数据。]]></string>
+    <string name="rogue_device_warning"><![CDATA[我们的服务器检测到有人试图从另一台设备登录现有的 ${app_name_short} ID，您最近是否在其他设备上登录过您的 ${app_name_short} ID？<br><br>如果有，就可以忽略此消息。<br><br>如果没有，您的私钥可能已经泄露。在创建新ID之前，请<a href="https://github.com/Treslibre/treslibre-android">按照我们的建议</a>保护您的设备和数据。]]></string>
     <string name="fetch2_failure">与配置服务器同步失败。</string>
     <string name="no_members_support_group_calls">此群组中没有成员可以接听群组通话</string>
     <string name="group_calls">群组通话</string>

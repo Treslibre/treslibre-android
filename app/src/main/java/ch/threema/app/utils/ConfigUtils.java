@@ -252,7 +252,7 @@ public class ConfigUtils {
     }
 
     public static boolean isDemoOPServer(@NonNull PreferenceService preferenceService) {
-        return preferenceService.getOppfUrl() != null && preferenceService.getOppfUrl().toLowerCase().contains(".3ma.ch/");
+        return false;
     }
 
     /**

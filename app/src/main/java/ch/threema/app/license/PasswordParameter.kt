@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.app.license
 
 class PasswordParameter private constructor(
@@ -16,5 +17,12 @@ class PasswordParameter private constructor(
                 source = parameterSource,
             )
         }
+
+        @JvmStatic
+        fun createOrEmpty(password: String?, parameterSource: ParameterSource): PasswordParameter =
+            PasswordParameter(
+                value = password ?: "",
+                source = parameterSource,
+            )
     }
 }

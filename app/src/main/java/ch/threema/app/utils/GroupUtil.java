@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.app.utils;
 
 import java.util.Set;
@@ -14,10 +15,8 @@ public class GroupUtil {
     public static String CENTRALLY_MANAGED_GATEWAY_GROUP_PREFIX = "☁";
 
     /**
-     * Return true, if the group is created by a normal threema user
+     * Return true, if the group is created by a normal user
      * or by a gateway id and marked with a special prefix (cloud emoji {@link CENTRALLY_MANAGED_GATEWAY_GROUP_PREFIX}) as "centrally managed group"
-     *
-     * @see <a href="https://broadcast.threema.ch/en/faq#central-groups">What are centrally managed group chats?</a>
      */
     public static boolean shouldSendMessagesToCreator(@NonNull GroupModelOld groupModel) {
         return shouldSendMessagesToCreator(groupModel.getCreatorIdentity(), groupModel.getName());

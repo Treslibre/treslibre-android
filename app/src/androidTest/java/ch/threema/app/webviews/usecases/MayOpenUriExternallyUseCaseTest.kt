@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.app.webviews.usecases
 
 import androidx.core.net.toUri
@@ -11,7 +12,7 @@ class MayOpenUriExternallyUseCaseTest {
     @Test
     fun mayOpenUri() {
         listOf(
-            "https://threema.com",
+            "https://treslibre.invalid",
             "http://example.com",
             "mailto:john.doe@example.com",
             "tel:+4100000000",

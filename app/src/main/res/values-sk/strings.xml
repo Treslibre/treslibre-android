@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Modified 2026 by Treslibre Project (Treslibre). -->
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="title_section2">Kontakty</string>
     <!-- Label on first tab on app's main screen, selecting it leads to the list of chats -->
@@ -14,9 +15,9 @@
     <string name="title_invite_friend">Pozvať priateľa</string>
     <string name="invite_via">Pozvať priateľa pomocou…</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
-    <string name="invite_email_body">Ahoj,\n\n používam aplikáciu %1$s, bezpečný komunikátor, ktorý chráni súkromie užívateľov.\n\nMoje ${app_name_short} ID: https://threema.id/%2$s\n\nPoďme komunikovať cez aplikáciu %1$s!\n\nS pozdravom,\n</string>
+    <string name="invite_email_body">Ahoj,\n\n používam aplikáciu %1$s, bezpečný komunikátor, ktorý chráni súkromie užívateľov.\n\nMoje ${app_name_short} ID: treslibre://add?id=%2$s\n\nPoďme komunikovať cez aplikáciu %1$s!\n\nS pozdravom,\n</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
-    <string name="invite_sms_body">Ahoj! Začnime používať aplikáciu %1$s, nech môžme spolu komunikovať bezpečne a v súkromí! Moje ${app_name_short} ID je: https://threema.id/%2$s</string>
+    <string name="invite_sms_body">Ahoj! Začnime používať aplikáciu %1$s, nech môžme spolu komunikovať bezpečne a v súkromí! Moje ${app_name_short} ID je: treslibre://add?id=%2$s</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="invite_email_subject">${app_name_short}. Bezpečný komunikátor, ktorý chráni naše súkromie</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
@@ -173,7 +174,7 @@
     <string name="backup_and_delete">Záloha a odstránenie</string>
     <string name="delete_id_menu_title">Odstrániť ID a údaje</string>
     <string name="delete_id_message">Ak ste si nevytvorili zálohu alebo neexportovali a neuložili kópiu tohto ID, už nikdy nebudete môcť odosielať ani prijímať
-        správy s týmto ID.\n\nAk už nechcete toto ID používať, odporúčame vám pred jeho vymazaním nastaviť heslo na zrušenie a ID zrušiť na stránke myid.threema.ch/revoke.</string>
+        správy s týmto ID.\n\nAk už nechcete toto ID používať, odporúčame vám pred jeho vymazaním nastaviť heslo na zrušenie a ID zrušiť na stránke github.com/Treslibre/treslibre-android/revoke.</string>
     <string name="delete_id_message2">Posledné varovanie: naozaj chcete z tohto zariadenia vymazať vaše ID?</string>
     <string name="delete_id_summary">Odstrániť svoje ${app_name_short}-ID a všetky údaje z tohto zariadenia</string>
     <string name="delete_all_data_prompt">Odstrániť všetky údaje aplikácie?</string>
@@ -256,7 +257,7 @@ alebo naskenovať QR kód pomocou iného zariadenia.</string>
     <string name="save_message_action">Uložiť</string>
     <string name="masterkey_is_unlocked">Hlavný kľúč je odomknutý</string>
     <string name="file_too_large">Súbor prekročil veľkosť %1$d MB</string>
-    <string name="enter_serial_body"><![CDATA[Zadajte prosím zakúpený licenčný kľúč. Môžete <a href="https://shop.threema.ch/">zakúpiť</a> licenciu, alebo <a href="https://shop.threema.ch/retrieve_keys">obnoviť</a> vaše kľúče v prípade, že ste licenciu zakupili skôr.]]></string>
+    <string name="enter_serial_body"><![CDATA[Zadajte prosím zakúpený licenčný kľúč. Môžete <a href="https://github.com/Treslibre/treslibre-android">zakúpiť</a> licenciu, alebo <a href="https://github.com/Treslibre/treslibre-android">obnoviť</a> vaše kľúče v prípade, že ste licenciu zakupili skôr.]]></string>
     <!-- ${app_name_short} is a placeholder for the app's name, it must be kept as-is, not translated. -->
     <string name="work_enter_serial_body">Zadajte prihlasovacie údaje ${app_name_short} poskytnuté vašou spoločnosťou.</string>
     <!-- ${app_name} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
@@ -527,7 +528,7 @@ Naplánujte udalosti, vytvorte prieskum, alebo sa niečo spýtajte svojich priat
     <string name="invalid_backup">Poškodené údaje zálohy. Nie je možné obnoviť.</string>
     <string name="invalid_zip_restore_failed">Obnovenie zlyhalo. Neplatný súbor zálohy: %1$s</string>
     <string name="revocation_explain">Heslo, ktoré tu zadáte, vám umožní odvolať vaše ID na stránke
-https://myid.threema.ch/revoke v prípade, že ho stratíte alebo vám bude odcudzené</string>
+https://github.com/Treslibre/treslibre-android v prípade, že ho stratíte alebo vám bude odcudzené</string>
     <!-- Empty state text shown on home screen widget when there are no unread messages -->
     <string name="no_unread_messages">Žiadne neprečítané správy</string>
     <string name="send_media">Odoslať média</string>
@@ -1383,7 +1384,7 @@ Vykonajte prosím zálohú vašich údajov vhodnou metódou.</string>
     <string name="forward_security_notification_rejected_text_contact">Jednu alebo viac správ sa nepodarilo odoslať na %1$s.</string>
     <string name="forward_security_notification_rejected_text_group">Jednu alebo viac správ sa nepodarilo odoslať na \"%1$s\".</string>
     <string name="forward_security_notification_rejected_text_generic">Jednu alebo viac správ sa nepodarilo odoslať.</string>
-    <string name="self_updater_installation_failed">Sťahovanie aktualizácie zlyhalo. Stiahnite si a nainštalujte aktualizáciu z <a href="https://shop.threema.ch/download">https://shop.threema.ch/download</a> manuálne.</string>
+    <string name="self_updater_installation_failed">Sťahovanie aktualizácie zlyhalo. Stiahnite si a nainštalujte aktualizáciu z <a href="https://github.com/Treslibre/treslibre-android">https://github.com/Treslibre/treslibre-android</a> manuálne.</string>
     <string name="spam_first_contact">Táto konverzácia je od neznámeho kontaktu</string>
     <string name="spam_report">Nahlásiť spam</string>
     <!-- ${company_name} is a placeholder for the name of the company that operates the app, e.g. "Threema". It must be left as-is and not translated. -->
@@ -1422,7 +1423,7 @@ Vykonajte prosím zálohú vašich údajov vhodnou metódou.</string>
     <string name="prefs_summary_hibernation_api">Ak chcete zabrániť tomu, aby systém po dlhšej nečinnosti pozastavil aplikáciu ${app_name}, vypnite systémové nastavenie „Odstrániť povolenia, ak sa nepoužíva“.</string>
     <string name="unable_to_fetch_configuration">Nie je možné načítať údaje z konfiguračného servera. Skúste to znova neskôr.</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
-    <string name="rogue_device_warning"><![CDATA[Bolo zistené pripojenie z iného zariadenia s rovnakým ${app_name_short} ID. Použili ste nedávno svoje ${app_name_short} ID na inom zariadení? <br><br> Ak áno, môžete túto správu ignorovať. <br><br> Ak ste tak neurobili, váš súkromný kľúč môže byť ohrozený. Pred vytvorením nového identifikátora <a href="https://threema.com/faq/another_connection">postupujte podľa našich návrhov</a> na ochranu svojho zariadenia a údajov.]]></string>
+    <string name="rogue_device_warning"><![CDATA[Bolo zistené pripojenie z iného zariadenia s rovnakým ${app_name_short} ID. Použili ste nedávno svoje ${app_name_short} ID na inom zariadení? <br><br> Ak áno, môžete túto správu ignorovať. <br><br> Ak ste tak neurobili, váš súkromný kľúč môže byť ohrozený. Pred vytvorením nového identifikátora <a href="https://github.com/Treslibre/treslibre-android">postupujte podľa našich návrhov</a> na ochranu svojho zariadenia a údajov.]]></string>
     <string name="fetch2_failure">Synchronizácia so serverom poskytovania zlyhala.</string>
     <string name="no_members_support_group_calls">V tejto skupine nie sú žiadni ďalší členovia, ktorí by mohli prijímať skupinové hovory</string>
     <string name="group_calls">Skupinové hovory</string>

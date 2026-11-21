@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Modified 2026 by Treslibre Project (Treslibre). -->
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="title_section2">Contatos</string>
     <!-- Label on first tab on app's main screen, selecting it leads to the list of chats -->
@@ -14,9 +15,9 @@
     <string name="title_invite_friend">Convidar um amigo</string>
     <string name="invite_via">Convidar um amigo via…</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
-    <string name="invite_email_body">Olá,\n\nEu uso o %1$s, o aplicativo de mensagens que protege a privacidade dos usuários.\n\nMinha ID ${app_name_short} é: https://threema.id/%2$s\n\nVamos conversar no %1$s!\n\nAté mais,\n</string>
+    <string name="invite_email_body">Olá,\n\nEu uso o %1$s, o aplicativo de mensagens que protege a privacidade dos usuários.\n\nMinha ID ${app_name_short} é: treslibre://add?id=%2$s\n\nVamos conversar no %1$s!\n\nAté mais,\n</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
-    <string name="invite_sms_body">Oi! Vamos usar o %1$s para conversar de forma segura e simples! Minha ID ${app_name_short} é: https://threema.id/%2$s</string>
+    <string name="invite_sms_body">Oi! Vamos usar o %1$s para conversar de forma segura e simples! Minha ID ${app_name_short} é: treslibre://add?id=%2$s</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="invite_email_subject">${app_name_short}, o messenger seguro que protege nossa privacidade</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
@@ -162,7 +163,7 @@
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="backup_sum">Exportar sua ID do ${app_name_short}</string>
     <string name="backup_and_delete">Backup e exclusão</string>
-    <string name="delete_id_message">A menos que tenha criado um backup ou exportado e salvo uma cópia desta ID, você nunca conseguirá enviar ou receber mensagens com esta ID novamente.\n\nSe não deseja usar mais esta ID, recomendamos que você crie uma senha de revogação e revogue a ID em myid.threema.ch/revoke antes de excluí-la.</string>
+    <string name="delete_id_message">A menos que tenha criado um backup ou exportado e salvo uma cópia desta ID, você nunca conseguirá enviar ou receber mensagens com esta ID novamente.\n\nSe não deseja usar mais esta ID, recomendamos que você crie uma senha de revogação e revogue a ID em github.com/Treslibre/treslibre-android/revoke antes de excluí-la.</string>
     <string name="delete_id_message2">Último aviso: você realmente deseja excluir a sua ID neste dispositivo?</string>
     <string name="delete_all_data_prompt">Excluir todos os dados do aplicativo?</string>
     <string name="backup_password_summary">A exportação da sua ID será criptografada com uma senha. Use uma combinação de letras, números e símbolos. Não esqueça a senha digitada!</string>
@@ -240,7 +241,7 @@
     <string name="save_message_action">Salvar</string>
     <string name="masterkey_is_unlocked">Chave mestra está desbloqueada</string>
     <string name="file_too_large">O arquivo excede o tamanho máximo de %1$d MB</string>
-    <string name="enter_serial_body"><![CDATA[Digite a sua chave da licença de compra. Você pode <a href="https://shop.threema.ch/">adquirir</a> uma licença ou <a href="https://shop.threema.ch/retrieve_keys">recuperar</a> as suas chaves caso já tenha adquirido uma licença anteriormente.]]></string>
+    <string name="enter_serial_body"><![CDATA[Digite a sua chave da licença de compra. Você pode <a href="https://github.com/Treslibre/treslibre-android">adquirir</a> uma licença ou <a href="https://github.com/Treslibre/treslibre-android">recuperar</a> as suas chaves caso já tenha adquirido uma licença anteriormente.]]></string>
     <!-- ${app_name_short} is a placeholder for the app's name, it must be kept as-is, not translated. -->
     <string name="work_enter_serial_body">Insira as credenciais ${app_name_short} fornecidas pela sua empresa.</string>
     <!-- ${app_name} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
@@ -507,7 +508,7 @@ Por favor, insira uma pergunta para a sua enquete.</string>
     <string name="wallpapers_removed">Papéis de parede removidos</string>
     <string name="invalid_backup">Dados de backup inválidos. Não é possível restaurar.</string>
     <string name="invalid_zip_restore_failed">Falha ao restaurar. Arquivo de backup inválido: %1$s</string>
-    <string name="revocation_explain">A senha que você digitar aqui permite que você revogue o seu ID em https://myid.threema.ch/revoke caso você perdê-lo ou ele for roubado</string>
+    <string name="revocation_explain">A senha que você digitar aqui permite que você revogue o seu ID em https://github.com/Treslibre/treslibre-android caso você perdê-lo ou ele for roubado</string>
     <!-- Empty state text shown on home screen widget when there are no unread messages -->
     <string name="no_unread_messages">Nenhuma mensagem não lida</string>
     <string name="send_media">Enviar mídia</string>
@@ -1358,7 +1359,7 @@ Por favor, insira uma pergunta para a sua enquete.</string>
     <string name="forward_security_notification_rejected_text_contact">Uma ou mais mensagens não puderam ser enviadas para %1$s.</string>
     <string name="forward_security_notification_rejected_text_group">Uma ou mais mensagens não puderam ser enviadas para \"%1$s\".</string>
     <string name="forward_security_notification_rejected_text_generic">Uma ou mais mensagens não puderam ser enviadas.</string>
-    <string name="self_updater_installation_failed">O download da atualização falhou. Faça o download e instale a atualização em <a href="https://shop.threema.ch/download">https://shop.threema.ch/download</a> manualmente.</string>
+    <string name="self_updater_installation_failed">O download da atualização falhou. Faça o download e instale a atualização em <a href="https://github.com/Treslibre/treslibre-android">https://github.com/Treslibre/treslibre-android</a> manualmente.</string>
     <string name="spam_first_contact">Esta conversa é de um contato desconhecido</string>
     <string name="spam_report">Denunciar SPAM</string>
     <!-- ${company_name} is a placeholder for the name of the company that operates the app, e.g. "Threema". It must be left as-is and not translated. -->
@@ -1397,7 +1398,7 @@ Por favor, insira uma pergunta para a sua enquete.</string>
     <string name="prefs_summary_hibernation_api">Para evitar que o ${app_name} seja pausado pelo sistema após ficar inativo por algum tempo, desative a configuração do sistema “Pausar a atividade no app quando não usado”.</string>
     <string name="unable_to_fetch_configuration">Não foi possível obter os dados do servidor de configuração. Tente novamente mais tarde.</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
-    <string name="rogue_device_warning"><![CDATA[Foi detectada uma conexão de um dispositivo diferente com a mesma ID do ${app_name_short}. Você usou recentemente sua ID do ${app_name_short} em outro dispositivo?<br><br>Se usou, você pode ignorar esta mensagem.<br><br>Se não usou, sua chave privada por ter sido comprometida. <a href="https://threema.com/faq/another_connection">Siga as nossas sugestões</a> para proteger seu dispositivo e os seus dados antes de criar uma nova ID.]]></string>
+    <string name="rogue_device_warning"><![CDATA[Foi detectada uma conexão de um dispositivo diferente com a mesma ID do ${app_name_short}. Você usou recentemente sua ID do ${app_name_short} em outro dispositivo?<br><br>Se usou, você pode ignorar esta mensagem.<br><br>Se não usou, sua chave privada por ter sido comprometida. <a href="https://github.com/Treslibre/treslibre-android">Siga as nossas sugestões</a> para proteger seu dispositivo e os seus dados antes de criar uma nova ID.]]></string>
     <string name="fetch2_failure">A sincronização com o servidor de provisionamento falhou.</string>
     <string name="no_members_support_group_calls">Não há outros membros neste grupo que podem receber chamadas de grupo</string>
     <string name="group_calls">Chamadas de grupo</string>

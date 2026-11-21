@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Modified 2026 by Treslibre Project (Treslibre). -->
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="title_section2">Névjegyek</string>
     <!-- Label on first tab on app's main screen, selecting it leads to the list of chats -->
@@ -14,9 +15,9 @@
     <string name="title_invite_friend">Barátok meghívása</string>
     <string name="invite_via">Meghívás…</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
-    <string name="invite_email_body">Szia!\n\nA %1$s-t használom, a biztonságos messengert, amely védi a privátszférát.\n\nA ${app_name_short} azonosítóm: https://threema.id/%2$s\n\nBeszélgessünk a %1$s-n keresztül!\n\nÜdv!\n</string>
+    <string name="invite_email_body">Szia!\n\nA %1$s-t használom, a biztonságos messengert, amely védi a privátszférát.\n\nA ${app_name_short} azonosítóm: treslibre://add?id=%2$s\n\nBeszélgessünk a %1$s-n keresztül!\n\nÜdv!\n</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
-    <string name="invite_sms_body">Szia! Beszéljünk biztonságosan és az adatvédelemnek megfelelően a %1$s-n keresztül! A ${app_name_short} ID-m: https://threema.id/%2$s</string>
+    <string name="invite_sms_body">Szia! Beszéljünk biztonságosan és az adatvédelemnek megfelelően a %1$s-n keresztül! A ${app_name_short} ID-m: treslibre://add?id=%2$s</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="invite_email_subject">${app_name_short}. A biztonságos messenger, amely védi az én és a te privátszférádat.</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
@@ -234,7 +235,7 @@
     <string name="masterkey_is_unlocked">A főkulcs nyitva van</string>
     <string name="file_too_large">A fájl nagyobb, mint a megengedett %1$d MB</string>
     <string name="enter_serial_body"><![CDATA[Kérjük, adja meg a boltban kapott licenckulcsát. Ha elfelejtette, kattintson ide:
-		https://shop.threema.ch/retrieve_keys]]></string>
+		https://github.com/Treslibre/treslibre-android]]></string>
     <!-- ${app_name_short} is a placeholder for the app's name, it must be kept as-is, not translated. -->
     <!-- ${app_name} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="enter_serial_title">${app_name} feloldása</string>
@@ -483,7 +484,7 @@
     <string name="wallpapers_removed">Háttérképek eltávolítva</string>
     <string name="invalid_backup">A biztonsági másolat adatai érvénytelenek. Visszaállítás nem lehetséges.</string>
     <string name="revocation_explain">Az itt megadott jelszóval visszavonhatja ID-jét a
-		https://myid.threema.ch/revoke címen, ha elveszítette vagy ellopták.</string>
+		https://github.com/Treslibre/treslibre-android címen, ha elveszítette vagy ellopták.</string>
     <!-- Empty state text shown on home screen widget when there are no unread messages -->
     <string name="no_unread_messages">Nincsenek olvasatlan üzenetek vagy a PIN-zár aktív</string>
     <string name="send_media">Média küldése</string>

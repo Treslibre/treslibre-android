@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.app.utils
 
 import android.text.Spanned
@@ -69,9 +70,9 @@ class LinkifyUtilTest {
 
     @Test
     fun testSimpleUrls() {
-        assertSingleSpan("www.threema.com")
-        assertSingleSpan("a.b.c.d.e.f.threema.com")
-        assertSingleSpan("https://www.threema.com")
+        assertSingleSpan("www.treslibre.invalid")
+        assertSingleSpan("a.b.c.d.e.f.treslibre.invalid")
+        assertSingleSpan("https://www.treslibre.invalid")
     }
 
     @Test

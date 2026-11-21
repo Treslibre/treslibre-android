@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.app.license
 
 class ServerUrlParameter private constructor(
@@ -7,7 +8,7 @@ class ServerUrlParameter private constructor(
     fun getUrlToOppf(): String {
         var url = "$HTTPS_PREFIX${value.trim()}"
 
-        if (!url.endsWith(".oppf")) {
+        if (!url.endsWith(".oppf") && !url.endsWith(".tlpf") && !url.endsWith(".json")) {
             url += DEFAULT_OPPF_PATH
         }
 

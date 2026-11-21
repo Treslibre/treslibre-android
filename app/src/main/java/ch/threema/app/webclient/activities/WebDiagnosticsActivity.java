@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.app.webclient.activities;
 
 import android.annotation.SuppressLint;
@@ -94,7 +95,7 @@ public class WebDiagnosticsActivity extends ThreemaToolbarActivity implements Te
     private static final String DIALOG_TAG_SEND_VOIP_DEBUG = "svd";
 
     // Config
-    private static final String WS_HOST = "saltyrtc-ee.threema.ch";
+    private static final String WS_HOST = "saltyrtc.treslibre.invalid";
     private static final String WS_BASE_URL = "wss://" + WS_HOST;
     private static final String WS_PATH = "ffffffffffffffff000000000000eeeeeeee000000000000ffffffffffffffff";
     private static final String WS_PROTOCOL = "v1.saltyrtc.org";

@@ -1,6 +1,6 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.app.onprem
 
-import ch.threema.app.BuildConfig
 import ch.threema.base.ThreemaException
 import ch.threema.domain.onprem.OnPremConfig
 import ch.threema.domain.onprem.OnPremConfigFetcher
@@ -130,13 +130,10 @@ class OnPremServerAddressProvider(
 
     @Throws(ThreemaException::class)
     override fun getMapStyleUrl(): String? = fetch().maps?.styleUrl
-        ?: BuildConfig.MAP_STYLES_URL // TODO(ANDR-3805): Remove the fallback
 
     @Throws(ThreemaException::class)
-    override fun getMapPoiAroundUrl() = fetch().maps?.poiAroundUrl
-        ?: MapPoiAroundUrl(BuildConfig.MAP_POI_AROUND_URL) // TODO(ANDR-3805): Remove the fallback
+    override fun getMapPoiAroundUrl(): MapPoiAroundUrl? = fetch().maps?.poiAroundUrl
 
     @Throws(ThreemaException::class)
-    override fun getMapPoiNamesUrl() = fetch().maps?.poiNamesUrl
-        ?: MapPoiNamesUrl(BuildConfig.MAP_POI_NAMES_URL) // TODO(ANDR-3805): Remove the fallback
+    override fun getMapPoiNamesUrl(): MapPoiNamesUrl? = fetch().maps?.poiNamesUrl
 }

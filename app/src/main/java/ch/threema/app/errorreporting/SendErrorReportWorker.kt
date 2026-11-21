@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.app.errorreporting
 
 import android.content.Context
@@ -32,16 +33,8 @@ class SendErrorReportWorker(
     private val timeProvider: TimeProvider by inject()
 
     override suspend fun doWork(): Result {
+        // Outbound error report submission is permanently disabled in Treslibre.
         errorRecordStore.getConfirmedRecords().forEach { errorRecord ->
-            if (isStillRelevant(errorRecord)) {
-                try {
-                    logger.info("Sending error record {} to Sentry", errorRecord.id)
-                    sentryService.sendErrorRecord(errorRecord)
-                } catch (e: IOException) {
-                    logger.warn("Failed to send error record, retry later", e)
-                    return Result.retry()
-                }
-            }
             errorRecordStore.deleteConfirmedRecord(errorRecord.id)
         }
         return Result.success()

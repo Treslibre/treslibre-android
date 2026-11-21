@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Modified 2026 by Treslibre Project (Treslibre). -->
 <PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     app:key="pref_screen_header">
@@ -101,6 +102,7 @@
 
     <Preference
         app:icon="@drawable/threema_work_app_icon"
+        app:isPreferenceVisible="false"
         app:key="pref_key_work"
         app:layout="@layout/preference_notice_material3"
         app:summary="@string/prefs_threema_work_summary"

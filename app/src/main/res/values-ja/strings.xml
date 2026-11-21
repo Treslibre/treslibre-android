@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Modified 2026 by Treslibre Project (Treslibre). -->
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="title_section2">連絡先</string>
     <!-- Label on first tab on app's main screen, selecting it leads to the list of chats -->
@@ -14,9 +15,9 @@
     <string name="title_invite_friend">友達を招待する</string>
     <string name="invite_via">共有先を選択…</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
-    <string name="invite_email_body">こんにちは！\n\nこれはユーザーのプライバシーを守る安全なインスタントメッセンジャーの %1$s の招待です。\n\n${app_name_short} ID: https://threema.id/%2$s\n\nそれではまた %1$s で！\n\n良い一日を！\n</string>
+    <string name="invite_email_body">こんにちは！\n\nこれはユーザーのプライバシーを守る安全なインスタントメッセンジャーの %1$s の招待です。\n\n${app_name_short} ID: treslibre://add?id=%2$s\n\nそれではまた %1$s で！\n\n良い一日を！\n</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
-    <string name="invite_sms_body">こんにちは！%1$sを使って安全にプライベートな会話をしましょう！${app_name_short} ID: https://threema.id/%2$s</string>
+    <string name="invite_sms_body">こんにちは！%1$sを使って安全にプライベートな会話をしましょう！${app_name_short} ID: treslibre://add?id=%2$s</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="invite_email_subject">${app_name_short}。プライバシーを守る安全なメッセンジャー</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
@@ -239,7 +240,7 @@
     <string name="masterkey_is_unlocked">マスターキーが解除されました</string>
     <string name="file_too_large">ファイルが最大容量の %1$d MB を超えています</string>
     <string name="enter_serial_body"><![CDATA[ショップライセンスキーを入力するか、ここをクリックしてキーを取得してください。
-https://shop.threema.ch/retrieve_keys]]></string>
+https://github.com/Treslibre/treslibre-android]]></string>
     <!-- ${app_name_short} is a placeholder for the app's name, it must be kept as-is, not translated. -->
     <!-- ${app_name} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
     <string name="enter_serial_title">${app_name}のロック解除</string>
@@ -500,7 +501,7 @@ http://www.7-zip.org または https://itunes.apple.com/us/app/the-unarchiver/id
     <string name="invalid_backup">バックアップデータが無効です。復元できませんでした。</string>
     <string name="invalid_zip_restore_failed">復元は失敗しました。無効なバックアップファイル: %1$s</string>
     <string name="revocation_explain">ID を紛失したり、盗難された場合に、ここに入力したパスワードを
-https://myid.threema.ch/revoke に入力することで ID を削除することができます。</string>
+https://github.com/Treslibre/treslibre-android に入力することで ID を削除することができます。</string>
     <!-- Empty state text shown on home screen widget when there are no unread messages -->
     <string name="no_unread_messages">未読のメッセージが無いか、PINロックがかかっています</string>
     <string name="send_media">メディアを送信</string>
@@ -1318,7 +1319,7 @@ https://myid.threema.ch/revoke に入力することで ID を削除すること
     <string name="forward_security_notification_rejected_text_contact">%1$s に対する１つ以上のメッセージが送信できませんでした。</string>
     <string name="forward_security_notification_rejected_text_group">「%1$s」に対する１つ以上のメッセージが送信できませんでした。</string>
     <string name="forward_security_notification_rejected_text_generic">１つ以上のメッセージの送信に失敗しました。</string>
-    <string name="self_updater_installation_failed">アップデートのダウンロードに失敗しました。<a href="https://shop.threema.ch/download">https://shop.threema.ch/download</a> からアップデートをダウンロードしてインストールしてください。</string>
+    <string name="self_updater_installation_failed">アップデートのダウンロードに失敗しました。<a href="https://github.com/Treslibre/treslibre-android">https://github.com/Treslibre/treslibre-android</a> からアップデートをダウンロードしてインストールしてください。</string>
     <string name="spam_first_contact">このトークは不明な連絡先からのものです</string>
     <string name="spam_report">スパム報告</string>
     <!-- ${company_name} is a placeholder for the name of the company that operates the app, e.g. "Threema". It must be left as-is and not translated. -->
@@ -1356,7 +1357,7 @@ https://myid.threema.ch/revoke に入力することで ID を削除すること
     <string name="prefs_summary_hibernation_api">長期の不使用後に、${app_name}がシステムによって中断されるのを防ぐために、システム設定の「使用していないアプリを一時停止する」を無効にしてください。</string>
     <string name="unable_to_fetch_configuration">設定サーバーからデータを取得できません。後でもう一度お試しください。</string>
     <!-- ${app_name_short} is a placeholder for the app's name, e.g. "Threema". It must be left as-is and not translated. -->
-    <string name="rogue_device_warning"><![CDATA[異なるデバイスからの接続が、同じ${app_name_short} IDで検出されました。最近、別の端末であなたの${app_name_short} IDを使用しましたか？<br><br>もし使用したのであれば、このメッセージは無視してください。<br><br>もし使用していないのであれば、あなたのプライベートキーが不正利用されている可能性があります。新しいIDを作成する前に、<a href="https://threema.com/faq/another_connection">私たちの提案に従って</a>、あなたの端末とデータを保護してください。]]></string>
+    <string name="rogue_device_warning"><![CDATA[異なるデバイスからの接続が、同じ${app_name_short} IDで検出されました。最近、別の端末であなたの${app_name_short} IDを使用しましたか？<br><br>もし使用したのであれば、このメッセージは無視してください。<br><br>もし使用していないのであれば、あなたのプライベートキーが不正利用されている可能性があります。新しいIDを作成する前に、<a href="https://github.com/Treslibre/treslibre-android">私たちの提案に従って</a>、あなたの端末とデータを保護してください。]]></string>
     <string name="fetch2_failure">プロビジョニングサーバーとの同期に失敗しました。</string>
     <string name="no_members_support_group_calls">このグループにはグループ通話に応答できるメンバーがいません</string>
     <string name="group_calls">グループ通話</string>

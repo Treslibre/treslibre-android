@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.domain.protocol.api
 
 import ch.threema.common.plus
@@ -39,7 +40,7 @@ class APIConnectorTest {
             /* serverAddressProvider = */
             mockk {
                 every { getDirectoryServerUrl(any()) } answers { "https://server.url/${firstArg<String>()}" }
-                every { getWorkServerUrlLegacy() } returns "https://api-work.threema.ch/"
+                every { getWorkServerUrlLegacy() } returns "https://api-work.treslibre.invalid/"
             },
             /* challengeResponseHelper */
             mockk {
@@ -56,7 +57,7 @@ class APIConnectorTest {
     @Test
     fun testFetchWorkData_Support() {
         mockPostRequest(
-            url = "https://api-work.threema.ch/fetch2",
+            url = "https://api-work.treslibre.invalid/fetch2",
             expectedPayload = payload,
             response = """{"support":"the-support-url"}""",
         )
@@ -76,7 +77,7 @@ class APIConnectorTest {
     @Test
     fun testFetchWorkData_Logo_Dark() {
         mockPostRequest(
-            url = "https://api-work.threema.ch/fetch2",
+            url = "https://api-work.treslibre.invalid/fetch2",
             expectedPayload = payload,
             response = """{"logo":{"dark": "the-dark-logo"}}""",
         )
@@ -97,7 +98,7 @@ class APIConnectorTest {
     @Test
     fun testFetchWorkData_Logo_Light() {
         mockPostRequest(
-            url = "https://api-work.threema.ch/fetch2",
+            url = "https://api-work.treslibre.invalid/fetch2",
             expectedPayload = payload,
             response = """{"logo":{"light": "the-light-logo"}}""",
         )
@@ -118,7 +119,7 @@ class APIConnectorTest {
     @Test
     fun testFetchWorkData_Contacts() {
         mockPostRequest(
-            url = "https://api-work.threema.ch/fetch2",
+            url = "https://api-work.treslibre.invalid/fetch2",
             expectedPayload = payload,
             response = """{"contacts":[{"id":"id1","pk":"AQ=="},{"id":"id2","pk":"Aq==","first":"id2-firstname"},
                 {"id":"id3","pk":"Aw==","last":"id3-lastname"},{"id":"id4","pk":"BA==","first": "id4-firstname", "last":"id4-lastname"}]}""",
@@ -160,7 +161,7 @@ class APIConnectorTest {
     @Test
     fun testFetchWorkData_MDM() {
         mockPostRequest(
-            url = "https://api-work.threema.ch/fetch2",
+            url = "https://api-work.treslibre.invalid/fetch2",
             expectedPayload = payload,
             response = """{"mdm":{"override": true,"params":{"param-string": "string-param","param-bool": true,"param-int": 123}}}""",
         )
@@ -188,7 +189,7 @@ class APIConnectorTest {
     @Test
     fun testFetchWorkContacts_InvalidJSON() {
         mockPostRequest(
-            url = "https://api-work.threema.ch/identities",
+            url = "https://api-work.treslibre.invalid/identities",
             expectedPayload = payload,
             response = "i-am-not-a-json",
         )
@@ -201,7 +202,7 @@ class APIConnectorTest {
     @Test
     fun testFetchWorkContacts() {
         mockPostRequest(
-            url = "https://api-work.threema.ch/identities",
+            url = "https://api-work.treslibre.invalid/identities",
             expectedPayload = payload,
             response = """{"contacts":[{"id":"id1","pk":"AQ=="},{"id":"id2","pk":"Aq==","first":"id2-firstname"},
                 {"id":"id3","pk":"Aw==","last":"id3-lastname"},{"id":"id4","pk":"BA==","first": "id4-firstname", "last":"id4-lastname"}]}""",
@@ -280,7 +281,7 @@ class APIConnectorTest {
     @Test
     fun testFetchWorkData_Organization() {
         mockPostRequest(
-            url = "https://api-work.threema.ch/fetch2",
+            url = "https://api-work.treslibre.invalid/fetch2",
             expectedPayload = payload,
             response = """{"org":{"name": "monkeybusiness"}}""",
         )
@@ -295,7 +296,7 @@ class APIConnectorTest {
     @Test
     fun testFetchWorkData_NoOrganization() {
         mockPostRequest(
-            url = "https://api-work.threema.ch/fetch2",
+            url = "https://api-work.treslibre.invalid/fetch2",
             expectedPayload = payload,
             response = "{}",
         )
@@ -310,7 +311,7 @@ class APIConnectorTest {
     @Test
     fun testFetchWorkData_Directory() {
         mockPostRequest(
-            url = "https://api-work.threema.ch/fetch2",
+            url = "https://api-work.treslibre.invalid/fetch2",
             expectedPayload = payload,
             response = """{directory:{enabled: true,cat: {"c1": "Category 1","c2": "Category 2","c3": "Category 3"}}}""",
         )
@@ -359,7 +360,7 @@ class APIConnectorTest {
             every { getIdentityString() } returns "IDENTITY"
         }
         mockPostRequest(
-            url = "https://api-work.threema.ch/directory",
+            url = "https://api-work.treslibre.invalid/directory",
             expectedPayload = jsonObject {
                 put("username", username)
                 put("password", password)

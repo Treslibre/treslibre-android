@@ -1,3 +1,4 @@
+// Modified 2026 by Treslibre Project (Treslibre).
 package ch.threema.app.utils
 
 import android.net.Uri
@@ -20,7 +21,7 @@ class UrlUtilTest {
 
     @Test
     fun simpleUris() {
-        assertLegalUri("threema.com")
+        assertLegalUri("treslibre.invalid")
 
         assertIllegalUri("threemа.com") // cyrillic a
 
