@@ -1,13 +1,9 @@
 ## Description
 
-<!-- Please describe your change. If the change concerns the user interface,
-please include screenshots. For improvements to translation strings
-please see CONTRIBUTING.md or README.md -->
+<!-- Please describe your change. If the change concerns the user interface, please include screenshots. -->
 
 ## Checklist
 
-<!-- Please check the items that apply. -->
-
-- [ ] I signed the [Contributor License Agreement](https://treslibre.invalid/en/open-source/cla)
-- [ ] All changes in this pull request were made by me, I own the full copyright
-      for all these changes
+- [ ] My changes are my own work and compatible with GNU AGPL-3.0
+- [ ] `bash scripts/audit-debrand.sh` passes (exit `0`)
+- [ ] `./gradlew :app:assembleTreslibreDebug -PcargoTargets=arm64 --no-daemon` builds cleanly

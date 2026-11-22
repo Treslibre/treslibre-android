@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 #
-# A build script for the release version of the Threema Android app.
+# A build script for the release version of the Treslibre Android app.
 
 set -euo pipefail
 
-DOCKERIMAGE=threema/android-compile
+DOCKERIMAGE=treslibre/android-compile
 
 GREEN="\033[0;32m"
 RED="\033[0;31m"
@@ -14,7 +14,7 @@ function print_usage() {
     echo "Usage: $0 -v <variants> [-b] [-k <dir>] [-o <dir>] [--no-image-export] --i-accept-the-android-sdk-license"
     echo ""
     echo "Options:"
-    echo "  -v <variants>        Comma-separated variants to build: googleplay_private, googleplay_work, googleplay_onprem, hms_private, hms_work, threemashop_private, libre_private"
+    echo "  -v <variants>        Comma-separated variants to build: treslibre"
     echo "  -b,--build           (Re)build the Docker image"
     echo "  --no-cache           Clear Docker build cache"
     echo "  -k,--keystore <dir>  Path to the keystore directory"
@@ -87,7 +87,7 @@ releasedir=$(realpath "$releasedir")
 IFS=', ' read -r -a variant_array <<< "$variants"
 for variant in "${variant_array[@]}"; do
     case $variant in
-        googleplay_private | googleplay_work | googleplay_onprem | hms_private | hms_work | threemashop_private | libre_private)
+        treslibre)
             # Valid
             ;;
         *)
@@ -151,33 +151,9 @@ fi
 for variant in "${variant_array[@]}"; do
     # Determine target and path
     case $variant in
-        googleplay_private)
-            target=assembleStore_googleRelease
-            variant_dir="store_google"
-            ;;
-        googleplay_work)
-            target=assembleStore_google_workRelease
-            variant_dir="store_google_work"
-            ;;
-        googleplay_onprem)
-            target=assembleOnpremRelease
-            variant_dir="onprem"
-            ;;
-        hms_private)
-            target=assembleHmsRelease
-            variant_dir="hms"
-            ;;
-        hms_work)
-            target=assembleHms_workRelease
-            variant_dir="hms_work"
-            ;;
-        threemashop_private)
-            target=assembleStore_threemaRelease
-            variant_dir="store_threema"
-            ;;
-        libre_private)
-            target=assembleLibreRelease
-            variant_dir="libre"
+        treslibre)
+            target=assembleTreslibreRelease
+            variant_dir="treslibre"
             ;;
         *)
             fail "Invalid build variant: $variant"

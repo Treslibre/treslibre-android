@@ -1,6 +1,6 @@
-# Manual Artwork Replacement Inventory (Treslibre Android)
+# Branding Asset Inventory (Treslibre Android)
 
-All proprietary Threema visual assets below were replaced with temporary geometric Treslibre shield/bar placeholders during Phase 2. Replace these before a final release with finalized artwork.
+Official Treslibre 3L logo, geometric wordmark, and Material You monochrome assets from `branding/` are integrated into the resources below.
 
 ## Launcher & Play Store Icons
 - `app/src/main/res/drawable/ic_launcher_foreground.xml`
@@ -39,5 +39,5 @@ All proprietary Threema visual assets below were replaced with temporary geometr
 - `app/src/main/res/drawable/ic_verification_full_work.xml`
 
 ## Palette & Font Audit
-- `app/src/treslibre/res/values/colors.xml` (Lavender `#D0CFEC` / `#4B468A` / `#312D61` palette)
+- `app/src/treslibre/res/values/colors.xml` (Lavender `#D0CFEC` / `#58559A` / `#3D3A72` palette)
 - Fonts audited: no proprietary font binaries exist in `treslibre-android/app/src` or `app/assets`.

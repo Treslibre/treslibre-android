@@ -20,7 +20,7 @@ function print_usage() {
     echo ""
     echo "Options:"
     echo "  -n <version-name>    The version name. Example: '4.43k'"
-    echo "  -v <variant>         Variant to verify: Either googleplay_private, threemashop_private, libre_private or hms_private"
+    echo "  -v <variant>         Variant to verify: treslibre"
     echo "  -p <published-apk>   Path to the APK file extracted from the phone"
     echo "  -l <local-apk>       Optional: Path to the locally built APK"
     echo "  -h,--help            Print this help and exit"
@@ -91,13 +91,10 @@ fi
 published_apk=$(realpath "$published_apk")
 if [[ "$variant" == "" ]]; then
     log_error 'Please set a valid build variant with "-v <variant>".'
-    fail 'Example: "-v googleplay_private" or "-v threemashop_private"'
+    fail 'Example: "-v treslibre"'
 fi
 case "$variant" in
-    googleplay_private) variant_name="store_google" ;;
-    threemashop_private) variant_name="store_threema" ;;
-    libre_private) variant_name="libre" ;;
-    hms_private) variant_name="hms" ;;
+    treslibre) variant_name="treslibre" ;;
     *) fail "Invalid build variant: $variant" ;;
 esac
 
@@ -161,6 +158,6 @@ else
     log_warning "APK could not be verified."
     log_warning "Don't panic! First, make sure that you have compiled the correct version!"
     log_warning "If you cannot figure out why the verification failed,"
-    log_warning "send us an e-mail to opensource@treslibre.invalid containing the log above."
+    log_warning "please open an issue at https://github.com/Treslibre/treslibre-android/issues with the log above."
     exit 2
 fi

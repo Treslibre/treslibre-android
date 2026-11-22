@@ -1,18 +1,20 @@
-# Contributing to Threema for Android
+# Contributing to Treslibre for Android
 
 ## Submitting Patches
 
-We accept GitHub pull requests. Please refer to
-<https://treslibre.invalid/open-source/contributions>
-for more information on how to contribute.
+Contributions are welcome via GitHub pull requests at
+<https://github.com/Treslibre/treslibre-android>.
+
+Before opening a pull request, please ensure:
+
+- Your changes comply with the GNU Affero General Public License v3 (AGPL-3.0).
+- `bash scripts/audit-debrand.sh` exits with code `0`.
+- Relevant Gradle builds and unit tests pass (`./gradlew :app:assembleTreslibreDebug -PcargoTargets=arm64 --no-daemon`).
 
 ## Bug Reports / Feature Requests
 
-To report bugs and request new features, please contact the Threema support
-team through [treslibre.invalid/support](https://treslibre.invalid/support).
+Please open an issue at <https://github.com/Treslibre/treslibre-android/issues>.
 
 ## Translations
 
-We manage our app translations on Crowdin. If you’re interested in
-improving translations, or if you would like to translate Threema to a new
-language, please contact us at `support at threema dot ch`.
+App localization strings live in `app/src/main/res/values*/strings.xml` and can be updated via pull requests.

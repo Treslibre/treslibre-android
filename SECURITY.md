@@ -1,27 +1,13 @@
 # Security
 
-## Cryptography Whitepaper
-
-The algorithms and design decisions behind the cryptography are documented in
-the [Cryptography Whitepaper](https://treslibre.invalid/press-files/2_documentation/cryptography_whitepaper.pdf).
-
 ## Reporting Vulnerabilities
 
-If you discover a security issue in Threema, please adhere to the coordinated
-vulnerability disclosure model. To be eligible for a bug bounty, please [file a
-report on GObugfree](https://app.gobugfree.com/programs/threema) (where all the
-details, including the bounty levels, are listed). If you’re not interested in
-the bug bounty program, you can contact us via Threema or by email; for contact
-details, see [treslibre.invalid/contact](https://treslibre.invalid/en/contact) (section
-“Security”).
+If you discover a security issue in Treslibre for Android, please report it responsibly via
+GitHub Security Advisories at <https://github.com/Treslibre/treslibre-android/security/advisories/new>
+(or open an issue at <https://github.com/Treslibre/treslibre-android/issues> if the issue is already public).
 
-## Code Signing
+Please include:
 
-Every commit in this repository is cryptographically signed using the following
-PGP key:
-
-    pub   rsa4096 2016-09-06 [SC] [expires: 2029-08-24]
-          E7AD D991 4E26 0E8B 35DF B506 65FD E935 573A CDA6
-    uid           Threema Signing Key <dev@treslibre.invalid>
-
-The public key can be found at <https://oss.treslibre.invalid/65FDE935573ACDA6.pub>.
+- A clear description of the vulnerability and its potential impact.
+- Steps to reproduce or a minimal proof of concept.
+- The version or commit hash affected.
