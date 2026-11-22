@@ -23,7 +23,7 @@ jobs:
         run: bash scripts/audit-debrand.sh
 
   build-and-test:
-    name: Build & Test (arm64)
+    name: Build & Test (all ABIs)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -56,7 +56,7 @@ jobs:
         uses: dtolnay/rust-toolchain@master
         with:
           toolchain: '1.97'
-          targets: aarch64-linux-android
+          targets: aarch64-linux-android,armv7-linux-androideabi,i686-linux-android,x86_64-linux-android
 
       - name: Cache Rust dependencies
         uses: Swatinem/rust-cache@v2
@@ -69,14 +69,14 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x gradlew
 
-      - name: Assemble Treslibre Debug APK (arm64)
-        run: ./gradlew :app:assembleTreslibreDebug -PcargoTargets=arm64 --no-daemon
+      - name: Assemble Treslibre Debug APKs (all ABIs + universal)
+        run: ./gradlew :app:assembleTreslibreDebug -PbuildUniversalApk --no-daemon
 
       - name: Run domain unit tests
-        run: ./gradlew :domain:test -PcargoTargets=arm64 --no-daemon
+        run: ./gradlew :domain:test --no-daemon
 
-      - name: Upload Debug APK
+      - name: Upload Debug APKs
         uses: actions/upload-artifact@v4
         with:
-          name: treslibre-android-arm64-debug
-          path: app/build/outputs/apk/treslibre/debug/app-treslibre-arm64-v8a-debug.apk
+          name: treslibre-android-debug-apks
+          path: app/build/outputs/apk/treslibre/debug/*.apk
