@@ -38,14 +38,17 @@ jobs:
       - name: Install protobuf compiler
         run: sudo apt-get update && sudo apt-get install -y --no-install-recommends protobuf-compiler
 
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
-
       - name: Install Android SDK components
         run: |
-          yes | sdkmanager --licenses >/dev/null || true
-          sdkmanager --install \
-            "platforms;android-37.0" \
+          SDK_ROOT="${ANDROID_HOME:-/usr/local/lib/android/sdk}"
+          SDKMANAGER=$(find "$SDK_ROOT/cmdline-tools" -name sdkmanager -type f | head -n 1)
+          echo "Using sdkmanager: $SDKMANAGER"
+          yes | "$SDKMANAGER" --licenses >/dev/null || true
+          PLATFORM_PKG=$("$SDKMANAGER" --list | grep -oE 'platforms;android-37(\.0)?' | head -n 1 || true)
+          PLATFORM_PKG="${PLATFORM_PKG:-platforms;android-37.0}"
+          echo "Installing $PLATFORM_PKG"
+          "$SDKMANAGER" --install \
+            "$PLATFORM_PKG" \
             "build-tools;35.0.0" \
             "ndk;28.2.13676358"
 
